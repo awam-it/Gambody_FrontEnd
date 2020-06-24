@@ -1,0 +1,23 @@
+
+/* slider.scss */
+.main-slider{
+  margin-bottom: -12%;
+  min-height: 300px;
+  @media (max-width: $breakepoint-md){
+    margin-bottom: 0%;
+    min-height: auto;
+  }
+}
+
+.slider{
+  position: relative;
+  font-size: 16px;
+  z-index: 0;
+}
+.slider.owl-theme .owl-dots{
+  bottom: 33%;
+  @media (max-width: $breakepoint-md){
+    bottom: 16px;
+  }
+}
+

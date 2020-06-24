@@ -1,0 +1,86 @@
+
+/* all.scss */
+
+.main-title{
+  @include font-property(normal);
+  @extend %flex-align;
+  font-size: 36px;
+  font-weight: 300;
+  line-height: 1.17;
+  letter-spacing: normal;
+  color: #101010;
+  margin-bottom:32px;
+  .button{
+    @extend %inline16px-margin;
+    @media (max-width: $breakepoint-md) {
+
+    }
+  }
+  @media (max-width: $breakepoint-md) {
+    font-size: 28px;
+    line-height: 1.14;
+    width: 100%;
+    justify-content: flex-start;
+  }
+
+}
+
+.seo-block{
+  background: $white-bg;
+  padding-bottom:12px;
+  .h4{
+    @include font-property(normal);
+    font-size: 26px;
+    line-height: 1.23;
+    letter-spacing: 0.25px;
+    color: #101010;
+    margin:24px 0px 16px 0px;
+  }
+  .h5{
+    @include font-property(normal);
+    font-size: 20px;
+    line-height: 1.2;
+    letter-spacing: 0.15px;
+    color: #101010;
+    margin: 12px 0px;
+  }
+  p {
+    @include font-property(normal);
+    margin: 12px 0px;
+    font-size: 11px;
+    line-height: 1.45;
+    letter-spacing: normal;
+    color: #666666;
+    width: 100%;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

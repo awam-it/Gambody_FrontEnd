@@ -1,0 +1,102 @@
+
+%flex-align{
+  align-items: center;
+  justify-content: center;
+  display: inline-flex;
+}
+
+%delimeter{
+  content: "";
+  display:inline-flex;
+  width: 1px;
+  height: 16px;
+  opacity: 0.9;
+  background-color:#bdbdbd;
+}
+
+%before{
+  content: '';
+  display: block;
+}
+%before-small{
+  width: 16px;
+  height: 16px;
+}
+%before-mid{
+  width: 24px;
+  height: 24px;
+}
+%before-large{
+  width: 32px;
+  height: 32px;
+}
+%before-xlarge{
+  width: 40px;
+  height: 40px;
+}
+%inline8px-padding{
+  padding:0px 8px;
+  @media (max-width: $breakepoint-md) {
+    padding:0px 4px;
+  }
+}
+%inline12px-padding{
+  padding:0px 12px;
+}
+%inline16px-padding{
+  padding:0px 16px;
+}
+%column8px-padding{
+  padding:8px 0px;
+}
+%column16px-padding{
+  padding:16px 0px;
+}
+%column20px-padding{
+  padding:20px 0px;
+}
+%column24px-padding{
+  padding:24px 0px;
+}
+%column32px-padding{
+  padding:32px 0px;
+}
+%column40px-padding{
+  padding:40px 0px;
+}
+%inline8px-margin {
+  margin: 0px 8px;
+}
+%column20px-margin{
+  margin:20px 0px;
+}
+%inline16px-margin{
+  margin:0px 16px;
+}
+%column8px-margin{
+  margin:8px 0px;
+}
+%btn-size40{
+  width: 40px;
+  height: 40px;
+}
+
+%card_hover_btn_mini{
+  padding:8px;
+  min-width: 32px;
+  min-height:32px;
+  border-radius: 2px;
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer;
+  position: relative;
+}
+%card_hover_btn_mini-hover{
+  background-color: rgba(255, 255, 255, 0.15);
+}
+%card_hover_btn_mid {
+  padding:4px;
+  min-width: 24px;
+  min-height:24px;
+}
+

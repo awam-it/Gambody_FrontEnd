@@ -1,0 +1,160 @@
+
+/* core.scss */
+
+.container{
+  @media (min-width: $breakepoint-xs) {
+    max-width: $screen-sm;
+    padding-right: $padding-side-sm;
+    padding-left: $padding-side-sm;
+  }
+  @media (min-width: $breakepoint-sm) {
+    max-width: $screen-sm;
+    padding-right: $padding-side-sm;
+    padding-left: $padding-side-sm;
+  }
+  @media (min-width: $breakepoint-md) {
+    max-width: $screen-md;
+    padding-right: $padding-side-md;
+    padding-left: $padding-side-md;
+  }
+  @media (min-width: $breakepoint-lg) {
+    max-width: $screen-lg;
+    padding-right: $padding-side-lg;
+    padding-left: $padding-side-lg;
+  }
+  @media (min-width: $breakepoint-xl) {
+    max-width: $screen-xl;
+    padding-right: $padding-side-xl;
+    padding-left: $padding-side-xl;
+  }
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+}
+.row{
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin: 0;
+  @media (min-width: $breakepoint-sm) {
+    margin: 0;
+  }
+  @media (min-width: $breakepoint-md) {
+    margin: 0;
+  }
+  @media (min-width: $breakepoint-lg) {
+    margin-right: -12px;
+    margin-left: -12px;
+  }
+  @media (min-width: $breakepoint-xl) {
+    margin-right: -8px;
+    margin-left: -8px;
+  }
+  &.row_full{
+    margin:0;
+  }
+}
+.container-full{
+  width:100%;
+  padding:12px 24px;
+  margin: 0 auto;
+  background: $main-bg;
+  &__row{
+    width: 100%;
+    margin:0px;
+    font-size: 0;
+  }
+}
+body {
+  font-family: $primary-font;
+  font-size: 0px;
+  font-weight: 400;
+  color: $black;
+  margin: 0;
+  background-color: $second-bg;
+  @include font-property(normal);
+  /*@media (max-width: $breakepoint-md) {
+    background-color: $main-bg;
+  }*/
+}
+body.lock-position {
+  overflow: hidden;
+}
+.container_inline {
+  display: inline-flex;
+  > div, > a, > span, > img, > form {
+    display: inline-flex;
+  }
+}
+
+.row [class*=col-]{
+  position: relative;
+  width: 100%;
+  padding-right: 8px;
+  padding-left: 8px;
+  font-size: 16px;
+}
+
+//cols
+
+.col-12 {
+  @include container-col(100%);
+}
+.col-6 {
+  @include container-col(50%);
+}
+
+// xs
+
+.col-xs-6{
+  @media (min-width: $breakepoint-xs) {
+    @include container-col(50%);
+  }
+}
+
+// lg
+
+.col-lg-6 {
+  @media (min-width: $breakepoint-lg) {
+    @include container-col(50%);
+  }
+}
+.col-lg-4 {
+  @media (min-width: $breakepoint-lg){
+    @include container-col(33.333333%);
+  }
+}
+.col-lg-2 {
+  @media (min-width: $breakepoint-lg){
+    @include container-col(16.666667%);
+  }
+}
+
+ul, menu{
+  -webkit-margin-before: 0;
+  -webkit-margin-after: 0;
+  -webkit-margin-start: 0px;
+  -webkit-margin-end: 0px;
+  -webkit-padding-start: 0px;
+  list-style: none;
+  font-size: 0;
+  padding-left: 0px;
+}
+a{
+  text-decoration: none;
+}
+:focus {
+  outline: none;
+}
+
+// img
+
+img{
+  max-width:100%;
+  height: auto;
+  @media (max-width: $breakepoint-md) {
+    max-height: 100%;
+    height: 100%;
+  }
+}

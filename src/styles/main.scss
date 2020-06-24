@@ -1,0 +1,21 @@
+@import "utils/variables";
+@import 'utils/mixins';
+@import 'utils/extend';
+
+@import 'vendors/_owl.css';
+
+@import 'base/reset';
+@import 'base/typography';
+@import 'base/core';
+@import 'base/all';
+
+@import 'layout/navigation';
+
+@import 'components/buttons';
+@import 'components/card';
+@import "components/container";
+
+@import "pages/home";
+@import "../blocks/modules";
+
+

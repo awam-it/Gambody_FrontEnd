@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+    <g fill="none" fill-rule="evenodd" opacity=".9">
+        <circle cx="5.839" cy="6.628" r="1" fill="#D50000"/>
+        <circle cx="10.159" cy="9.337" r="1" fill="#D50000"/>
+        <path fill="#F9A825" fill-rule="nonzero" d="M8.031 14.425L5.96 15.727 4.818 13.564 2.374 13.657 2.466 11.213 0.303 10.071 1.606 8 0.303 5.929 2.466 4.787 2.374 2.343 4.818 2.436 5.96 0.273 8.031 1.575 10.101 0.273 11.243 2.436 13.688 2.343 13.595 4.787 15.758 5.929 14.456 8 15.758 10.071 13.595 11.213 13.688 13.657 11.243 13.564 10.101 15.727z"/>
+        <text fill="#000" font-family="Roboto-Bold, Roboto" font-size="12" font-weight="bold">
+            <tspan x="6" y="13">!</tspan>
+        </text>
+    </g>
+</svg>
