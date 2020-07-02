@@ -2,20 +2,21 @@
 @import 'utils/mixins';
 @import 'utils/extend';
 
-@import 'vendors/_owl.css';
+@import "vendors/owl.scss";
+@import 'vendors/smart-grid';
+@import 'vendors/tiny-slider';
 
 @import 'base/reset';
 @import 'base/typography';
 @import 'base/core';
 @import 'base/all';
 
-@import 'layout/navigation';
-
 @import 'components/buttons';
 @import 'components/card';
 @import "components/container";
 
 @import "pages/home";
+@import "pages/cards";
 @import "../blocks/modules";
 
 

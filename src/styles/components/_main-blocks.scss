@@ -263,10 +263,20 @@
     @include transition(.25s);
   }
   .owl-nav button.owl-prev {
-    left: -72px;
+    @media (min-width: $breakepoint-xs) {
+      left: -10px;
+    }
+    @media (min-width: $breakepoint-xxl) {
+      left: -72px;
+    }
   }
   .owl-nav button.owl-next {
-    right: -72px;
+    @media (min-width: $breakepoint-xs) {
+      right: -10px;
+    }
+    @media (min-width: $breakepoint-xxl) {
+      right: -72px;
+    }
   }
   .owl-nav button.disabled{
     opacity:0;

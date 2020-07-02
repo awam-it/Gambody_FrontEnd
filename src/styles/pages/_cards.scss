@@ -1,0 +1,38 @@
+.cards-catalog{
+  @include row-flex();
+  @include xs(justify-content, center);
+  @include md(justify-content, left);
+  width: 100%;
+  @media (min-width: $breakepoint-xs) {
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .card{
+    @include col();
+    @include size-xs(12);
+    @include size-md(4);
+    @include size-lg(3);
+    @include size-xl(2);
+    margin: $padding-side-xs;
+  }
+}
+.cards-featured{
+  @extend .cards-catalog;
+  .card{
+    @include size-lg(4);
+    @include size-xl(4);
+  }
+}
+
+.catalog-line{
+  padding: 20px 0px;
+  &:first-child{
+    padding-top:40px;
+  }
+  .row{
+    .main-title{
+      padding:0px 8px;
+    }
+  }
+}
+

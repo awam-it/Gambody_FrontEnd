@@ -1,0 +1,208 @@
+.footer{
+  background-color: #616161;
+  &__top{
+    @extend %column32px-padding;
+    @media (max-width: $breakepoint-md) {
+      .col-lg-2{
+      margin-bottom:32px;
+      }
+    }
+  }
+  &__center{
+    @extend %column32px-padding;
+    background-color: #424242
+  }
+  &__menu-title{
+    @include font-property(normal);
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: normal;
+    color: $white;
+    display: flex;
+    margin-bottom:8px;
+  }
+  &__top-menu {
+    li {
+      a{
+        @include font-property(normal);
+        font-size: 11px;
+        line-height: 1.45;
+        letter-spacing: normal;
+        color: $white;
+        margin-bottom:8px;
+        display: flex;
+        max-width: 170px;
+        &:hover{
+          text-decoration: underline;
+        }
+      }
+    }
+
+  }
+  &__top-line{
+    @extend %column24px-padding;
+    margin-top:32px;
+    border-top: solid 1px #bdbdbd;
+  }
+
+  &__quicklinks{
+
+  }
+  &__quicklinks-title{
+    @include font-property(normal);
+    font-size: 11px;
+    line-height: 1.45;
+    letter-spacing: normal;
+    color: $white;
+    @extend %flex-align;
+    &:before {
+      @extend %before;
+      @extend %before-small;
+      background-image: url(../../img/svg/menuflat_top.svg);
+      margin-right:8px;
+    }
+  }
+
+
+  &__center{
+    .col-lg-4{
+      @extend %flex-align;
+      flex-direction: column;
+      justify-content: flex-start;
+      border-radius: 2px;
+    }
+  }
+  &__center-content{
+    @extend %flex-align;
+    flex-direction: column;
+  }
+  &__center-content-trustpilot-link img{
+    border: solid 1px #06b67a;
+    max-width: 163px;
+    height: inherit;
+    &:hover{
+      opacity:0.7;
+    }
+  }
+  &__center-title{
+    @media (max-width: $breakepoint-md) {
+      margin-top:32px;
+    }
+  }
+  &__center-title, &__center-content-trustpilot {
+    @include font-property(normal);
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.71;
+    letter-spacing: normal;
+    color: $white;
+    margin-bottom:24px;
+
+  }
+  &__center-content-trustpilot{
+    @extend %flex-align;
+    margin-bottom: 8px;
+    line-height: 32px;
+  }
+  &__center-content-trustpilot{
+    img{
+      margin-left:8px;
+      max-width:88px;
+      margin-top: -4px;
+      height: inherit;
+    }
+  }
+  &__social-links, &__payment-links{
+    @extend %flex-align;
+  }
+  &__soc, &__payment{
+    @extend %inline12px-padding;
+    &:hover{
+      opacity:0.7;
+    }
+  }
+  &__models{
+    @extend %flex-align;
+    flex-direction: column;
+  }
+  &__models-count{
+    @extend %flex-align;
+    font-size: 32px;
+    font-weight: 300;
+    line-height: 1;
+    letter-spacing: normal;
+    text-align: center;
+    color: $white;
+  }
+  &__models-description{
+    @extend %column8px-margin;
+    @include font-property(normal);
+    border-top: solid 1px #bdbdbd;
+    font-size: 11px;
+    line-height: 1.45;
+    letter-spacing: normal;
+    color: $white;
+    padding:8px 6px;
+  }
+  &__payments{
+
+  }
+  &__payment-links{
+    @extend %flex-align;
+    @extend %column16px-padding;
+    width: 100%;
+  }
+  &__bottom{
+    @extend %column24px-padding;
+    background-color: #424242;
+    width: 100%;
+    @extend %flex-align;
+    justify-content: space-between;
+    a, .row [class*=col-]{
+      @include font-property(normal);
+      font-size: 11px;
+      line-height: 1.45;
+      letter-spacing: normal;
+      color: $white;
+      @extend %flex-align;
+    }
+  }
+  &__bottom-links{
+    @extend %flex-align;
+    text-align: center;
+    list-style-type: none;
+    li{
+      @extend %flex-align;
+      &:before{
+        @extend %before;
+        @extend %before-small;
+        content:"•";
+        font-size: 11px;
+        line-height: 1.45;
+        color: $white;
+        width: 10px;
+      }
+      @media (max-width: $breakepoint-md) {
+        padding:12px 0px;
+      }
+    }
+    li{
+      &:first-child{
+          &:before{
+            display: none;
+        }
+      }
+      a{
+        &:hover{
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+  ul{
+    padding-left: 0px;
+  }
+
+
+}

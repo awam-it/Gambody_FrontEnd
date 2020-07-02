@@ -1,0 +1,198 @@
+
+.masonry-root {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  img{
+    height: auto;
+    min-width: auto !important;
+  }
+  @media (min-width: $breakepoint-xs) {
+    flex-wrap: nowrap;
+  }
+  @media (min-width: $breakepoint-sm) {
+    flex-wrap: nowrap;
+  }
+  @media (min-width: $breakepoint-md) {
+    flex-wrap: wrap;
+  }
+
+  .masonry-cell {
+    flex: 1;
+    margin: 8px;
+    @media (min-width: $breakepoint-xs) {
+      width: 100%;
+      margin: 0px;
+      margin-bottom: 16px;
+    }
+    @media (min-width: $breakepoint-sm) {
+      width: 100%;
+    }
+    @media (min-width: $breakepoint-md) {
+      width:auto;
+      margin: 8px;
+    }
+    .masonry-item {
+      background: transparent;
+      color: white;
+      text-align: center;
+      font-family: system-ui;
+      font-weight: 900;
+      font-size: 0;
+      min-height:220px;
+      .card__img {
+        max-width: 220px;
+        min-height: 220px;
+        @media (min-width: $breakepoint-xs) {
+          width: 100%;
+          max-width: 100%;
+          max-width: 242px;
+        }
+        @media (min-width: $breakepoint-sm) {
+          width: 100%;
+          max-width: 100%;
+          max-width: 242px;
+        }
+        @media (min-width: $breakepoint-lg) {
+          max-width: 342px;
+        }
+        @media (min-width: $breakepoint-xl) {
+          max-width: 220px;
+        }
+        >img{
+          @media (min-width: $breakepoint-xs) {
+            min-width: 100% !important;
+          }
+          @media (min-width: $breakepoint-sm) {
+            min-width: 100% !important;
+          }
+          @media (min-width: $breakepoint-md) {
+            min-width: 220px;
+            width: 220px;
+          }
+          @media (min-width: $breakepoint-lg) {
+            min-width: 242px;
+          }
+          @media (min-width: $breakepoint-xl) {
+            min-width: 100%;
+          }
+        }
+
+      }
+
+
+
+    }
+  }
+  @for $i from 1 through 512 {
+    .masonry-cell:nth-child(#{$i}) {
+      .masonry-item {
+        /*$h: (random(428) + 64) + px;
+        height: $h;
+        line-height: $h;*/
+      }
+    }
+  }
+}
+.masonry-block {
+  position: relative;
+  width: 100%;
+  &__show-more{
+    justify-content: center;
+    max-width: 456px;
+    margin: 0 auto;
+    margin-top:32px;
+    @media (max-width: $breakepoint-md) {
+      max-width: 242px;
+    }
+  }
+}
+.card{
+  &__overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 8px;
+    @extend %flex-align;
+    justify-content: space-between;
+  }
+  &__overlay-type{
+    @extend %card_hover_btn_mini;
+    @extend %card_hover_btn_mid;
+    border-radius: 2px;
+    background-color: $white;
+    &:before{
+      @extend %before;
+      @extend %before-small;
+      background-image: url(../../img/svg/masonry-product-type.svg);
+      background-size: cover;
+    }
+  }
+  &__overlay-comments{
+    @extend %card_hover_btn_mini;
+    @extend %card_hover_btn_mid;
+    padding: 0px 8px;
+    border-radius: 2px;
+    background-color: $white;
+    &:before{
+      @extend %before;
+      @extend %before-small;
+      background-image: url(../../img/svg/masonry-comments.svg);
+      background-size: cover;
+    }
+    span{
+      @include font-property(normal);
+      font-size: 11px;
+      line-height: 1.45;
+      letter-spacing: normal;
+      color: #666666;
+      margin-left:8px;
+    }
+  }
+
+
+
+  &_masonry{
+    border: 0;
+    .card__hover-block{
+      text-align: left;
+      justify-content: flex-start;
+    }
+    .card__hover-item img {
+      max-width: 16px;
+    }
+    .card__hover-item {
+      margin-top: 8px;
+      align-items: flex-start;
+    }
+    @media (max-width: $breakepoint-md) {
+      width: 100%;
+    }
+    @media (max-width: $breakepoint-md) {
+    .card__hover-mobile-label {
+      top: initial;
+      left: 50%;
+      bottom: 0;
+      margin-left: -16px;
+      margin-top: 0;
+    }
+    }
+
+    .card__hover-mobile:checked ~ .card__hover-mobile-label {
+      right: inherit;
+      left: 50%;
+    }
+    .card__hover-mobile-label:before {
+      transform: rotate(270deg);
+    }
+    .card__hover-mobile:checked ~ .card__hover-mobile-label:before {
+    }
+
+  }
+
+
+
+
+}
+

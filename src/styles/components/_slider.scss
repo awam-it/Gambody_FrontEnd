@@ -1,3 +1,25 @@
+
+/* slider.scss */
+.main-slider{
+  margin-bottom: -12%;
+  min-height: 300px;
+  @media (max-width: $breakepoint-md){
+    margin-bottom: 0%;
+    min-height: auto;
+  }
+}
+
+.slider{
+  position: relative;
+  font-size: 16px;
+  z-index: 0;
+}
+.slider.owl-theme .owl-dots{
+  bottom: 33%;
+  @media (max-width: $breakepoint-md){
+    bottom: 16px;
+  }
+}
 .owl-theme .owl-dots, .owl-theme .owl-nav {
   text-align: center;
   -webkit-tap-highlight-color: transparent;
@@ -29,7 +51,7 @@
   display: inline-flex;
   zoom: 1;
 }
-.owl-carousel button.owl-dot {
+ .owl-carousel button.owl-dot {
   background: 0 0;
   color: inherit;
   border: none;
