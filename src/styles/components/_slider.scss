@@ -3,9 +3,14 @@
 .main-slider{
   margin-bottom: -12%;
   min-height: 300px;
+  position: relative;
   @media (max-width: $breakepoint-md){
     margin-bottom: 0%;
     min-height: auto;
+  }
+  img{
+    display: block;
+    width: 100%;
   }
 }
 
@@ -87,3 +92,336 @@
   /*bottom: 0%;*/
   margin-top: 5px;
 }
+
+
+/* tiny slide */
+
+
+
+.tns-nav{
+  @extend %flex-align;
+  width: 100%;
+  margin-top: 16px;
+  position: relative;
+  button {
+    display: inline-flex;
+    zoom: 1;
+    background: 0 0;
+    color: inherit;
+    border: none;
+    padding: 0 !important;
+    font: inherit;
+    &.tns-nav-active{
+      &:before{
+        border-radius: 2px;
+        background-color: #d50000;
+        border: solid 1px #d50000;
+      }
+    }
+    &:before{
+      @extend %before;
+      @extend %before-mid;
+        margin: 4px;
+        background: transparent;
+        display: block;
+        transition: opacity .2s ease;
+        width: 8px;
+        height: 16px;
+        border-radius: 2px;
+        border: solid 1px #bdbdbd;
+    }
+    &:hover{
+      @extend .tns-nav-active;
+    }
+  }
+}
+
+/*   main-discover   */
+
+.main-discover{
+  @extend %column32px-padding;
+  background: $white-bg;
+  &__slider-wrap{
+    padding: 0px 22px 8px 22px;
+    position: relative;
+  }
+  &__item{
+    img {
+      width: auto !important;
+      margin: 0 auto;
+      max-width: 134px;
+      max-height: 134px;
+    }
+  }
+  &__title{
+    @include font-property(normal);
+    font-size: 14px;
+    line-height: 1.71;
+    letter-spacing: normal;
+    text-align: center;
+    color: $black;
+  }
+  &__img {
+    width: 100%;
+    text-align: center;
+    padding: 4px;
+    display: flex;
+    align-items: center;
+    min-height: 182px;
+  }
+  .main-title{
+    margin-bottom: 0px;
+  }
+  @media (max-width: $breakepoint-md) {
+    .main-title{
+      justify-content: center;
+    }
+  }
+
+}
+
+.main-slider{
+  .tns-controls button {
+    color: #FFF;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 4px;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 44px 16px !important;
+    margin-top: -61px;
+    &:before{
+      width: 24px;
+      height: 24px;
+    }
+    &:first-child {
+      left: 0;
+    }
+    &:last-child {
+      right: 0px;
+    }
+  }
+  .tns-nav {
+    position: absolute;
+    width: 100%;
+    margin-top: 5px;
+    @media (min-width: $breakepoint-xs) {
+      bottom: 16px;
+    }
+    @media (min-width: $breakepoint-md) {
+      bottom: 33%;
+    }
+
+  }
+}
+
+
+.slider-cards{
+  margin:0 !important;
+  position: relative;
+  .card{
+    @media (min-width: $breakepoint-xs) {
+      width: 100%;
+    }
+    @media (min-width: $breakepoint-lg) {
+      width: auto;
+    }
+  }
+  .tns-controls {
+    top: 43%;
+  }
+  .tns-controls button {
+    color: #FFF;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 4px;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 44px 16px !important;
+    margin-top: -61px;
+    &:before{
+      width: 24px;
+      height: 24px;
+    }
+  }
+  .tns-controls button[data-controls="prev"] {
+    @media (min-width: $breakepoint-xs) {
+      left: -10px;
+    }
+    @media (min-width: $breakepoint-xxl) {
+      left: -72px;
+    }
+  }
+  .tns-controls button[data-controls="next"] {
+    @media (min-width: $breakepoint-xs) {
+      right: -10px;
+    }
+    @media (min-width: $breakepoint-xxl) {
+      right: -72px;
+    }
+  }
+  .tns-controls button[disabled]{
+    opacity:0;
+  }
+  /******************/
+
+  .owl-nav {
+    top: 50%;
+    top: 43%;
+  }
+  .owl-nav button {
+    position: absolute;
+    @include transition(.25s);
+  }
+  .owl-nav button.owl-prev {
+    @media (min-width: $breakepoint-xs) {
+      left: -10px;
+    }
+    @media (min-width: $breakepoint-xxl) {
+      left: -72px;
+    }
+  }
+  .owl-nav button.owl-next {
+    @media (min-width: $breakepoint-xs) {
+      right: -10px;
+    }
+    @media (min-width: $breakepoint-xxl) {
+      right: -72px;
+    }
+  }
+  .owl-nav button.disabled{
+    opacity:0;
+  }
+  .owl-dots{
+    margin-top:16px;
+    position: relative;
+  }
+}
+
+
+.tns-controls button{
+  font-size: 0px !important;
+  padding: 0;
+  background: transparent;
+  margin: 0;
+  border: 0px;
+  position: absolute;
+  top: 50%;
+  z-index: 5;
+  border-radius: 2px;
+  padding: 8px;
+  background-color: rgba(0, 0, 0, 0.5);
+  margin-top: -32px;
+  &:before{
+    @extend %before;
+    @extend %before-small;
+    background-size: cover;
+  }
+  &:first-child{
+    left: 8px;
+    &:before{
+      background-image: url(../../img/svg/owl-prev.svg);
+    }
+  }
+  &:last-child{
+    right: 8px;
+    &:before{
+      background-image: url(../../img/svg/owl-next.svg);
+    }
+  }
+}
+
+
+
+.slider-style-black {
+  .tns-controls {
+   button{
+     background-color: transparent;
+     padding: 0 !important;
+   }
+  button[data-controls="prev"] {
+    margin-left: 0px;
+    left: 0;
+    @media (max-width: $breakepoint-md) {
+      margin-left: -20px
+    }
+    &:before {
+      background-image: url(../../img/svg/owl-prev-black.svg);
+      width: 24px;
+      height: 24px;
+    }
+  }
+
+  button[data-controls="next"] {
+    margin-right: 0px;
+    right: 0;
+    @media (max-width: $breakepoint-md) {
+      margin-right: -20px
+    }
+
+    &:before {
+      background-image: url(../../img/svg/owl-next-black.svg);
+      width: 24px;
+      height: 24px;
+    }
+  }
+}
+}
+
+/******************************/
+
+
+
+
+.owl-style-black{
+  .owl-prev {
+    left: 0;
+  }
+  .owl-next {
+    right: 0;
+  }
+  .owl-nav {
+    top: 50%;
+    margin-top: -12px;
+  }
+  .owl-nav button{
+    /*position: absolute;*/
+  }
+  .owl-nav button.owl-prev{
+    /*left:-34px;*/
+    margin-left: -34px;
+    @media (max-width: $breakepoint-md) {
+      margin-left: -20px
+    }
+  }
+  .owl-nav button.owl-next{
+    /*right:-34px;*/
+    margin-right: -34px;
+    @media (max-width: $breakepoint-md) {
+      margin-right: -20px
+    }
+  }
+  .owl-prev:before {
+    background-image: url(../../img/svg/owl-prev-black.svg);
+  }
+  .owl-next:before {
+    background-image: url(../../img/svg/owl-next-black.svg);
+  }
+  .owl-nav button[class*=owl-] {
+    background-color: transparent;
+    padding: 0 !important;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

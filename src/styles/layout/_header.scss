@@ -1,7 +1,7 @@
 
 /* header.scss */
 
-@import "nav-new";
+@import "header-navigation";
 
 .header{
   .main-header__logo{
@@ -342,7 +342,6 @@
 
 /*** mainheader.scss !!! ***/
 
-@import "navigation";
 
 .main-header{
   justify-content: space-between;

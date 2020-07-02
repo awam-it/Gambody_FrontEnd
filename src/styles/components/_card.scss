@@ -703,37 +703,6 @@
 
     }
 
-    .tns-controls button{
-      font-size: 0px !important;
-      padding: 0;
-      background: transparent;
-      margin: 0;
-      border: 0px;
-      position: absolute;
-      top: 50%;
-      z-index: 5;
-      border-radius: 2px;
-      padding: 8px;
-      background-color: rgba(0, 0, 0, 0.5);
-      margin-top: -32px;
-      &:before{
-        @extend %before;
-        @extend %before-small;
-        background-size: cover;
-      }
-      &:first-child{
-        left: 8px;
-        &:before{
-          background-image: url(../../img/svg/owl-prev.svg);
-        }
-      }
-      &:last-child{
-        right: 8px;
-        &:before{
-          background-image: url(../../img/svg/owl-next.svg);
-        }
-      }
-    }
   }
 
   &__controls{
@@ -876,6 +845,10 @@
 
 
 }
+
+
+
+
 
 
 
