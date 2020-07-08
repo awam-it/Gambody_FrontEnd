@@ -1,0 +1,1814 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta charset="UTF-8">
+    <link rel="icon" href="img/svg/favicon.svg" sizes="128x128">
+    <title>GamBody Search</title>
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+@@include("../blocks/modules/header/header.html")
+    
+<section class="catalog-page">
+    <div class="container">
+        <div class="row">
+            <aside class="sidebar">
+                <input id="menu__sidebar" class="mobile-sidebar" type="checkbox">
+                <div class="sidebar__container">
+                <label class="menu__btn menu__box-close mobile-sidebar" for="menu__sidebar">
+                    <span></span>
+                </label>
+                <!-- sidebar__block -->
+                <div class="sidebar__block">
+                    <div class="sidebar-title">Popular</div>
+                    <div class="sidebar__block-content">
+                        <ul class="checkbox-style">
+                            <li class="checkbox-style__item">
+                                <input class="checkbox-style__input" id="Hottest" type="checkbox" value="Hottest">
+                                <label for="Hottest"><div class="label-style label-hot"></div>Hottest</label>
+                                <div class="checkbox-style__count">(100)</div>
+                            </li>
+                            <li class="checkbox-style__item">
+                                <input class="checkbox-style__input" id="New" type="checkbox" value="New">
+                                <label for="New"><div class="label-style label-new">NEW</div>New</label>
+                                <div class="checkbox-style__count">(100)</div>
+                            </li>
+                            <li class="checkbox-style__item">
+                                <input class="checkbox-style__input" id="Popular" type="checkbox" value="Popular">
+                                <label for="Popular"><div class="label-style label-favorites"></div>Popular</label>
+                                <div class="checkbox-style__count">(100)</div>
+                            </li>
+                            <li class="checkbox-style__item">
+                                <input class="checkbox-style__input" id="Sale" type="checkbox" value="Sale">
+                                <label for="Sale"><div class="label-style label-sale">-70%</div>Sale</label>
+                                <div class="checkbox-style__count">(100)</div>
+                            </li>
+                            <li class="checkbox-style__item">
+                                <input class="checkbox-style__input" id="Diorama" type="checkbox" value="Diorama part">
+                                <label for="Diorama"><div class="label-style label-diorama"></div>Diorama part</label>
+                                <div class="checkbox-style__count">(100)</div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- sidebar__block -->
+                <div class="sidebar__block">
+                    <div class="sidebar-title">Customer review</div>
+                    <ul class="checkbox-style">
+                      <li class="checkbox-style__item">
+                            <input class="checkbox-style__input" id="star4" type="checkbox" value="star4">
+                            <label for="star4">
+                                <div class="checkbox-style__rating">
+                                    <span class="star star-active"></span><span class="star star-active"></span><span class="star star-active"></span><span class="star star-active"></span><span class="star"></span>
+                                </div>
+                                & Up
+                            </label>
+                            <div class="checkbox-style__count">(100)</div>
+                        </li>
+                        <li class="checkbox-style__item">
+                            <input class="checkbox-style__input" id="star3" type="checkbox" value="star3">
+                            <label for="star3">
+                                <div class="checkbox-style__rating">
+                                    <span class="star star-active"></span><span class="star star-active"></span><span class="star star-active"></span><span class="star"></span><span class="star"></span>
+                                </div>
+                                & Up
+                            </label>
+                            <div class="checkbox-style__count">(100)</div>
+                        </li>
+                        <li class="checkbox-style__item">
+                            <input class="checkbox-style__input" id="star2" type="checkbox" value="star2">
+                            <label for="star2">
+                                <div class="checkbox-style__rating">
+                                    <span class="star star-active"></span><span class="star star-active"></span><span class="star"></span><span class="star"></span><span class="star"></span>
+                                </div>
+                                & Up
+                            </label>
+                            <div class="checkbox-style__count">(100)</div>
+                        </li>
+                        <li class="checkbox-style__item">
+                            <input class="checkbox-style__input" id="star1" type="checkbox" value="star1">
+                            <label for="star1">
+                                <div class="checkbox-style__rating">
+                                    <span class="star star-active"></span><span class="star"></span><span class="star"></span><span class="star"></span><span class="star"></span>
+                                </div>
+                                & Up
+                            </label>
+                            <div class="checkbox-style__count">(100)</div>
+                        </li>
+                    </ul>
+
+                </div>
+
+                <!-- sidebar__block -->
+                <div class="sidebar__block">
+                    <div class="sidebar-title">Category</div>
+                    <form class="filter-search">
+                        <input type="text" placeholder="Search">
+                        <button class="filter-search__clear"></button>
+                    </form>
+                    <ul class="checkbox-style sidebar__block__colapse">
+                        <li class="checkbox-style__item">
+                            <input class="checkbox-style__input" id="Mechwarrior" type="checkbox" value="Mechwarrior">
+                            <label for="Mechwarrior">Mechwarrior </label>
+                            <div class="checkbox-style__count">(100)</div>
+                        </li>
+                        <li class="checkbox-style__item">
+                            <input class="checkbox-style__input" id="Superheroes" type="checkbox" value="Superheroes">
+                            <label for="Superheroes">Superheroes </label>
+                            <div class="checkbox-style__count">(100)</div>
+                        </li>
+                        <li class="checkbox-style__item">
+                            <input class="checkbox-style__input" id="Villains" type="checkbox" value="Villains">
+                            <label for="Villains">Villains </label>
+                            <div class="checkbox-style__count">(100)</div>
+                        </li>
+                        <li class="checkbox-style__item">
+                            <input class="checkbox-style__input" id="Godzilla" type="checkbox" value="Godzilla">
+                            <label for="Godzilla">Godzilla </label>
+                            <div class="checkbox-style__count">(100)</div>
+                        </li>
+                        <li class="checkbox-style__item">
+                            <input class="checkbox-style__input" id="Horrors" type="checkbox" value="Horrors">
+                            <label for="Horrors">Horrors </label>
+                            <div class="checkbox-style__count">(100)</div>
+                        </li>
+                        <li class="checkbox-style__item">
+                            <input class="checkbox-style__input" id="Jaegers" type="checkbox" value="Jaegers">
+                            <label for="Jaegers">Jaegers </label>
+                            <div class="checkbox-style__count">(100)</div>
+                        </li>
+                        <li class="checkbox-style__item">
+                            <input class="checkbox-style__input" id="Robotech" type="checkbox" value="Robotech">
+                            <label for="Robotech">Robotech </label>
+                            <div class="checkbox-style__count">(100)</div>
+                        </li>
+                        <li class="checkbox-style__item">
+                            <input class="checkbox-style__input" id="Warhammer " type="checkbox" value="Warhammer ">
+                            <label for="Warhammer ">Warhammer  </label>
+                            <div class="checkbox-style__count">(100)</div>
+                        </li>
+                        <li class="checkbox-style__item">
+                            <input class="checkbox-style__input" id="Battle-tech " type="checkbox" value="Battle tech ">
+                            <label for="Battle-tech ">Battle tech </label>
+                            <div class="checkbox-style__count">(100)</div>
+                        </li>
+                    </ul>
+                    <span class="sidebar__block__show-more colapse-more">Show more</span>
+                </div>
+
+                <!-- sidebar__block -->
+                <div class="sidebar__block">
+                    <div class="sidebar-title">Type</div>
+                    <ul class="checkbox-style sidebar__block__colapse">
+                        <li class="checkbox-style__item">
+                            <input class="checkbox-style__input" id="Miniature" type="checkbox" value="Miniature">
+                            <label for="Miniature">Miniature </label>
+                            <div class="checkbox-style__count">(100)</div>
+                        </li>
+                        <li class="checkbox-style__item">
+                            <input class="checkbox-style__input" id="Tabletop" type="checkbox" value="Tabletop">
+                            <label for="Tabletop">Tabletop </label>
+                            <div class="checkbox-style__count">(100)</div>
+                        </li>
+                        <li class="checkbox-style__item">
+                            <input class="checkbox-style__input" id="Figurine" type="checkbox" value="Figurine">
+                            <label for="Figurine">Figurine </label>
+                            <div class="checkbox-style__count">(100)</div>
+                        </li>
+                        <li class="checkbox-style__item">
+                            <input class="checkbox-style__input" id="Diorama" type="checkbox" value="Diorama">
+                            <label for="Diorama">Diorama </label>
+                            <div class="checkbox-style__count">(100)</div>
+                        </li>
+                        <li class="checkbox-style__item">
+                            <input class="checkbox-style__input" id="Weapon pack" type="checkbox" value="Weapon pack">
+                            <label for="Weapon pack">Weapon pack </label>
+                            <div class="checkbox-style__count">(100)</div>
+                        </li>
+                        <li class="checkbox-style__item">
+                            <input class="checkbox-style__input" id="Updated" type="checkbox" value="Updated">
+                            <label for="Updated">Updated </label>
+                            <div class="checkbox-style__count">(100)</div>
+                        </li>
+                        <li class="checkbox-style__item">
+                            <input class="checkbox-style__input" id="Bust" type="checkbox" value="Bust">
+                            <label for="Bust">Bust </label>
+                            <div class="checkbox-style__count">(100)</div>
+                        </li>
+                        <li class="checkbox-style__item">
+                            <input class="checkbox-style__input" id="Static" type="checkbox" value="Static ">
+                            <label for="Static">Static  </label>
+                            <div class="checkbox-style__count">(100)</div>
+                        </li>
+                        <li class="checkbox-style__item">
+                            <input class="checkbox-style__input" id="Assembly" type="checkbox" value="Assembly ">
+                            <label for="Assembly">Assembly </label>
+                            <div class="checkbox-style__count">(100)</div>
+                        </li>
+                        <li class="checkbox-style__item">
+                            <input class="checkbox-style__input" id="Active" type="checkbox" value="Active ">
+                            <label for="Active">Active </label>
+                            <div class="checkbox-style__count">(100)</div>
+                        </li>
+
+                    </ul>
+                    <span class="sidebar__block__show-more colapse-more">Show more</span>
+                </div>
+                <!-- sidebar__block -->
+                <div class="sidebar__block">
+                    <div class="sidebar-title">Technology <div class="filter-clear">Clear <span class="close"></span></div></div>
+                    <ul class="checkbox-style sidebar__block__colapse">
+                        <li class="checkbox-style__item">
+                            <input class="checkbox-style__input" id="FDM/FFF" type="checkbox" value="FDM/FFF" checked>
+                            <label for="FDM/FFF">FDM/FFF </label>
+                            <div class="checkbox-style__count">(100)</div>
+                        </li>
+                        <li class="checkbox-style__item">
+                            <input class="checkbox-style__input" id="SLA/DLP" type="checkbox" value="SLA/DLP" checked>
+                            <label for="SLA/DLP">SLA/DLP </label>
+                            <div class="checkbox-style__count">(100)</div>
+                        </li>
+                        <li class="checkbox-style__item">
+                            <input class="checkbox-style__input" id="SLS" type="checkbox" value="SLS">
+                            <label for="SLS">SLS </label>
+                            <div class="checkbox-style__count">(100)</div>
+                        </li>
+                    </ul>
+                </div>
+                <!-- sidebar__block -->
+                <div class="sidebar__block">
+                    <div class="sidebar-title">Complexity</div>
+                    <ul class="checkbox-style sidebar__block__colapse">
+                        <li class="checkbox-style__item">
+                            <input class="checkbox-style__input" id="Begginer" type="checkbox" value="Begginer">
+                            <label for="Begginer">Begginer </label>
+                            <div class="checkbox-style__count">(100)</div>
+                        </li>
+                        <li class="checkbox-style__item">
+                            <input class="checkbox-style__input" id="Normal" type="checkbox" value="Normal">
+                            <label for="Normal">Normal </label>
+                            <div class="checkbox-style__count">(100)</div>
+                        </li>
+                        <li class="checkbox-style__item">
+                            <input class="checkbox-style__input" id="Expert" type="checkbox" value="Expert">
+                            <label for="Expert">Expert </label>
+                            <div class="checkbox-style__count">(100)</div>
+                        </li>
+                    </ul>
+                </div>
+                <!-- sidebar__block -->
+                <div class="sidebar__block">
+                    <div class="sidebar-title">Model Size</div>
+                    <ul class="checkbox-style sidebar__block__colapse">
+                        <li class="checkbox-style__item">
+                            <input class="checkbox-style__input" id="Mini (1cm - 6cm)" type="checkbox" value="Mini (1cm - 6cm)">
+                            <label for="Mini (1cm - 6cm)">Mini (1cm - 6cm) </label>
+                            <div class="checkbox-style__count">(100)</div>
+                        </li>
+                        <li class="checkbox-style__item">
+                            <input class="checkbox-style__input" id="Small (7cm - 14 cm)" type="checkbox" value="Small (7cm - 14 cm)">
+                            <label for="Small (7cm - 14 cm)">Small (7cm - 14 cm) </label>
+                            <div class="checkbox-style__count">(100)</div>
+                        </li>
+                        <li class="checkbox-style__item">
+                            <input class="checkbox-style__input" id="Average (15cm - 30cm)" type="checkbox" value="Average (15cm - 30cm)">
+                            <label for="Average (15cm - 30cm)">Average (15cm - 30cm) </label>
+                            <div class="checkbox-style__count">(100)</div>
+                        </li>
+                        <li class="checkbox-style__item">
+                            <input class="checkbox-style__input" id="Big (30cm - 49cm)" type="checkbox" value="Big (30cm - 49cm)">
+                            <label for="Big (30cm - 49cm)">Big (30cm - 49cm) </label>
+                            <div class="checkbox-style__count">(100)</div>
+                        </li>
+                        <li class="checkbox-style__item">
+                            <input class="checkbox-style__input" id="Huge (50cm - 99cm)" type="checkbox" value="Huge (50cm - 99cm)">
+                            <label for="Huge (50cm - 99cm)">Huge (50cm - 99cm) </label>
+                            <div class="checkbox-style__count">(100)</div>
+                        </li>
+                        <li class="checkbox-style__item">
+                            <input class="checkbox-style__input" id="Giant (1m+)" type="checkbox" value="Giant (1m+)">
+                            <label for="Giant (1m+)">Giant (1m+) </label>
+                            <div class="checkbox-style__count">(100)</div>
+                        </li>
+                    </ul>
+                    <span class="sidebar__block__show-more colapse-more">Show more</span>
+                </div>
+                <!-- sidebar__block -->
+                <div class="sidebar__block">
+                    <div class="sidebar-title">Price</div>
+                    <ul class="checkbox-style sidebar__block__colapse-full">
+                        <li class="checkbox-style__item">
+                            <input class="checkbox-style__input" id="$1 - $5" type="checkbox" value="$1 - $5">
+                            <label for="$1 - $5">$1 - $5"</label>
+                            <div class="checkbox-style__count">(100)</div>
+                        </li>
+                        <li class="checkbox-style__item">
+                            <input class="checkbox-style__input" id="$6 - $10" type="checkbox" value="$6 - $10">
+                            <label for="$6 - $10">$6 - $10 </label>
+                            <div class="checkbox-style__count">(100)</div>
+                        </li>
+                        <li class="checkbox-style__item">
+                            <input class="checkbox-style__input" id="$11 - $20" type="checkbox" value="$11 - $20">
+                            <label for="$11 - $20">$11 - $20 </label>
+                            <div class="checkbox-style__count">(100)</div>
+                        </li>
+                        <li class="checkbox-style__item">
+                            <input class="checkbox-style__input" id="$21 - $30" type="checkbox" value="$21 - $30">
+                            <label for="$21 - $30">$21 - $30 </label>
+                            <div class="checkbox-style__count">(100)</div>
+                        </li>
+                        <li class="checkbox-style__item">
+                            <input class="checkbox-style__input" id="$31 - $40" type="checkbox" value="$31 - $40">
+                            <label for="$31 - $40">$31 - $40 </label>
+                            <div class="checkbox-style__count">(100)</div>
+                        </li>
+                        <li class="checkbox-style__item">
+                            <input class="checkbox-style__input" id="$41+" type="checkbox" value="$41+">
+                            <label for="$41+">$41+ </label>
+                            <div class="checkbox-style__count">(100)</div>
+                        </li>
+                    </ul>
+                    <span class="sidebar__block__show-more colapse-full">Show more</span>
+                </div>
+                <!-- sidebar__block -->
+                <div class="sidebar__block">
+                    <div class="sidebar-title">Scale</div>
+                    <ul class="checkbox-style sidebar__block__colapse-full">
+                        <li class="checkbox-style__item">
+                            <input class="checkbox-style__input" id="1:1" type="checkbox" value="1:1">
+                            <label for="1:1">1:1</label>
+                            <div class="checkbox-style__count">(100)</div>
+                        </li>
+                        <li class="checkbox-style__item">
+                            <input class="checkbox-style__input" id="1:8" type="checkbox" value="1:8">
+                            <label for="1:8">1:8</label>
+                            <div class="checkbox-style__count">(100)</div>
+                        </li>
+                        <li class="checkbox-style__item">
+                            <input class="checkbox-style__input" id="1:16" type="checkbox" value="1:16">
+                            <label for="1:16">1:16</label>
+                            <div class="checkbox-style__count">(100)</div>
+                        </li>
+                        <li class="checkbox-style__item">
+                            <input class="checkbox-style__input" id="1:32" type="checkbox" value="1:32">
+                            <label for="1:32">1:32</label>
+                            <div class="checkbox-style__count">(100)</div>
+                        </li>
+                        <li class="checkbox-style__item">
+                            <input class="checkbox-style__input" id="1:48" type="checkbox" value="1:48">
+                            <label for="1:48">1:48</label>
+                            <div class="checkbox-style__count">(100)</div>
+                        </li>
+                    </ul>
+                    <span class="sidebar__block__show-more colapse-full">Show more</span>
+                </div>
+                <!-- sidebar__block -->
+                <div class="sidebar__block">
+                    <div class="sidebar-title sidebar-title_left"><span class="license-icon"></span> License</div>
+                    <ul class="checkbox-style sidebar__block__colapse-full">
+                        <li class="checkbox-style__item">
+                            <input class="checkbox-style__input" id="Regular Permission for Personal Use" type="checkbox" value="Regular Permission for Personal Use">
+                            <label for="Regular Permission for Personal Use">Regular Permission for Personal Use </label>
+                            <div class="checkbox-style__count">(100)</div>
+                        </li>
+                        <li class="checkbox-style__item">
+                            <input class="checkbox-style__input" id="Extended Permission for Sole Proprietor" type="checkbox" value="Extended Permission for Sole Proprietor">
+                            <label for="Extended Permission for Sole Proprietor">Extended Permission for Sole Proprietor </label>
+                            <div class="checkbox-style__count">(100)</div>
+                        </li>
+                        <li class="checkbox-style__item">
+                            <input class="checkbox-style__input" id="Extended Permission for Small Business" type="checkbox" value="Extended Permission for Small Business">
+                            <label for="Extended Permission for Small Business">Extended Permission for Small Business </label>
+                            <div class="checkbox-style__count">(100)</div>
+                        </li>
+                    </ul>
+                    <span class="sidebar__block__show-more colapse-full">Show more</span>
+                </div>
+
+                <!-- sidebar__block -->
+                <div class="sidebar__block">
+                    <div class="sidebar-title sidebar-title_left">By artist</div>
+                    <form class="filter-search">
+                        <input type="text" placeholder="Search">
+                        <button class="filter-search__clear"></button>
+                    </form>
+                    <ul class="checkbox-style sidebar__block__colapse-full">
+                        <li class="checkbox-style__item">
+                            <input class="checkbox-style__input" id="Erika Mateo" type="checkbox" value="Erika Mateo">
+                            <label for="Erika Mateo">Erika Mateo </label>
+                            <div class="checkbox-style__count">(20)</div>
+                        </li>
+                        <li class="checkbox-style__item">
+                            <input class="checkbox-style__input" id="Oliver" type="checkbox" value="Oliver">
+                            <label for="Oliver">Oliver </label>
+                            <div class="checkbox-style__count">(10)</div>
+                        </li>
+                        <li class="checkbox-style__item">
+                            <input class="checkbox-style__input" id="Irene Sotelo" type="checkbox" value="Irene Sotelo">
+                            <label for="Irene Sotelo">Irene Sotelo</label>
+                            <div class="checkbox-style__count">(5)</div>
+                        </li>
+                    </ul>
+                    <span class="sidebar__block__show-more colapse-full">Show more</span>
+                </div>
+                    <label class="menu__full-bg-close" for="menu__toggle">
+                        <span></span>
+                    </label>
+
+
+                </div>
+            </aside>
+            <div class="catalog-page__container">
+                <div class="main-title">
+                    Robots
+                    <div class="main-title__items-count">250 items found</div>
+                </div>
+                <div class="search-checkbox">
+                    <div class="search-checkbox__title search-checkbox_active">Seach in marketplace</div>
+                    <label class="switch" for="switch">
+                        <input type="checkbox" id="switch" />
+                        <div class="switch-round"></div>
+                    </label>
+                    <div class="search-checkbox__title">Seach in marketplace</div>
+                </div>
+                <div class="search-tags">
+                    <div class="mini-title">
+                        You might be interested in:
+                    </div>
+                    <ul class="search-tags__list">
+                        <li class="search-tags_active">Mechwarrior <span>(24)</span></li>
+                        <li class="search-tags_active">Robotech <span>(75)</span></li>
+                        <li>Jaegers <span>(122)</span></li>
+                        <li>Robotech <span>(75)</span></li>
+                        <li>Trasformers <span>(75)</span></li>
+                        <li>Robotech <span>(75)</span></li>
+                        <li>Robotech <span>(75)</span></li>
+                        <li>Warhammer <span>(75)</span></li>
+                        <li>Robotanks <span>(75)</span></li>
+                        <li>Gundam <span>(75)</span></li>
+                        <li>Mech Warrior <span>(75)</span></li>
+                        <li>Battle tech <span>(75)</span></li>
+                    </ul>
+                </div>
+                <div class="catalog-sorting">
+                    <ul class="catalog-sorting__list">
+                        <li class="catalog-sorting_active">Best Match</li>
+                        <li>Best Sellers</li>
+                        <li>Newest</li>
+                        <li>Trendings</li>
+                        <li>Price: high to low</li>
+                        <li>Price: Low to hight</li>
+                    </ul>
+                </div>
+
+                <!-- catlaog -->
+
+                <div class="catalog-block">
+                    <div class="card">
+                        <div class="card__img">
+                            <div class="card__img-bg" style="background-image:  url('img/jpg/card-catalog1.jpg');"></div>
+                            <div class="labels">
+                                <div class="labels__list">
+                                    <div class="labels__new">NEW</div>
+                                    <div class="labels__hot"></div>
+                                    <div class="labels__favorites"></div>
+                                    <div class="labels__sale">-70%</div>
+                                    <div class="labels__diorama"></div>
+                                </div>
+                            </div>
+                            <!-- hover block -->
+                            <input id="card__hover-mobile1" class="card__hover-mobile" type="checkbox" />
+                            <label for="card__hover-mobile1" class="card__hover-mobile-label"></label>
+                            <div class="card__hover-block">
+                                <div class="card__hover-settings">
+                                    <input id="card__hover-settings-checkbox1" class="card__hover-settings-checkbox" type="checkbox" />
+                                    <div class="card__hover-settings-label">
+                                        <label for="card__hover-settings-checkbox1"></label>
+                                    </div>
+                                    <!-- hover block settings block -->
+                                    <div class="card__hover-settings-hidden-block">
+                                        <ul class="card__hover-settings-hidden-block-menu">
+                                            <li><a href="javascript:;">Edit Item</a></li>
+                                            <li><a href="javascript:;">Hide Item</a></li>
+                                            <li><a href="javascript:;">Delete</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="card__hover-comments">
+                                    <div class="card__hover-comments-label"><span>55</span></div>
+                                </div>
+                                <div class="card__hover-etc">
+                                    <div class="card__hover-share"></div>
+                                    <div class="card__hover-list"></div>
+                                    <div class="card__hover-favourites"></div>
+                                </div>
+                                <div class="card__hover-content">
+                                    <div class="card__hover-item">
+                                        <img src="img/svg/hover-size.svg" alt="File size">
+                                        <span>2799.35 MB</span>
+                                    </div>
+                                    <div class="card__hover-item">
+                                        <img src="img/svg/hover-resolution.svg" alt="File resolution">
+                                        <span>1:200, 1:400, 1:2000</span>
+                                    </div>
+                                    <div class="card__hover-item">
+                                        <img src="img/svg/hover-real-size.svg" alt="File real size">
+                                        <span>CM: 83 x 63 x 53<br>IN: 39 x 25 x 21</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- hover block -->
+                        </div>
+                        <div class="card__content">
+                            <div class="card__content-title">
+                                Viserion Ice Dragon 3D Printing Figurine
+                            </div>
+                            <div class="card__content-author">
+                                by <span>Oliver</span>
+                            </div>
+                            <div class="card__content-line">
+                                <div class="card__price">
+                                    $24.99
+                                </div>
+                                <div class="card__cart">
+                                    <a href="javascript:;" class="card__cart-link"></a>
+                                </div>
+                            </div>
+                        </div>
+                        <!------------------------------------------------
+                        <div class="card__hidden-slider">
+                            <div class="my-slider">
+                                <div class="slider-item">
+                                     <img src="https://placeimg.com/200/150/any" alt="">
+                                </div>
+                                <div class="slider-item">
+                                        <img src="https://placeimg.com/200/150/nature" alt="">
+                                </div>
+                                <div class="slider-item">
+                                    <img src="https://placeimg.com/200/150/any" alt="">
+                                </div>
+                                <div class="slider-item">
+                                    <img src="https://placeimg.com/200/150/nature" alt="">
+                                </div>
+                            </div>
+                        </div>
+                       ----------------------------------------------->
+
+                    </div>
+                    <div class="card">
+                        <div class="card__img">
+                            <div class="card__img-bg" style="background-image:  url('img/jpg/card-catalog2.jpg');"></div>
+                            <!-- hover block -->
+                            <input id="card__hover-mobile2" class="card__hover-mobile" type="checkbox" />
+                            <label for="card__hover-mobile2" class="card__hover-mobile-label"></label>
+                            <div class="card__hover-block">
+                                <div class="card__hover-settings">
+                                    <input id="card__hover-settings-checkbox2" class="card__hover-settings-checkbox" type="checkbox" />
+                                    <div class="card__hover-settings-label">
+                                        <label for="card__hover-settings-checkbox2"></label>
+                                    </div>
+                                    <!-- hover block settings block -->
+                                    <div class="card__hover-settings-hidden-block">
+                                        <ul class="card__hover-settings-hidden-block-menu">
+                                            <li><a href="javascript:;">Edit Item</a></li>
+                                            <li><a href="javascript:;">Hide Item</a></li>
+                                            <li><a href="javascript:;">Delete</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="card__hover-comments">
+                                    <div class="card__hover-comments-label"><span>55</span></div>
+                                </div>
+                                <div class="card__hover-etc">
+                                    <div class="card__hover-share"></div>
+                                    <div class="card__hover-list"></div>
+                                    <div class="card__hover-favourites"></div>
+                                </div>
+                                <div class="card__hover-content">
+                                    <div class="card__hover-item">
+                                        <img src="img/svg/hover-size.svg" alt="File size">
+                                        <span>2799.35 MB</span>
+                                    </div>
+                                    <div class="card__hover-item">
+                                        <img src="img/svg/hover-resolution.svg" alt="File resolution">
+                                        <span>1:200, 1:400, 1:2000</span>
+                                    </div>
+                                    <div class="card__hover-item">
+                                        <img src="img/svg/hover-real-size.svg" alt="File real size">
+                                        <span>CM: 83 x 63 x 53<br>IN: 39 x 25 x 21</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- hover block -->
+                        </div>
+                        <div class="card__content">
+                            <div class="card__content-title">
+                                Alien Queen 3D Printing Figurine in
+                            </div>
+                            <div class="card__content-author">
+                                by <span>Irene Sotelo</span>
+                            </div>
+                            <div class="card__content-line">
+                                <div class="card__price">
+                                    $24.99
+                                </div>
+                                <div class="card__cart">
+                                    <a href="javascript:;" class="card__cart-link"></a>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="card">
+                        <div class="card__img">
+                            <div class="card__img-bg" style="background-image:  url('img/jpg/card-catalog3.jpg');"></div>
+                            <div class="labels">
+                                <div class="labels__list">
+                                    <div class="labels__new">NEW</div>
+                                    <div class="labels__sale">-70%</div>
+                                </div>
+                            </div>
+                            <!-- hover block -->
+                            <input id="card__hover-mobile3" class="card__hover-mobile" type="checkbox" />
+                            <label for="card__hover-mobile3" class="card__hover-mobile-label"></label>
+                            <div class="card__hover-block">
+                                <div class="card__hover-settings">
+                                    <input id="card__hover-settings-checkbox3" class="card__hover-settings-checkbox" type="checkbox" />
+                                    <div class="card__hover-settings-label">
+                                        <label for="card__hover-settings-checkbox3"></label>
+                                    </div>
+                                    <!-- hover block settings block -->
+                                    <div class="card__hover-settings-hidden-block">
+                                        <ul class="card__hover-settings-hidden-block-menu">
+                                            <li><a href="javascript:;">Edit Item</a></li>
+                                            <li><a href="javascript:;">Hide Item</a></li>
+                                            <li><a href="javascript:;">Delete</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="card__hover-comments">
+                                    <div class="card__hover-comments-label"><span>55</span></div>
+                                </div>
+                                <div class="card__hover-etc">
+                                    <div class="card__hover-share"></div>
+                                    <div class="card__hover-list"></div>
+                                    <div class="card__hover-favourites"></div>
+                                </div>
+                                <div class="card__hover-content">
+                                    <div class="card__hover-item">
+                                        <img src="img/svg/hover-size.svg" alt="File size">
+                                        <span>2799.35 MB</span>
+                                    </div>
+                                    <div class="card__hover-item">
+                                        <img src="img/svg/hover-resolution.svg" alt="File resolution">
+                                        <span>1:200, 1:400, 1:2000</span>
+                                    </div>
+                                    <div class="card__hover-item">
+                                        <img src="img/svg/hover-real-size.svg" alt="File real size">
+                                        <span>CM: 83 x 63 x 53<br>IN: 39 x 25 x 21</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- hover block -->
+                        </div>
+                        <div class="card__content">
+                            <div class="card__content-title">
+                                Millennium Falcon 3D Print Model | Standard Assembly Kit
+                            </div>
+                            <div class="card__content-author">
+                                by <span>Jaclynn Bradley</span>
+                            </div>
+                            <div class="card__content-line">
+                                <div class="card__price card__sale">
+                                    $24.99
+                                    <div class="card__oldprice">
+                                        $74.99
+                                    </div>
+                                </div>
+                                <div class="card__cart">
+                                    <a href="javascript:;" class="card__cart-link"></a>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="card card_sale-premium">
+                        <div class="card__img">
+                            <div class="card__img-bg" style="background-image:  url('img/jpg/card-catalog7.jpg');"></div>
+                            <div class="labels">
+                                <div class="labels__list">
+                                    <div class="labels__new">NEW</div>
+                                </div>
+                                <div class="labels__save-with-premium">
+                                    Save with premium -35%
+                                </div>
+                            </div>
+                            <!-- hover block -->
+                            <input id="card__hover-mobile4" class="card__hover-mobile" type="checkbox" />
+                            <label for="card__hover-mobile4" class="card__hover-mobile-label"></label>
+                            <div class="card__hover-block">
+                                <div class="card__hover-settings">
+                                    <input id="card__hover-settings-checkbox4" class="card__hover-settings-checkbox" type="checkbox" />
+                                    <div class="card__hover-settings-label">
+                                        <label for="card__hover-settings-checkbox4"></label>
+                                    </div>
+                                    <!-- hover block settings block -->
+                                    <div class="card__hover-settings-hidden-block">
+                                        <ul class="card__hover-settings-hidden-block-menu">
+                                            <li><a href="javascript:;">Edit Item</a></li>
+                                            <li><a href="javascript:;">Hide Item</a></li>
+                                            <li><a href="javascript:;">Delete</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="card__hover-comments">
+                                    <div class="card__hover-comments-label"><span>55</span></div>
+                                </div>
+                                <div class="card__hover-etc">
+                                    <div class="card__hover-share"></div>
+                                    <div class="card__hover-list"></div>
+                                    <div class="card__hover-favourites"></div>
+                                </div>
+                                <div class="card__hover-content">
+                                    <div class="card__hover-item">
+                                        <img src="img/svg/hover-size.svg" alt="File size">
+                                        <span>2799.35 MB</span>
+                                    </div>
+                                    <div class="card__hover-item">
+                                        <img src="img/svg/hover-resolution.svg" alt="File resolution">
+                                        <span>1:200, 1:400, 1:2000</span>
+                                    </div>
+                                    <div class="card__hover-item">
+                                        <img src="img/svg/hover-real-size.svg" alt="File real size">
+                                        <span>CM: 83 x 63 x 53<br>IN: 39 x 25 x 21</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- hover block -->
+                        </div>
+                        <div class="card__content">
+                            <div class="card__content-title">
+                                Spider-Man Wall Crawler 3D Printing Figurine | Assembly
+                            </div>
+                            <div class="card__content-author">
+                                by <span>Amelia Cabal</span>
+                            </div>
+                            <div class="card__content-line">
+                                <div class="card__price">
+                                    $24.99
+                                    <div class="card__premium-price">
+                                        $14.99
+                                    </div>
+                                </div>
+                                <div class="card__cart">
+                                    <a href="javascript:;" class="card__cart-link"></a>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="card">
+                        <div class="card__img">
+                            <div class="card__img-bg" style="background-image:  url('img/jpg/card-catalog4.jpg');"></div>
+                            <!-- hover block -->
+                            <input id="card__hover-mobile5" class="card__hover-mobile" type="checkbox" />
+                            <label for="card__hover-mobile5" class="card__hover-mobile-label"></label>
+                            <div class="card__hover-block">
+                                <div class="card__hover-settings">
+                                    <input id="card__hover-settings-checkbox5" class="card__hover-settings-checkbox" type="checkbox" />
+                                    <div class="card__hover-settings-label">
+                                        <label for="card__hover-settings-checkbox5"></label>
+                                    </div>
+                                    <!-- hover block settings block -->
+                                    <div class="card__hover-settings-hidden-block">
+                                        <ul class="card__hover-settings-hidden-block-menu">
+                                            <li><a href="javascript:;">Edit Item</a></li>
+                                            <li><a href="javascript:;">Hide Item</a></li>
+                                            <li><a href="javascript:;">Delete</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="card__hover-comments">
+                                    <div class="card__hover-comments-label"><span>55</span></div>
+                                </div>
+                                <div class="card__hover-etc">
+                                    <div class="card__hover-share"></div>
+                                    <div class="card__hover-list"></div>
+                                    <div class="card__hover-favourites"></div>
+                                </div>
+                                <div class="card__hover-content">
+                                    <div class="card__hover-item">
+                                        <img src="img/svg/hover-size.svg" alt="File size">
+                                        <span>2799.35 MB</span>
+                                    </div>
+                                    <div class="card__hover-item">
+                                        <img src="img/svg/hover-resolution.svg" alt="File resolution">
+                                        <span>1:200, 1:400, 1:2000</span>
+                                    </div>
+                                    <div class="card__hover-item">
+                                        <img src="img/svg/hover-real-size.svg" alt="File real size">
+                                        <span>CM: 83 x 63 x 53<br>IN: 39 x 25 x 21</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- hover block -->
+                        </div>
+                        <div class="card__content">
+                            <div class="card__content-title">
+                                Viserion Ice Dragon 3D Printing Figurine
+                            </div>
+                            <div class="card__content-author">
+                                by <span>Oliver</span>
+                            </div>
+                            <div class="card__content-line">
+                                <div class="card__price">
+                                    $24.99
+                                </div>
+                                <div class="card__cart">
+                                    <a href="javascript:;" class="card__cart-link"></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card__img">
+                            <div class="card__img-bg" style="background-image:  url('img/jpg/card-catalog5.jpg');"></div>
+                            <div class="labels">
+                                <div class="labels__list">
+                                    <div class="labels__diorama"></div>
+                                </div>
+                            </div>
+                            <!-- hover block -->
+                            <input id="card__hover-mobile6" class="card__hover-mobile" type="checkbox" />
+                            <label for="card__hover-mobile6" class="card__hover-mobile-label"></label>
+                            <div class="card__hover-block">
+                                <div class="card__hover-settings">
+                                    <input id="card__hover-settings-checkbox6" class="card__hover-settings-checkbox" type="checkbox" />
+                                    <div class="card__hover-settings-label">
+                                        <label for="card__hover-settings-checkbox6"></label>
+                                    </div>
+                                    <!-- hover block settings block -->
+                                    <div class="card__hover-settings-hidden-block">
+                                        <ul class="card__hover-settings-hidden-block-menu">
+                                            <li><a href="javascript:;">Edit Item</a></li>
+                                            <li><a href="javascript:;">Hide Item</a></li>
+                                            <li><a href="javascript:;">Delete</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="card__hover-comments">
+                                    <div class="card__hover-comments-label"><span>55</span></div>
+                                </div>
+                                <div class="card__hover-etc">
+                                    <div class="card__hover-share"></div>
+                                    <div class="card__hover-list"></div>
+                                    <div class="card__hover-favourites"></div>
+                                </div>
+                                <div class="card__hover-content">
+                                    <div class="card__hover-item">
+                                        <img src="img/svg/hover-size.svg" alt="File size">
+                                        <span>2799.35 MB</span>
+                                    </div>
+                                    <div class="card__hover-item">
+                                        <img src="img/svg/hover-resolution.svg" alt="File resolution">
+                                        <span>1:200, 1:400, 1:2000</span>
+                                    </div>
+                                    <div class="card__hover-item">
+                                        <img src="img/svg/hover-real-size.svg" alt="File real size">
+                                        <span>CM: 83 x 63 x 53<br>IN: 39 x 25 x 21</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- hover block -->
+                        </div>
+                        <div class="card__content">
+                            <div class="card__content-title">
+                                Viserion Ice Dragon 3D Printing Figurine
+                            </div>
+                            <div class="card__content-author">
+                                by <span>Oliver</span>
+                            </div>
+                            <div class="card__content-line">
+                                <a href="#" class="button button_primary button_m">Download</a>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="card">
+                        <div class="card__img">
+                            <div class="card__img-bg" style="background-image:  url('img/jpg/card-catalog6.jpg');"></div>
+                            <div class="labels">
+                                <div class="labels__list">
+                                    <div class="labels__favorites"></div>
+                                </div>
+                            </div>
+                            <!-- hover block -->
+                            <input id="card__hover-mobile7" class="card__hover-mobile" type="checkbox" />
+                            <label for="card__hover-mobile7" class="card__hover-mobile-label"></label>
+                            <div class="card__hover-block">
+                                <div class="card__hover-settings">
+                                    <input id="card__hover-settings-checkbox7" class="card__hover-settings-checkbox" type="checkbox" />
+                                    <div class="card__hover-settings-label">
+                                        <label for="card__hover-settings-checkbox7"></label>
+                                    </div>
+                                    <!-- hover block settings block -->
+                                    <div class="card__hover-settings-hidden-block">
+                                        <ul class="card__hover-settings-hidden-block-menu">
+                                            <li><a href="javascript:;">Edit Item</a></li>
+                                            <li><a href="javascript:;">Hide Item</a></li>
+                                            <li><a href="javascript:;">Delete</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="card__hover-comments">
+                                    <div class="card__hover-comments-label"><span>55</span></div>
+                                </div>
+                                <div class="card__hover-etc">
+                                    <div class="card__hover-share"></div>
+                                    <div class="card__hover-list"></div>
+                                    <div class="card__hover-favourites"></div>
+                                </div>
+                                <div class="card__hover-content">
+                                    <div class="card__hover-item">
+                                        <img src="img/svg/hover-size.svg" alt="File size">
+                                        <span>2799.35 MB</span>
+                                    </div>
+                                    <div class="card__hover-item">
+                                        <img src="img/svg/hover-resolution.svg" alt="File resolution">
+                                        <span>1:200, 1:400, 1:2000</span>
+                                    </div>
+                                    <div class="card__hover-item">
+                                        <img src="img/svg/hover-real-size.svg" alt="File real size">
+                                        <span>CM: 83 x 63 x 53<br>IN: 39 x 25 x 21</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- hover block -->
+                        </div>
+                        <div class="card__content">
+                            <div class="card__content-title">
+                                Viserion Ice Dragon 3D Printing Figurine
+                            </div>
+                            <div class="card__content-author">
+                                by <span>Oliver</span>
+                            </div>
+                            <div class="card__content-line">
+                                <div class="card__price">
+                                    $24.99
+                                </div>
+                                <div class="card__cart">
+                                    <a href="javascript:;" class="card__cart-link"></a>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="card">
+                        <div class="card__img">
+                            <div class="card__img-bg" style="background-image:  url('img/jpg/card-catalog2.jpg');"></div>
+                            <div class="labels">
+                                <div class="labels__list">
+                                    <div class="labels__hot"></div>
+                                </div>
+                            </div>
+                            <!-- hover block -->
+                            <input id="card__hover-mobile8" class="card__hover-mobile" type="checkbox" />
+                            <label for="card__hover-mobile8" class="card__hover-mobile-label"></label>
+                            <div class="card__hover-block">
+                                <div class="card__hover-settings">
+                                    <input id="card__hover-settings-checkbox8" class="card__hover-settings-checkbox" type="checkbox" />
+                                    <div class="card__hover-settings-label">
+                                        <label for="card__hover-settings-checkbox8"></label>
+                                    </div>
+                                    <!-- hover block settings block -->
+                                    <div class="card__hover-settings-hidden-block">
+                                        <ul class="card__hover-settings-hidden-block-menu">
+                                            <li><a href="javascript:;">Edit Item</a></li>
+                                            <li><a href="javascript:;">Hide Item</a></li>
+                                            <li><a href="javascript:;">Delete</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="card__hover-comments">
+                                    <div class="card__hover-comments-label"><span>55</span></div>
+                                </div>
+                                <div class="card__hover-etc">
+                                    <div class="card__hover-share"></div>
+                                    <div class="card__hover-list"></div>
+                                    <div class="card__hover-favourites"></div>
+                                </div>
+                                <div class="card__hover-content">
+                                    <div class="card__hover-item">
+                                        <img src="img/svg/hover-size.svg" alt="File size">
+                                        <span>2799.35 MB</span>
+                                    </div>
+                                    <div class="card__hover-item">
+                                        <img src="img/svg/hover-resolution.svg" alt="File resolution">
+                                        <span>1:200, 1:400, 1:2000</span>
+                                    </div>
+                                    <div class="card__hover-item">
+                                        <img src="img/svg/hover-real-size.svg" alt="File real size">
+                                        <span>CM: 83 x 63 x 53<br>IN: 39 x 25 x 21</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- hover block -->
+                        </div>
+                        <div class="card__content">
+                            <div class="card__content-title">
+                                Viserion Ice Dragon 3D Printing Figurine
+                            </div>
+                            <div class="card__content-author">
+                                by <span>Oliver</span>
+                            </div>
+                            <div class="card__content-line">
+                                <div class="card__price">
+                                    $24.99
+                                </div>
+                                <div class="card__cart">
+                                    <a href="javascript:;" class="card__cart-link"></a>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="card">
+                        <div class="card__img">
+                            <div class="card__img-bg" style="background-image:  url('img/jpg/card-catalog4.jpg');"></div>
+                            <div class="labels">
+                                <div class="labels__list">
+                                    <div class="labels__hot"></div>
+                                </div>
+                            </div>
+                            <!-- hover block -->
+                            <input id="card__hover-mobile15" class="card__hover-mobile" type="checkbox" />
+                            <label for="card__hover-mobile15" class="card__hover-mobile-label"></label>
+                            <div class="card__hover-block">
+                                <div class="card__hover-comments">
+                                    <div class="card__hover-comments-label"><span>55</span></div>
+                                </div>
+                                <div class="card__hover-etc">
+                                    <div class="card__hover-share"></div>
+                                    <div class="card__hover-list"></div>
+                                    <div class="card__hover-favourites"></div>
+                                </div>
+                                <div class="card__hover-content">
+                                    <div class="card__hover-item">
+                                        <img src="img/svg/hover-size.svg" alt="File size">
+                                        <span>2799.35 MB</span>
+                                    </div>
+                                    <div class="card__hover-item">
+                                        <img src="img/svg/hover-resolution.svg" alt="File resolution">
+                                        <span>1:200, 1:400, 1:2000</span>
+                                    </div>
+                                    <div class="card__hover-item">
+                                        <img src="img/svg/hover-real-size.svg" alt="File real size">
+                                        <span>CM: 83 x 63 x 53<br>IN: 39 x 25 x 21</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- hover block -->
+                        </div>
+                        <div class="card__content">
+                            <div class="card__content-title">
+                                Deadpool 3D Printing Miniature | Assembly
+                            </div>
+                            <div class="card__content-author">
+                                by <span>Oliver</span>
+                            </div>
+                            <div class="card__content-line">
+
+                                <div class="card__price">
+                                    $24.99
+                                </div>
+                                <div class="card__cart">
+                                    <a href="javascript:;" class="card__cart-link"></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card__img">
+                            <div class="card__img-bg" style="background-image:  url('img/jpg/card-catalog3.jpg');"></div>
+                            <!-- hover block -->
+                            <input id="card__hover-mobile16" class="card__hover-mobile" type="checkbox" />
+                            <label for="card__hover-mobile16" class="card__hover-mobile-label"></label>
+                            <div class="card__hover-block">
+                                <div class="card__hover-comments">
+                                    <div class="card__hover-comments-label"><span>55</span></div>
+                                </div>
+                                <div class="card__hover-etc">
+                                    <div class="card__hover-favourites"></div>
+                                </div>
+                                <div class="card__hover-content">
+                                    <div class="card__hover-item">
+                                        <img src="img/svg/hover-size.svg" alt="File size">
+                                        <span>2799.35 MB</span>
+                                    </div>
+                                    <div class="card__hover-item">
+                                        <img src="img/svg/hover-resolution.svg" alt="File resolution">
+                                        <span>1:200, 1:400, 1:2000</span>
+                                    </div>
+                                    <div class="card__hover-item">
+                                        <img src="img/svg/hover-real-size.svg" alt="File real size">
+                                        <span>CM: 83 x 63 x 53<br>IN: 39 x 25 x 21</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- hover block -->
+                        </div>
+                        <div class="card__content">
+                            <div class="card__content-title">
+                                BT-7274 3D Printing Model | Assembly + Action
+                            </div>
+                            <div class="card__content-author">
+                                by <span>Irene Sotelo</span>
+                            </div>
+                            <div class="card__content-line">
+                                <div class="card__price">
+                                    $24.99
+                                </div>
+                                <div class="card__cart">
+                                    <a href="javascript:;" class="card__cart-link"></a>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="card">
+                        <div class="card__img">
+                            <div class="card__img-bg" style="background-image:  url('img/jpg/card-catalog6.jpg');"></div>
+                            <!-- hover block -->
+                            <input id="card__hover-mobile17" class="card__hover-mobile" type="checkbox" />
+                            <label for="card__hover-mobile17" class="card__hover-mobile-label"></label>
+                            <div class="card__hover-block">
+                                <div class="card__hover-comments">
+                                    <div class="card__hover-comments-label"><span>55</span></div>
+                                </div>
+                                <div class="card__hover-etc">
+                                    <div class="card__hover-share"></div>
+                                    <div class="card__hover-list"></div>
+                                    <div class="card__hover-favourites"></div>
+                                </div>
+                                <div class="card__hover-content">
+                                    <div class="card__hover-item">
+                                        <img src="img/svg/hover-size.svg" alt="File size">
+                                        <span>2799.35 MB</span>
+                                    </div>
+                                    <div class="card__hover-item">
+                                        <img src="img/svg/hover-resolution.svg" alt="File resolution">
+                                        <span>1:200, 1:400, 1:2000</span>
+                                    </div>
+                                    <div class="card__hover-item">
+                                        <img src="img/svg/hover-real-size.svg" alt="File real size">
+                                        <span>CM: 83 x 63 x 53<br>IN: 39 x 25 x 21</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- hover block -->
+                        </div>
+                        <div class="card__content">
+                            <div class="card__content-title">
+                                Millennium Falcon 3D Print Model | Standard Assembly Kit
+                            </div>
+                            <div class="card__content-author">
+                                by <span>Jaclynn Bradley</span>
+                            </div>
+                            <div class="card__content-line">
+                                <div class="card__price">
+                                    $24.99
+                                    <div class="card__oldprice">
+                                        $74.99
+                                    </div>
+                                </div>
+                                <div class="card__cart">
+                                    <a href="javascript:;" class="card__cart-link"></a>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="card">
+                        <div class="card__img">
+                            <div class="card__img-bg" style="background-image:  url('img/jpg/card-catalog2.jpg');"></div>
+                            <div class="labels">
+                                <div class="labels__list">
+                                    <div class="labels__new">NEW</div>
+                                </div>
+
+                            </div>
+                            <!-- hover block -->
+                            <input id="card__hover-mobile18" class="card__hover-mobile" type="checkbox" />
+                            <label for="card__hover-mobile18" class="card__hover-mobile-label"></label>
+                            <div class="card__hover-block">
+
+                                <div class="card__hover-comments">
+                                    <div class="card__hover-comments-label"><span>55</span></div>
+                                </div>
+                                <div class="card__hover-etc">
+                                    <div class="card__hover-share"></div>
+                                    <div class="card__hover-list"></div>
+                                    <div class="card__hover-favourites"></div>
+                                </div>
+                                <div class="card__hover-content">
+                                    <div class="card__hover-item">
+                                        <img src="img/svg/hover-size.svg" alt="File size">
+                                        <span>2799.35 MB</span>
+                                    </div>
+                                    <div class="card__hover-item">
+                                        <img src="img/svg/hover-resolution.svg" alt="File resolution">
+                                        <span>1:200, 1:400, 1:2000</span>
+                                    </div>
+                                    <div class="card__hover-item">
+                                        <img src="img/svg/hover-real-size.svg" alt="File real size">
+                                        <span>CM: 83 x 63 x 53<br>IN: 39 x 25 x 21</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- hover block -->
+                        </div>
+                        <div class="card__content">
+                            <div class="card__content-title">
+                                Robotech VFA-6 Alpha 3D Printing Model | Action Assembly
+                            </div>
+                            <div class="card__content-author">
+                                by <span>Chloé Modibo</span>
+                            </div>
+                            <div class="card__content-line">
+                                <div class="card__price">
+                                    $24.99
+                                </div>
+                                <div class="card__cart">
+                                    <a href="javascript:;" class="card__cart-link"></a>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="card">
+                        <div class="card__img">
+                            <div class="card__img-bg" style="background-image:  url('img/jpg/card-catalog1.jpg');"></div>
+                            <!-- hover block -->
+                            <input id="card__hover-mobile19" class="card__hover-mobile" type="checkbox" />
+                            <label for="card__hover-mobile19" class="card__hover-mobile-label"></label>
+                            <div class="card__hover-block">
+                                <div class="card__hover-comments">
+                                    <div class="card__hover-comments-label"><span>55</span></div>
+                                </div>
+                                <div class="card__hover-etc">
+                                    <div class="card__hover-favourites"></div>
+                                </div>
+                                <div class="card__hover-content">
+                                    <div class="card__hover-item">
+                                        <img src="img/svg/hover-size.svg" alt="File size">
+                                        <span>2799.35 MB</span>
+                                    </div>
+                                    <div class="card__hover-item">
+                                        <img src="img/svg/hover-resolution.svg" alt="File resolution">
+                                        <span>1:200, 1:400, 1:2000</span>
+                                    </div>
+                                    <div class="card__hover-item">
+                                        <img src="img/svg/hover-real-size.svg" alt="File real size">
+                                        <span>CM: 83 x 63 x 53<br>IN: 39 x 25 x 21</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- hover block -->
+                        </div>
+                        <div class="card__content">
+                            <div class="card__content-title">
+                                BT-7274 3D Printing Model | Assembly + Action
+                            </div>
+                            <div class="card__content-author">
+                                by <span>Erika Mateo</span>
+                            </div>
+                            <div class="card__content-line">
+                                <div class="card__price">
+                                    $24.99
+                                </div>
+                                <div class="card__cart">
+                                    <a href="javascript:;" class="card__cart-link"></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card__img">
+                            <div class="card__img-bg" style="background-image:  url('img/jpg/card-catalog5.jpg');"></div>
+                            <div class="labels">
+                                <div class="labels__list">
+                                    <div class="labels__diorama"></div>
+                                </div>
+                            </div>
+                            <!-- hover block -->
+                            <input id="card__hover-mobile20" class="card__hover-mobile" type="checkbox" />
+                            <label for="card__hover-mobile20" class="card__hover-mobile-label"></label>
+                            <div class="card__hover-block">
+                                <div class="card__hover-comments">
+                                    <div class="card__hover-comments-label"><span>55</span></div>
+                                </div>
+                                <div class="card__hover-etc">
+                                    <div class="card__hover-share"></div>
+                                    <div class="card__hover-list"></div>
+                                    <div class="card__hover-favourites"></div>
+                                </div>
+                                <div class="card__hover-content">
+                                    <div class="card__hover-item">
+                                        <img src="img/svg/hover-size.svg" alt="File size">
+                                        <span>2799.35 MB</span>
+                                    </div>
+                                    <div class="card__hover-item">
+                                        <img src="img/svg/hover-resolution.svg" alt="File resolution">
+                                        <span>1:200, 1:400, 1:2000</span>
+                                    </div>
+                                    <div class="card__hover-item">
+                                        <img src="img/svg/hover-real-size.svg" alt="File real size">
+                                        <span>CM: 83 x 63 x 53<br>IN: 39 x 25 x 21</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- hover block -->
+                        </div>
+                        <div class="card__content">
+                            <div class="card__content-title">
+                                Cyberpunk Vampire Bust 3D Printing Figurine | Assembly
+                            </div>
+                            <div class="card__content-author">
+                                by <span>Leonardo Oliveira</span>
+                            </div>
+                            <div class="card__content-line">
+                                <div class="card__price">
+                                    $24.99
+                                </div>
+                                <div class="card__cart">
+                                    <a href="javascript:;" class="card__cart-link"></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card__img">
+                            <div class="card__img-bg" style="background-image:  url('img/jpg/card-catalog2.jpg');"></div>
+                            <!-- hover block -->
+                            <input id="card__hover-mobile22" class="card__hover-mobile" type="checkbox" />
+                            <label for="card__hover-mobile22" class="card__hover-mobile-label"></label>
+                            <div class="card__hover-block">
+                                <div class="card__hover-comments">
+                                    <div class="card__hover-comments-label"><span>55</span></div>
+                                </div>
+                                <div class="card__hover-etc">
+                                    <div class="card__hover-share"></div>
+                                    <div class="card__hover-list"></div>
+                                    <div class="card__hover-favourites"></div>
+                                </div>
+                                <div class="card__hover-content">
+                                    <div class="card__hover-item">
+                                        <img src="img/svg/hover-size.svg" alt="File size">
+                                        <span>2799.35 MB</span>
+                                    </div>
+                                    <div class="card__hover-item">
+                                        <img src="img/svg/hover-resolution.svg" alt="File resolution">
+                                        <span>1:200, 1:400, 1:2000</span>
+                                    </div>
+                                    <div class="card__hover-item">
+                                        <img src="img/svg/hover-real-size.svg" alt="File real size">
+                                        <span>CM: 83 x 63 x 53<br>IN: 39 x 25 x 21</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- hover block -->
+                        </div>
+                        <div class="card__content">
+                            <div class="card__content-title">
+                                Alien Queen 3D Printing Figurine in
+                            </div>
+                            <div class="card__content-author">
+                                by <span>Irene Sotelo</span>
+                            </div>
+                            <div class="card__content-line">
+                                <div class="card__price">
+                                    $24.99
+                                </div>
+                                <div class="card__cart">
+                                    <a href="javascript:;" class="card__cart-link"></a>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="pagination">
+                        <a href="javascript:;" class="pagination__prev"></a>
+                        <ul class="pagination__list">
+                            <li class="pagination__item"><a class="pagination__link">1</a></li>
+                            <li class="pagination__item"><a class="pagination__link">2</a></li>
+                            <li class="pagination__item"><a class="pagination__link pagination__link_active">3</a></li>
+                            <li class="pagination__item"><a class="pagination__link">4</a></li>
+                            <li class="pagination__item"><a class="pagination__link">5</a></li>
+                            <li class="pagination__item"><a class="pagination__link">...</a></li>
+                            <li class="pagination__item"><a class="pagination__link">20</a></li>
+                        </ul>
+                        <a href="javascript:;" class="pagination__next"></a>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+        <div class="row">
+            <section class="catalog-history">
+            <div class="container">
+                <div class="main-title">
+                    Your Browsing History
+                </div>
+                <div class="slider-cards">
+                    <div class="slider-cards__slider-new">
+                        <div> <div class="card">
+                            <div class="card__img">
+                                <div class="card__img-bg" style="background-image:  url('img/jpg/trending8.jpg');"></div>
+                                <!-- hover block -->
+                                <input id="card__hover-mobile13" class="card__hover-mobile" type="checkbox" />
+                                <label for="card__hover-mobile13" class="card__hover-mobile-label"></label>
+                                <div class="card__hover-block">
+                                    <div class="card__hover-comments">
+                                        <div class="card__hover-comments-label"><span>55</span></div>
+                                    </div>
+                                    <div class="card__hover-etc">
+                                        <div class="card__hover-share"></div>
+                                        <div class="card__hover-list"></div>
+                                        <div class="card__hover-favourites"></div>
+                                    </div>
+                                    <div class="card__hover-content">
+                                        <div class="card__hover-item">
+                                            <img src="img/svg/hover-size.svg" alt="File size">
+                                            <span>2799.35 MB</span>
+                                        </div>
+                                        <div class="card__hover-item">
+                                            <img src="img/svg/hover-resolution.svg" alt="File resolution">
+                                            <span>1:200, 1:400, 1:2000</span>
+                                        </div>
+                                        <div class="card__hover-item">
+                                            <img src="img/svg/hover-real-size.svg" alt="File real size">
+                                            <span>CM: 83 x 63 x 53<br>IN: 39 x 25 x 21</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- hover block -->
+                            </div>
+                            <div class="card__content">
+                                <div class="card__content-title">
+                                    Viserion Ice Dragon 3D Printing Figurine
+                                </div>
+                                <div class="card__content-author">
+                                    by <span>Oliver</span>
+                                </div>
+                                <div class="card__content-line">
+                                    <div class="card__price">
+                                        $24.99
+                                        <div class="card__oldprice">
+                                            $74.99
+                                        </div>
+                                    </div>
+                                    <div class="card__cart">
+                                        <a href="javascript:;" class="card__cart-link"></a>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        </div><div> <div class="card">
+                        <div class="card__img">
+                            <div class="card__img-bg" style="background-image:  url('img/jpg/trending12.jpg');"></div>
+                            <div class="labels">
+                                <div class="labels__list">
+                                    <div class="labels__new">NEW</div>
+                                </div>
+                            </div>
+                            <!-- hover block -->
+                            <input id="card__hover-mobile14" class="card__hover-mobile" type="checkbox" />
+                            <label for="card__hover-mobile14" class="card__hover-mobile-label"></label>
+                            <div class="card__hover-block">
+                                <div class="card__hover-comments">
+                                    <div class="card__hover-comments-label"><span>55</span></div>
+                                </div>
+                                <div class="card__hover-etc">
+                                    <div class="card__hover-share"></div>
+                                    <div class="card__hover-list"></div>
+                                    <div class="card__hover-favourites"></div>
+                                </div>
+                                <div class="card__hover-content">
+                                    <div class="card__hover-item">
+                                        <img src="img/svg/hover-size.svg" alt="File size">
+                                        <span>2799.35 MB</span>
+                                    </div>
+                                    <div class="card__hover-item">
+                                        <img src="img/svg/hover-resolution.svg" alt="File resolution">
+                                        <span>1:200, 1:400, 1:2000</span>
+                                    </div>
+                                    <div class="card__hover-item">
+                                        <img src="img/svg/hover-real-size.svg" alt="File real size">
+                                        <span>CM: 83 x 63 x 53<br>IN: 39 x 25 x 21</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- hover block -->
+                        </div>
+                        <div class="card__content">
+                            <div class="card__content-title">
+                                Viserion Ice Dragon 3D Printing Figurine
+                            </div>
+                            <div class="card__content-author">
+                                by <span>Oliver</span>
+                            </div>
+                            <div class="card__content-line">
+                                <div class="card__price">
+                                    $24.99
+                                </div>
+                                <div class="card__cart">
+                                    <span>In cart</span>
+                                    <a href="javascript:;" class="card__cart-link"></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    </div><div> <div class="card">
+                        <div class="card__img">
+                            <div class="card__img-bg" style="background-image:  url('img/jpg/trending13.jpg');"></div>
+                            <div class="labels">
+                                <div class="labels__list">
+                                    <div class="labels__new">NEW</div>
+                                    <div class="labels__sale">-70%</div>
+                                </div>
+                            </div>
+                            <!-- hover block -->
+                            <input id="card__hover-mobile21" class="card__hover-mobile" type="checkbox" />
+                            <label for="card__hover-mobile21" class="card__hover-mobile-label"></label>
+                            <div class="card__hover-block">
+                                <div class="card__hover-comments">
+                                    <div class="card__hover-comments-label"><span>55</span></div>
+                                </div>
+                                <div class="card__hover-etc">
+                                    <div class="card__hover-share"></div>
+                                    <div class="card__hover-list"></div>
+                                    <div class="card__hover-favourites"></div>
+                                </div>
+                                <div class="card__hover-content">
+                                    <div class="card__hover-item">
+                                        <img src="img/svg/hover-size.svg" alt="File size">
+                                        <span>2799.35 MB</span>
+                                    </div>
+                                    <div class="card__hover-item">
+                                        <img src="img/svg/hover-resolution.svg" alt="File resolution">
+                                        <span>1:200, 1:400, 1:2000</span>
+                                    </div>
+                                    <div class="card__hover-item">
+                                        <img src="img/svg/hover-real-size.svg" alt="File real size">
+                                        <span>CM: 83 x 63 x 53<br>IN: 39 x 25 x 21</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- hover block -->
+                        </div>
+                        <div class="card__content">
+                            <div class="card__content-title">
+                                Viserion Ice Dragon 3D Printing Figurine
+                            </div>
+                            <div class="card__content-author">
+                                by <span>Oliver</span>
+                            </div>
+                            <div class="card__content-line">
+                                <div class="card__price">
+                                    $24.99
+                                </div>
+                                <div class="card__cart">
+                                    <a href="javascript:;" class="card__cart-link"></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    </div><div> <div class="card">
+                        <div class="card__img">
+                            <div class="card__img-bg" style="background-image:  url('img/jpg/trending14.jpg');"></div>
+                            <div class="labels">
+                                <div class="labels__list">
+                                    <div class="labels__favorites"></div>
+                                </div>
+                            </div>
+                            <!-- hover block -->
+                            <input id="card__hover-mobile23" class="card__hover-mobile" type="checkbox" />
+                            <label for="card__hover-mobile23" class="card__hover-mobile-label"></label>
+                            <div class="card__hover-block">
+                                <div class="card__hover-comments">
+                                    <div class="card__hover-comments-label"><span>55</span></div>
+                                </div>
+                                <div class="card__hover-etc">
+                                    <div class="card__hover-share"></div>
+                                    <div class="card__hover-list"></div>
+                                    <div class="card__hover-favourites"></div>
+                                </div>
+                                <div class="card__hover-content">
+                                    <div class="card__hover-item">
+                                        <img src="img/svg/hover-size.svg" alt="File size">
+                                        <span>2799.35 MB</span>
+                                    </div>
+                                    <div class="card__hover-item">
+                                        <img src="img/svg/hover-resolution.svg" alt="File resolution">
+                                        <span>1:200, 1:400, 1:2000</span>
+                                    </div>
+                                    <div class="card__hover-item">
+                                        <img src="img/svg/hover-real-size.svg" alt="File real size">
+                                        <span>CM: 83 x 63 x 53<br>IN: 39 x 25 x 21</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- hover block -->
+                        </div>
+                        <div class="card__content">
+                            <div class="card__content-title">
+                                Viserion Ice Dragon 3D Printing Figurine
+                            </div>
+                            <div class="card__content-author">
+                                by <span>Oliver</span>
+                            </div>
+                            <div class="card__content-line">
+                                <div class="card__price">
+                                    $24.99
+                                </div>
+                                <div class="card__cart">
+                                    <a href="javascript:;" class="card__cart-link"></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    </div><div> <div class="card">
+                        <div class="card__img">
+                            <div class="card__img-bg" style="background-image:  url('img/jpg/trending15.jpg');"></div>
+                            <div class="labels">
+                                <div class="labels__list">
+                                    <div class="labels__favorites"></div>
+                                </div>
+                            </div>
+                            <!-- hover block -->
+                            <input id="card__hover-mobile24" class="card__hover-mobile" type="checkbox" />
+                            <label for="card__hover-mobile24" class="card__hover-mobile-label"></label>
+                            <div class="card__hover-block">
+                                <div class="card__hover-comments">
+                                    <div class="card__hover-comments-label"><span>55</span></div>
+                                </div>
+                                <div class="card__hover-etc">
+                                    <div class="card__hover-share"></div>
+                                    <div class="card__hover-list"></div>
+                                    <div class="card__hover-favourites"></div>
+                                </div>
+                                <div class="card__hover-content">
+                                    <div class="card__hover-item">
+                                        <img src="img/svg/hover-size.svg" alt="File size">
+                                        <span>2799.35 MB</span>
+                                    </div>
+                                    <div class="card__hover-item">
+                                        <img src="img/svg/hover-resolution.svg" alt="File resolution">
+                                        <span>1:200, 1:400, 1:2000</span>
+                                    </div>
+                                    <div class="card__hover-item">
+                                        <img src="img/svg/hover-real-size.svg" alt="File real size">
+                                        <span>CM: 83 x 63 x 53<br>IN: 39 x 25 x 21</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- hover block -->
+                        </div>
+                        <div class="card__content">
+                            <div class="card__content-title">
+                                Viserion Ice Dragon 3D Printing Figurine
+                            </div>
+                            <div class="card__content-author">
+                                by <span>Oliver</span>
+                            </div>
+                            <div class="card__content-line">
+                                <div class="card__price">
+                                    $24.99
+                                </div>
+                                <div class="card__cart">
+                                    <a href="javascript:;" class="card__cart-link"></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    </div><div> <div class="card">
+                        <div class="card__img">
+                            <div class="card__img-bg" style="background-image:  url('img/jpg/trending16.jpg');"></div>
+                            <div class="labels">
+                                <div class="labels__list">
+                                    <div class="labels__favorites"></div>
+                                </div>
+                            </div>
+                            <!-- hover block -->
+                            <input id="card__hover-mobile25" class="card__hover-mobile" type="checkbox" />
+                            <label for="card__hover-mobile25" class="card__hover-mobile-label"></label>
+                            <div class="card__hover-block">
+                                <div class="card__hover-comments">
+                                    <div class="card__hover-comments-label"><span>55</span></div>
+                                </div>
+                                <div class="card__hover-etc">
+                                    <div class="card__hover-share"></div>
+                                    <div class="card__hover-list"></div>
+                                    <div class="card__hover-favourites"></div>
+                                </div>
+                                <div class="card__hover-content">
+                                    <div class="card__hover-item">
+                                        <img src="img/svg/hover-size.svg" alt="File size">
+                                        <span>2799.35 MB</span>
+                                    </div>
+                                    <div class="card__hover-item">
+                                        <img src="img/svg/hover-resolution.svg" alt="File resolution">
+                                        <span>1:200, 1:400, 1:2000</span>
+                                    </div>
+                                    <div class="card__hover-item">
+                                        <img src="img/svg/hover-real-size.svg" alt="File real size">
+                                        <span>CM: 83 x 63 x 53<br>IN: 39 x 25 x 21</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- hover block -->
+                        </div>
+                        <div class="card__content">
+                            <div class="card__content-title">
+                                Viserion Ice Dragon 3D Printing Figurine
+                            </div>
+                            <div class="card__content-author">
+                                by <span>Oliver</span>
+                            </div>
+                            <div class="card__content-line">
+                                <div class="card__price">
+                                    $24.99
+                                </div>
+                                <div class="card__cart">
+                                    <a href="javascript:;" class="card__cart-link"></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    </div><div> <div class="card">
+                        <div class="card__img">
+                            <div class="card__img-bg" style="background-image:  url('img/jpg/trending5.jpg');"></div>
+                        </div>
+                        <div class="card__content">
+                            <div class="card__content-title">
+                                Viserion Ice Dragon 3D Printing Figurine
+                            </div>
+                            <div class="card__content-author">
+                                by <span>Oliver</span>
+                            </div>
+                            <div class="card__content-line">
+                                <div class="card__price">
+                                    $24.99
+                                </div>
+                                <div class="card__cart">
+                                    <a href="javascript:;" class="card__cart-link"></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </section>
+        </div>
+    </div>
+</section>
+<section class="seo-block">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="h4">This is Our Land!</div>
+                <p>The sheer beauty of the computer-generated imagery is undoubtedly one of the main factors that make James Cameron’s expensive and incredibly impressive
+                    fictional universe a sensation. The people that inhabit the magical Pandora and animals and plants one can meet on the moon of the Alpha Centauri star
+                    easily inspire lots of creative minds with their unworldly appearance. Gigantic Hometrees and phosphorescent plants, tall blue-striped Na'vi people and
+                    hammerhead dragons, highly valuable mineral with unbelievable name “Unobtanium” and majestic predatory Great Leonopteryx swishing high in the sky.</p>
+                <p>The world of the Avatar universe is exceptionally diverse and abundance of special effects makes it totally one-of-a-kind that it is not surprising that
+                    many 3D artists and 3D printing enthusiasts take great interest in characters and beasts that are native to the rich fairytale woodland. Fortunately,
+                    thanks to the technological advancement and talent of our contributing 3D artists Gambody marketplace now has 3D printing figurines and models to offer
+                    any sci-fi fan!</p>
+                <div class="h5">Incredible Pandora inhabitants for 3D printing</div>
+                <p>There is no denying that immersive imagery of Cameron’s work greatly contribute to the long-lasting effect of the cinema experience. But it must be the
+                    characters that become the heart of the fictional universe and that inspire 3D artists with creative ideas that yield great results showcased in this
+                    category. Now every 3D printing enthusiast has a chance to capture the story of Avatar Program participant Jake Sully and beautiful Neytiri by simply
+                    printing the heroes on a 3D printer. Or the huge Last Shadows whom the Pandora inhabitants ride like horses during ferocious battles and who can also now
+                    become a unique 3D printed piece in any 3D printing fan’s figures collection as a diorama with 3D printing Toruk Makto.</p>
+            </div>
+        </div>
+    </div>
+</section>
+@@include("../blocks/modules/footer/footer.html")
+</body>
+</html>

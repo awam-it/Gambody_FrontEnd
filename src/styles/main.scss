@@ -4,7 +4,7 @@
 
 @import "vendors/owl.scss";
 @import 'vendors/smart-grid';
-@import 'vendors/tiny-slider';
+@import 'vendors/tinyslider';
 
 @import 'base/reset';
 @import 'base/typography';
@@ -14,9 +14,12 @@
 @import 'components/buttons';
 @import 'components/card';
 @import "components/container";
+@import 'components/slider';
+@import 'components/sidebar';
 
 @import "pages/home";
 @import "pages/cards";
+@import "pages/catalog";
 @import "../blocks/modules";
 
 

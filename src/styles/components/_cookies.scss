@@ -1,0 +1,57 @@
+
+.cookies{
+  box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.45);
+  background-color: $white-bg;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  z-index: 10;
+  .container-full{
+    padding:16px;
+  }
+  .container{
+    @include font-property(normal);
+    font-size: 14px;
+    line-height: 1.71;
+    color: $black;
+    position: relative;
+  }
+  &__title{
+    font-weight: 500;
+  }
+  &__content{
+    margin: 8px 0px;
+    a{
+      color: #0030ff;
+      &:hover{
+        text-decoration: underline;
+      }
+    }
+  }
+  &__button{
+    max-width: 128px;
+    justify-content: center;
+    margin: 0 auto;
+    margin-bottom: 16px;
+  }
+  &__close{
+    position: absolute;
+    right: 10px;
+    top: 0;
+    cursor: pointer;
+    &:before{
+      @extend %before;
+      @extend %before-small;
+      background-image: url(../../img/svg/close-black.svg);
+    }
+    &hover{
+      opacity:0.5;
+    }
+  }
+
+
+
+}
+
+
+
