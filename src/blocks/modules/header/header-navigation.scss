@@ -1,5 +1,5 @@
 
-/* nav-new.scss */
+/* header-navigation.scss */
 
 .nav-level {
   position: absolute;
@@ -151,24 +151,6 @@ nav.open {
   opacity: 0;
   display: none;
 }
-/*
-#menu__toggle:checked ~ .menu__btn > span {
-  transform: rotate(45deg);
-  background-color: #fff;
-  height: 2px;
-}
-#menu__toggle:checked ~ .menu__btn > span::before {
-  top: 0;
-  transform: rotate(0);
-  background-color: #fff;
-  height: 2px;
-}
-#menu__toggle:checked ~ .menu__btn > span::after {
-  top: 0;
-  transform: rotate(90deg);
-  background-color: #fff;
-  height: 2px;
-}*/
 
 #menu__toggle:checked ~ .menu__box {
   visibility: visible;
@@ -310,7 +292,7 @@ nav.open {
   span{
     background:#fff;
     width: 0px;
-    height: 100%;
+    height: 0px;
     display: block;
     transition-duration: .15s;
   }

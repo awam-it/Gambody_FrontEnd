@@ -9,17 +9,34 @@
 </head>
 <body>
 @@include("../blocks/modules/header/header.html")
-    
+
 <section class="catalog-page">
     <div class="container">
         <div class="row">
-            <aside class="sidebar">
+             <aside class="sidebar">
+                <div class="main-title mobile-sidebar">
+                    Robots
+                    <div class="main-title__items-count">250 items found</div>
+                </div>
+                <div class="sidebar__top mobile-sidebar">
+                    <div class="select">
+                        <select name="slct" id="slct">
+                            <option value="0" selected >Best Match</option>
+                            <option value="1">Pure CSS</option>
+                            <option value="2">No JS</option>
+                            <option value="3">Nice!</option>
+                        </select>
+                    </div>
+                    <label class="link button button_secondary button_m mobile-sidebar" for="menu__sidebar">Filter
+                    </label>
+                </div>
                 <input id="menu__sidebar" class="mobile-sidebar" type="checkbox">
                 <div class="sidebar__container">
                 <label class="menu__btn menu__box-close mobile-sidebar" for="menu__sidebar">
                     <span></span>
                 </label>
                 <!-- sidebar__block -->
+                <div class="sidebar__blocks">
                 <div class="sidebar__block">
                     <div class="sidebar-title">Popular</div>
                     <div class="sidebar__block-content">
@@ -413,12 +430,11 @@
                     </ul>
                     <span class="sidebar__block__show-more colapse-full">Show more</span>
                 </div>
-                    <label class="menu__full-bg-close" for="menu__toggle">
-                        <span></span>
-                    </label>
-
-
+                </div> <!-- blocks -->
                 </div>
+                <label class="menu__full-bg-close" for="menu__sidebar">
+                    <span></span>
+                </label>
             </aside>
             <div class="catalog-page__container">
                 <div class="main-title">

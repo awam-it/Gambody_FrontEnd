@@ -8,10 +8,12 @@
     background: $white-bg;
     padding: 4px 16px;
     //margin-bottom: $padding-side-xs;
-    @media (max-width: $breakepoint-md) {
-
+    @media (max-width: $breakepoint-lg) {
+      justify-content: space-between;
+      padding: 0px;
+      margin-bottom: 16px;
+      background: transparent;
     }
-
 
     &-title{
       @include font-property(normal);
@@ -55,6 +57,72 @@
             transform: rotate(180deg);
           }
         }
+      }
+    }
+    // sidebar mobile
+    .menu__full-bg-close{
+
+    }
+    label.button.mobile-sidebar{
+      justify-content: center;
+    }
+    &__container{
+      z-index: 2;
+      @media (max-width: $breakepoint-lg) {
+      display: block;
+      position: fixed;
+      visibility: hidden;
+      top: 0;
+      left: -364px;
+      width: 264px;
+      height: 100%;
+      margin: 0;
+      list-style: none;
+      background-color: #fff;
+      box-shadow: 1px 0px 6px rgba(0, 0, 0, 0.2);
+      transition-duration: .7s;
+      z-index: 10;
+      padding: 0;
+        background: $white-bg;
+
+      }
+    }
+    &__blocks{
+      @media (max-width: $breakepoint-lg) {
+        position: relative;
+        overflow-x: hidden;
+        height: 100%;
+        padding: 4px 16px;
+      }
+    }
+    #menu__sidebar:checked ~ .sidebar__container {
+      @media (max-width: $breakepoint-lg) {
+        visibility: visible;
+        left: 0;
+      }
+    }
+    #menu__sidebar:checked ~ .menu__full-bg-close {
+      visibility: visible;
+      top: 0;
+      left: 0;
+      position: absolute;
+      z-index: 5;
+      opacity: 1;
+      overflow: hidden;
+    }
+    #menu__sidebar:checked ~ .menu__full-bg-close span {
+      background-color: rgba(0, 0, 0, 0.9);
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+    }
+    &__top{
+      @extend %flex-align;
+      justify-content: space-between;
+      background: #fff;
+      padding: 8px;
+      >div, >label{
+        width: calc(50% - 8px);
       }
     }
   }
@@ -278,13 +346,22 @@
 }
 .mobile-sidebar{
   @media (min-width: $breakepoint-xs) {
-    display:block;
+    display: flex !important;
   }
   @media (min-width: $breakepoint-lg) {
-    display:none;
+    display:none !important;
   }
 }
-
+.catalog-page__container{
+  .main-title{
+    @media (min-width: $breakepoint-xs) {
+      display: none !important;
+    }
+    @media (min-width: $breakepoint-lg) {
+      display: inline-flex !important;
+    }
+  }
+}
 
 
 
