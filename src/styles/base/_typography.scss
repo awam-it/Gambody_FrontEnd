@@ -9,4 +9,17 @@ $second-font: 'Open Sans', sans-serif;
 .color_red {
   color: $red;
 }
-
+.content_text{
+  @include font-property(normal);
+  font-size: 12px;
+  line-height: 2;
+  letter-spacing: normal;
+  text-align: center;
+  color: $black;
+}
+.content_link{
+  @include font-property(normal);
+  @extend .content_text;
+  color: #0030ff;
+  padding:24px 0px 12px 0px;
+}

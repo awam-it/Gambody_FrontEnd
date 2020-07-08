@@ -189,6 +189,8 @@
       width:12px;
       height:12px;
       //top: 6px;
+      top: 50%;
+      margin-top: -6px;
       left: 2px;
       position: absolute;
       background-image: url(../../img/svg/checkbox-style.svg);
@@ -297,6 +299,7 @@
     @extend %before;
     @extend %before-small;
     background-image: url(../../img/svg/search-clear.svg);
+    background-repeat: no-repeat;
     position: absolute;
     top: 16px;
     right: 8px;
