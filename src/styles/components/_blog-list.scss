@@ -1,0 +1,39 @@
+.blog-list-section{
+  @extend %column40px-padding;
+  .main-title{
+    padding: 0px 8px;
+  }
+}
+.blog-list{
+  @include row-flex();
+  @include xs(justify-content, center);
+  @include md(justify-content, left);
+  width: 100%;
+  @media (min-width: $breakepoint-xs) {
+    margin-left: 0;
+    margin-right: 0;
+  }
+  &__item{
+    @include col();
+    @include size-xs(12);
+    @include size-md(4);
+    @include size-lg(4);
+    @include size-xl(3);
+    margin: $padding-side-xs;
+    @media (min-width: $breakepoint-xs) {
+      &:last-child{
+        display: inline-flex;
+      }
+    }
+    @media (min-width: $breakepoint-md) {
+      &:last-child{
+        display: none;
+      }
+    }
+    @media (min-width: $breakepoint-xl) {
+      &:last-child{
+        display: inline-flex;
+      }
+    }
+  }
+}

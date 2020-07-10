@@ -515,6 +515,39 @@
 
   }
 
+  &.card_article{
+  img{
+    object-fit: cover;
+    width: 100%;
+    height: 186px;
+  }
+    .card__hover-content{
+      font-size: 11px;
+      line-height: 1.45;
+      color: $white;
+    }
+    .card__hover-title{
+      @extend %column8px-margin;
+      font-size: 14px;
+      line-height: 1.71;
+      color:$white;
+      &:hover{
+        text-decoration: underline;
+      }
+    }
+    .card__hover-block{
+      @extend %flex-align;
+    }
+
+    .card__img {
+      @media (max-width: $breakepoint-md) {
+        width: 100%;
+      }
+    }
+
+
+  }
+
 
   // card condition
   &.card_added-to-cart{

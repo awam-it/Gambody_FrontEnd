@@ -7,8 +7,13 @@
     width: 100%;
   }
   &__left,  &__right{
-    width:50%;
     display: inline-block;
+    @media (min-width: $breakepoint-xs) {
+      width:100%;
+    }
+    @media (min-width: $breakepoint-md) {
+      width:50%;
+    }
   }
   &__image{
     position: relative;
@@ -45,6 +50,12 @@
     }
     &.size3 {
       width:50%;
+      @media (min-width: $breakepoint-xs) {
+        display: none;
+      }
+      @media (min-width: $breakepoint-md) {
+        display: block;
+      }
       &:before {
         content: "";
         display: block;

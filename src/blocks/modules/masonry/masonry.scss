@@ -5,7 +5,7 @@
   flex-wrap: wrap;
   img{
     height: auto;
-    min-width: auto !important;
+    //min-width: auto !important;
   }
   @media (min-width: $breakepoint-xs) {
     flex-wrap: nowrap;
@@ -24,6 +24,7 @@
       width: 100%;
       margin: 0px;
       margin-bottom: 16px;
+      min-width:100%;
     }
     @media (min-width: $breakepoint-sm) {
       width: 100%;
@@ -31,6 +32,13 @@
     @media (min-width: $breakepoint-md) {
       width:auto;
       margin: 8px;
+      min-width:225px;
+    }
+    @media (min-width: $breakepoint-lg) {
+      min-width: 242px;
+    }
+    @media (min-width: $breakepoint-xl) {
+      min-width:220px;
     }
     .masonry-item {
       background: transparent;
@@ -45,30 +53,30 @@
         min-height: 220px;
         @media (min-width: $breakepoint-xs) {
           width: 100%;
-          max-width: 100%;
-          max-width: 242px;
+          //max-width: 100%;
+          //max-width: 242px;
         }
         @media (min-width: $breakepoint-sm) {
           width: 100%;
-          max-width: 100%;
-          max-width: 242px;
         }
         @media (min-width: $breakepoint-lg) {
-          max-width: 342px;
+          max-width: 242px;
         }
         @media (min-width: $breakepoint-xl) {
           max-width: 220px;
         }
         >img{
           @media (min-width: $breakepoint-xs) {
-            min-width: 100% !important;
+            //min-width: 100% !important;
+            object-fit: cover;
+            min-height: 220px;
           }
           @media (min-width: $breakepoint-sm) {
-            min-width: 100% !important;
+            //min-width: 100% !important;
           }
           @media (min-width: $breakepoint-md) {
             min-width: 220px;
-            width: 220px;
+            /*width: 220px;*/
           }
           @media (min-width: $breakepoint-lg) {
             min-width: 242px;
@@ -102,6 +110,8 @@
     max-width: 456px;
     margin: 0 auto;
     margin-top:32px;
+    font-size: 12px;
+    height: 32px;
     @media (max-width: $breakepoint-md) {
       max-width: 242px;
     }
@@ -150,14 +160,32 @@
       margin-left:8px;
     }
   }
+  &__overlay-video{
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    margin-top:-24px;
+    &:before{
+      @extend %before;
+      width: 48px;
+      height: 48px;
+      background-image: url(../../img/svg/masonry-video.svg);
+      background-size: cover;
+      margin: 0 auto;
+    }
+  }
+
 
 
 
   &_masonry{
     border: 0;
+    background:transparent;
     .card__hover-block{
       text-align: left;
       justify-content: flex-start;
+      border-radius: 4px;
     }
     .card__hover-item img {
       max-width: 16px;
@@ -182,6 +210,7 @@
     .card__hover-mobile:checked ~ .card__hover-mobile-label {
       right: inherit;
       left: 50%;
+      z-index: 10;
     }
     .card__hover-mobile-label:before {
       transform: rotate(270deg);
@@ -196,3 +225,10 @@
 
 }
 
+.masonry-comunity{
+  @extend .main-comunity;
+}
+.masonry-lessons{
+  @extend .main-comunity;
+  background:transparent;
+}

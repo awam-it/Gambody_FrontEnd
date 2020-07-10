@@ -1,0 +1,16 @@
+form{
+  input[type=text]{
+    @include font-property(normal);
+    @include placeholder(#808080);
+    height: 32px;
+    border-radius: 4px;
+    border: solid 1px #bfbfbf;
+    background-color: $white-bg;
+    font-size: 12px;
+    line-height: 2;
+    color: #808080;
+    padding: $padding-side-xs;
+  }
+  input[type=submit]{
+  }
+}

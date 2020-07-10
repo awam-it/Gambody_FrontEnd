@@ -12,12 +12,15 @@
 @import 'base/all';
 
 @import 'components/buttons';
+@import 'components/form';
 @import 'components/card';
 @import "components/container";
-@import 'components/slider';
+@import 'components/cookies';
 @import 'components/sidebar';
 @import 'components/breadcrumbs';
 @import 'components/trending-slider';
+@import 'components/subscribe';
+@import 'components/blog-list';
 
 @import "pages/home";
 @import "pages/cards";
