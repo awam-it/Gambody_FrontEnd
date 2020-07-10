@@ -39,7 +39,8 @@
     input[type=text]{
       @extend %column8px-margin;
       @media (min-width: $breakepoint-xs) {
-        min-width: 100%;
+        min-width: auto;
+        min-width: 264px;
       }
       @media (min-width: $breakepoint-md) {
         min-width: 384px;
@@ -47,6 +48,12 @@
     }
     input[type=submit]{
       @extend %column8px-margin;
+      @media (min-width: $breakepoint-xs) {
+        min-width: auto;
+        min-width: 264px;
+      }
+      @media (min-width: $breakepoint-md) {
+      }
     }
 
   }
