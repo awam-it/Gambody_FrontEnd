@@ -1,0 +1,63 @@
+
+/* breadcrumbs.scss */
+
+.breadcrumbs{
+  @extend %flex-align;
+  justify-content: flex-start;
+  width:100%;
+  margin-bottom:16px;
+  &__item{
+    position: relative;
+    font-size: 11px;
+    color: $topline-color;
+    a {
+      @include font-property(normal);
+      font-size: 11px;
+      line-height: 1.45;
+      letter-spacing: normal;
+      color: $topline-color;
+      margin: 0px 5px;
+      &:hover{
+        text-decoration: underline;
+      }
+    }
+    &:after{
+      @extend %before;
+      content: '\\';
+      display: flex;
+      width: 10px;
+      height: 11px;
+      position: absolute;
+      right: -8px;
+      top:2px;
+    }
+    &:last-child{
+     &:after{
+       content:"";
+     }
+    }
+  }
+  &_previous{
+    padding-right: 4px;
+    &:after{
+      @extend %before;
+      @extend .breadcrumbs__item:after;
+      content:"•";
+      right: -5px;
+    }
+
+  }
+
+
+}
+
+
+
+
+
+
+
+
+
+
+

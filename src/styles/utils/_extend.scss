@@ -70,17 +70,23 @@
 %inline8px-margin {
   margin: 0px 8px;
 }
+%inline16px-margin{
+  margin:0px 16px;
+}
 %inline24px-margin {
   margin: 0px 24px;
+}
+%column8px-margin{
+  margin:8px 0px;
 }
 %column20px-margin{
   margin:20px 0px;
 }
-%inline16px-margin{
-  margin:0px 16px;
+%column24px-margin{
+  margin:24px 0px;
 }
-%column8px-margin{
-  margin:8px 0px;
+%column32px-margin{
+  margin:32px 0px;
 }
 %btn-size40{
   width: 40px;

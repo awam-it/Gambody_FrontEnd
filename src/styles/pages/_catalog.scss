@@ -60,6 +60,13 @@
       }
     }
   }
+  &__full{
+    //@include size-lg(12);
+    //@include size-xl(12);
+    width: 100%;
+  }
+
+
 }
 
 /* switch */
@@ -289,6 +296,12 @@ input {
     img{
       height: auto;
       width: auto;
+      @include transition(0.4s);
+    }
+    &:hover{
+      img{
+        transform: scale(1.1);
+      }
     }
 
   }
@@ -307,10 +320,138 @@ input {
 }
 
 
+.catalog{
+  &-top{
+    .row{
+      margin:40px 0px;
+    }
+  }
+  &-comunity{
+    background:$white-bg;
+    .row{
+      margin:0px;
+      padding:40px 0px;
+    }
+    &__line {
+      @include font-property(normal);
+      @extend %flex-align;
+      padding: 8px 16px;
+      font-size: 11px;
+      line-height: 1.45;
+      color: #666666;
+      justify-content: space-between;
+      width:100%;
+      border-bottom: solid 1px $grey;
+      &:hover{
+        background-color: #f7f7f7;
+      }
+    }
+    &__text{
+      @extend %inline16px-padding;
+      flex-direction: row;
+      flex-grow: 1;
+    }
+    &__media{
+      @extend %flex-align;
+    }
+    &__img{
+      img {
+        width: 32px;
+        height: 32px;
+        flex-shrink:0;
+        object-fit: cover;
+        border-radius: 32px;
+      }
+    }
+    &__type{
+      @extend %flex-align;
+      width: 32px;
+      height: 32px;
+      background-color: $grey;
+      border-radius: 32px;
+      margin-left: -8px;
+      span {
+        &:before {
+          @extend %before;
+          @extend %before-small;
+        }
+      }
+      .type-comment {
+        &:before {
+          background-image: url(../../img/svg/type-comment.svg);
+        }
+      }
+      .type-image {
+        &:before {
+          background-image: url(../../img/svg/type-image.svg);
+        }
+      }
+      .type-like {
+        &:before {
+          background-image: url(../../img/svg/type-like.svg);
+        }
+      }
+      .type-update {
+        &:before {
+          background-image: url(../../img/svg/type-update.svg);
+        }
+      }
+      .type-wishlist {
+        &:before {
+          background-image: url(../../img/svg/type-wishlist.svg);
+        }
+      }
+
+
+    }
+    &__author {
+      letter-spacing: 0.4px;
+      color: $black;
+    }
+    &__link {
+      color: $blue;
+    }
+    &__button{
+      max-width: 328px;
+      margin:32px auto;
+      justify-content: center;
+    }
 
 
 
+  }
 
+
+
+}
+
+.main-sellers{
+  @extend %column24px-padding;
+  padding-top:40px;
+}
+.main-release{
+  @extend %column16px-padding;
+}
+.promo-cat{
+  @extend %column24px-padding;
+}
+.categories-promo{
+  &__item{
+    background: $white-bg;
+    border-radius: 4px;
+    img{
+      width:100%;
+    }
+  }
+  &__title{
+    min-height: 64px;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 2;
+    color: $black;
+    padding:8px 16px;
+  }
+}
 
 
 
