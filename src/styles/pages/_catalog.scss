@@ -464,8 +464,6 @@ input {
 
   }
 
-
-
 }
 
 .main-sellers{
@@ -496,7 +494,25 @@ input {
   }
 }
 
-
+.item-label {
+  &__hot {
+    @extend %flex-align;
+    background-color: #f77628;
+    border-radius: 2px;
+    min-width: 32px;
+    height: 24px;
+    margin: 0px 4px;
+    padding: 0px 3px;
+    position: absolute;
+    top: 16px;
+    left: 16px;
+    &:before {
+      @extend %before;
+      @extend %before-small;
+      background-image: url("../../img/svg/labels_hot.svg");
+    }
+  }
+}
 
 
 
