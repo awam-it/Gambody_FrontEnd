@@ -21,13 +21,25 @@
 
   &__img{
     position: relative;
-      @media (max-width: $breakepoint-md) {
+    height: 240px;
+    border-radius: 0;
+    border-bottom-right-radius: 0px;
+    border-bottom-left-radius: 0px;
+    @media (min-width: $breakepoint-xs) {
+      height: 240px;
+    }
+    @media (max-width: $breakepoint-md) {
      width: 62%;
      }
     img{
       border-radius: 4px;
       @media (min-width: $breakepoint-xs) {
         height: auto;
+        object-fit: cover;
+        height: 100%;
+        width: 100%;
+        border-bottom-right-radius: 0px;
+        border-bottom-left-radius: 0px;
       }
     }
   }
