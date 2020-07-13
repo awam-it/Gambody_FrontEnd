@@ -217,6 +217,12 @@
     }
     .card__hover-mobile:checked ~ .card__hover-mobile-label:before {
     }
+    .card__img {
+      @media (min-width: $breakepoint-xs) {
+        height: auto;
+      }
+    }
+
 
   }
 

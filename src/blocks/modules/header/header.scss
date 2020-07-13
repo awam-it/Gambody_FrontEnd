@@ -447,7 +447,6 @@
       bottom: -32px;
     }
   }
-  
   &__desktop{
     @media (min-width: $breakepoint-xs) {
       display: none;
@@ -475,6 +474,7 @@
       display: none;
     }
   }
+
 }
 .rate_active{
   border: solid 1px #e61a1a;
