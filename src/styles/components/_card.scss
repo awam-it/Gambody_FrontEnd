@@ -816,13 +816,14 @@
       font-size: 12px;
       height: 32px;
   }
-  .button{
+  &.button{
     justify-content: center;
     @media (min-width: $breakepoint-xs) {
       width:100%;
+      max-width: 242px;
     }
     @media (min-width: $breakepoint-md) {
-      width:456px;
+      max-width:456px;
     }
   }
 }

@@ -300,6 +300,13 @@
       }
 
     }
+    @media (min-width: $breakepoint-xs) {
+      font-size: 26px;
+    }
+    @media (min-width: $breakepoint-md) {
+      font-size: 32px;
+    }
+
   }
 
   /******************/
