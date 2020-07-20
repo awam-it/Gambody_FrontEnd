@@ -12,7 +12,7 @@
   &:hover {
     .card__hover-block {
       opacity: 1;
-      z-index: 2;
+      z-index: 1;
     }
 
   }
@@ -27,6 +27,7 @@
     border-bottom-left-radius: 0px;
     @media (min-width: $breakepoint-xs) {
       height: 240px;
+      min-height: 240px;
     }
     @media (max-width: $breakepoint-md) {
      width: 62%;
@@ -43,6 +44,14 @@
       }
     }
   }
+  &.card_featured {
+    .card__img {
+      @media (min-width: $breakepoint-xs) {
+        min-height: auto;
+      }
+    }
+  }
+
   &__img-bg{
     width:100%;
     height:240px;
@@ -209,6 +218,11 @@
       @extend %card_hover_btn_mini-hover;
     }
   }
+  &__hover-list-active{
+    &:before{
+      background-image: url(../../img/svg/hover-add-to-list-active.svg);
+    }
+  }
   &__hover-favourites{
     @extend %card_hover_btn_mini;
     &:before{
@@ -219,6 +233,11 @@
     }
     &:hover {
       @extend %card_hover_btn_mini-hover;
+    }
+  }
+  &__hover-favourites-active{
+    &:before{
+      background-image: url(../../img/svg/hover-add-to-favourites-active.svg);
     }
   }
   &__hover-content {
@@ -336,18 +355,20 @@
 
   &__content{
     padding: 8px 10px;
-    background-color: $white-bg;
+    //background-color: $white-bg;
     border-bottom-left-radius: 4px;
     border-bottom-right-radius: 4px;
     height: 100%;
     display: flex;
     flex-direction: column;
+    z-index: 2;
     @media (max-width: $breakepoint-md) {
       width: 38%;
       position:relative;
       height: auto;
       justify-content: flex-start;
       align-items: flex-start;
+      overflow: hidden;
     }
   }
   &__content-line{
@@ -376,6 +397,9 @@
     letter-spacing: normal;
     color: $black;
     margin-bottom: 8px;
+    &:hover{
+      text-decoration: underline;
+    }
   }
   &__content-author{
     @include font-property(normal);
@@ -384,6 +408,12 @@
     letter-spacing: normal;
     color: #666666;
     margin-bottom: 8px;
+    a{
+      color: #666666;
+      &:hover{
+        text-decoration: underline;
+      }
+    }
   }
 
 
@@ -421,6 +451,7 @@
   }
   &__premium-price{
     color: #f7b228;
+    font-weight: normal;
     @media (min-width: $breakepoint-md) {
       margin-left: 0;
     }
@@ -496,12 +527,22 @@
         justify-content: space-between;*/
       }
     }
-    .card__content-title,
-    .card__content-author{
-    display: none;
-      @media (max-width: $breakepoint-md) {
-        display: block;
+    .card__content {
+      .card__content-title,
+      .card__content-author {
+        display: none;
+        @media (max-width: $breakepoint-md) {
+          display: block;
+        }
       }
+    }
+  }
+  .card_mini__link{
+    @media (min-width: $breakepoint-ipad) {
+      position: absolute;
+      width: 70%;
+      height: 80%;
+      z-index: 10;
     }
   }
 
@@ -518,14 +559,70 @@
         width: 100%;
       }
     }
+    .card__img{
+      >img{
+        @media (min-width: $breakepoint-xs) {
+          min-height: 360px;
+        }
+        @media (min-width: $breakepoint-lg) {
+          min-height: auto;
+        }
+      }
+      @media (min-width: $breakepoint-xs) {
+        height: auto;
+        display: inline-flex;
+        justify-content: start;
+        align-items: unset;
+      }
+      @media (min-width: $breakepoint-lg) {
+        height: 240px;
+      }
+      &:before {
+        @media (min-width: $breakepoint-xs) {
+          content: "";
+          display: block;
+          margin-top: 100%;
+        }
+        @media (min-width: $breakepoint-lg) {
+          margin-top: 0;
+        }
+      }
+
+    }
     .card__content-line {
       @media (min-width: $breakepoint-xs) {
         position: relative;
         padding: 0;
       }
     }
+    .card__hover-mobile:checked ~ .card__hover-mobile-label {
+      @media (min-width: $breakepoint-xs) {
+        right: 0px;
+        z-index: 3;
+      }
+    }
+     .card__hover-mobile:checked ~ .card__hover-block {
+       @media (min-width: $breakepoint-xs) {
+         width: calc(100% - 32px);
+       }
+       @media (min-width: $breakepoint-md) {
+         width: 100%;
+       }
+      }
 
   }
+  &.card_slider{
+    .tns-controls{
+      button:first-child {
+        left: 8px;
+      }
+      button:last-child {
+        right: 8px;
+      }
+    }
+  }
+
+
 
   &.card_article{
   img{
@@ -574,16 +671,51 @@
 
   // card condition
   &.card_added-to-cart{
-    border: solid 3px #4bb13c;
+    //border: solid 3px #4bb13c;
     .card__cart-link{
       background-color: #4bb13c;
       &:before{
         background-image:  url("../../img/svg/card_cart-white.svg");
       }
     }
+   &:after {
+      content: '.';
+      display: block;
+     width: 100%;
+     height: 100%;
+     position: absolute;
+     border: solid 3px #4bb13c;
+     border-radius: 4px;
+     z-index: 1;
+    }
+    .card__hover-block {
+      margin: 3px;
+      margin-bottom: 0;
+    }
+    &:hover .card__hover-block {
+      z-index: 2;
+    }
+
   }
   &.card_sale-premium{
-    border: solid 3px #f7b228;
+    //border: solid 3px #f7b228;
+    &:after {
+      content: '.';
+      display: block;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      border: solid 3px #f7b228;
+      border-radius: 4px;
+      z-index: 1;
+    }
+    .card__hover-block {
+      margin: 3px;
+      margin-bottom: 0;
+    }
+    &:hover .card__hover-block {
+      z-index: 2;
+    }
   }
 
 
@@ -623,6 +755,15 @@
       background-image: url(../../img/svg/owl-next.svg);
       background-size: cover;
     }
+    &:after {
+      @extend %before;
+      background: transparent;
+      width: 40px;
+      height: 40px;
+      width: 50px;
+      height: 200px;
+      position: absolute;
+    }
   }
 
 
@@ -638,6 +779,7 @@
     &__hover-mobile:checked ~ .card__hover-block {
       opacity: 1;
       z-index: 2;
+      z-index: 16;
     }
     &__hover-mobile:not(:checked)~ .card__hover-block {
       opacity: 0;
@@ -660,8 +802,12 @@
     }
     @media (min-width: $breakepoint-xs) {
       display: block;
+      z-index: 9;
     }
-    @media (min-width: $breakepoint-lg) {
+    @media (min-width: $breakepoint-ipad) {
+      z-index: 0;
+    }
+    @media (min-width: $breakepoint-ipad-L1) {
       display: none;
     }
   }
@@ -682,7 +828,7 @@
       display: block;
       z-index: 5;
     }
-    @media (min-width: $breakepoint-lg) {
+    @media (min-width: $breakepoint-ipad-L) {
       display: none;
     }
   }
@@ -712,11 +858,11 @@
     z-index: 10;
     font-size: 16px;
     top: -10%;
-    height: calc(100% + 10%);
+    //height: calc(100% + 10%);
     border-radius: 10px;
     box-shadow: 0 0 15px 5px rgba(0, 0, 0, 0.55);
     flex-direction: column;
-    &:before{
+    /*&:before{
       @extend %before;
       height: 100%;
       position: absolute;
@@ -724,32 +870,36 @@
       background: transparent;
       display: flex;
       width: 20px;
-    }
+    }*/
     @media (min-width: $breakepoint-xs) {
       width:100vw;
       width: 100%;
       height: 100%;
       top: 0;
+
+      min-height: auto;
     }
     @media (min-width: $breakepoint-md) {
       width: 100%;
       height: 100%;
       top: 0;
     }
-    @media (min-width: $breakepoint-lg) {
+    @media (min-width: $breakepoint-ipad-L) {
       width:500px;
-      height: calc(100% + 10%);
+      //height: calc(100% + 10%);
+      height: auto;
       top: -10%;
     }
 
 
     img{
       @media (min-width: $breakepoint-xs) {
-        border-top-left-radius: 4px;
-        border-top-right-radius: 4px;
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
         height: auto;
+        width: 100%;
       }
-      @media (min-width: $breakepoint-lg) {
+      @media (min-width: $breakepoint-ipad-L) {
         border-radius:0px;
         border-top-left-radius: 4px;
         border-top-right-radius: 4px;
@@ -757,6 +907,16 @@
       }
 
 
+    }
+
+    .card__cart {
+      @media (min-width: $breakepoint-xs) {
+        margin-left: 8px;
+        display:inline-flex;
+      }
+      @media (min-width: $breakepoint-md) {
+        display:none;
+      }
     }
 
   }
@@ -826,29 +986,66 @@
       max-width:456px;
     }
   }
+  .button{
+    @media (min-width: $breakepoint-xs) {
+      width: 100%;
+      max-width: 344px;
+      align-items: center;
+      justify-content: center;
+      height:40px;
+    }
+  }
 }
 
 /***********************/
 
+.tns-outer .over .card__hidden-slider, .tns-outer .over_l .card__hidden-slider {
+  @media (min-width: $breakepoint-md) and (max-width: $breakepoint-ipad-L1) {
+    width: 754px;
+  }
+}
 
 .over .card__hidden-slider, .over_l .card__hidden-slider{
   @extend %flex-align;
   @media (min-width: $breakepoint-xs) {
     right: auto;
     left: auto;
-    width: 100%;
-    height: 100%;
+    width: 100vw;
+    height: auto;
     top: 0;
+    z-index: 10;
+    border-radius: 0px;
+    border: 2px solid rgba(0, 0, 0, 0.55);
+    box-shadow: none !important;
+  }
+  @media (min-width: $breakepoint-750) and (max-width: $breakepoint-md) {
+    left: 0;
+  }
+  @media (min-width: $breakepoint-sm) and (max-width: $breakepoint-md)   {
+    width: calc(100vw - 16px);
 
   }
-  @media (min-width: $breakepoint-md) {
+  @media (min-width: $breakepoint-ipad) {
+    width: 100%;
     left: calc(100% + 15px);
     height: auto;
     min-height: auto;
+    z-index: 3;
   }
+  @media (min-width: $breakepoint-md) and (max-width: $breakepoint-ipad-L1) {
+    width: 722px;
+    left: 0;
+    z-index: 20;
+  }
+
+
   @media (min-width: $breakepoint-lg) {
     width: 500px;
-    height: calc(100% + 10%);
+    //height: calc(100% + 10%);
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 0 5px 3px rgba(0, 0, 0, 0.55)  !important;
+    border: 0px
   }
 }
 .over .card__controls, .over_l .card__controls{
@@ -860,6 +1057,9 @@
     display:inline-flex;
   }
 }
+.over .card__cart span, .over_l .card__cart span{
+   display:none;
+}
 .over .card__content .card__price, .over_l .card__content  .card__price{
   @media (min-width: $breakepoint-xs) {
     display:block;
@@ -870,15 +1070,25 @@
 }
 
 .over_l .card__hidden-slider{
-
-  @media (min-width: $breakepoint-md) {
+  @media (min-width: $breakepoint-xs) {
+    right: auto;
+    left: auto;
+    align-self: center;
+  }
+  @media (min-width: $breakepoint-ipad) {
     right: calc(100% + 15px);
     left: auto;
     height: auto;
     min-height: auto;
   }
-  @media (min-width: $breakepoint-lg) {
+  @media (min-width: $breakepoint-md) and (max-width: $breakepoint-ipad-L1) {
+    //width: 722px;
+    left: 0;
+    z-index: 20;
+    left: auto;
+    right: 0;
   }
+
 
 }
 .hidden-slider-content{
@@ -886,7 +1096,7 @@
   padding:8px 16px;
   width: 100%;
   flex-grow: 1;
-  align-items: flex-end;
+  align-items: center;
   .card__content-title{
     flex: auto;
     margin-bottom: 0;
@@ -910,6 +1120,7 @@
 
 
 }
+
 
 
 

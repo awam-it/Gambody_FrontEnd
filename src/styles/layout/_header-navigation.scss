@@ -41,6 +41,7 @@
     }
   }
   .multilevel-icon{
+    width: 100% !important;
     &:before {
       @extend %before;
       @extend %before-small;
@@ -51,7 +52,8 @@
       position: absolute;
       cursor:pointer;
       top: 50%;
-      left: 50%;
+      left: auto;
+      right: 30px;
       margin-top: -8px;
       margin-left: -8px;
     }
@@ -107,6 +109,17 @@ nav.open {
 .main-nav nav ul {
   padding: 0;
   margin: 0;
+  @media (min-width: $breakepoint-xs) {
+    background: #fff;
+    min-height: 100vh;
+    min-height: auto;
+  }
+  @media (min-width: $breakepoint-md) {
+    height: auto;
+    min-height: auto;
+  }
+
+
   li {
 
     a {
@@ -164,6 +177,7 @@ nav.open {
   z-index: 1;
   opacity:1;
   overflow: hidden;
+  height: 100vh;
   span{
     background-color: rgba(0, 0, 0, 0.9);
     width: 100%;
@@ -278,15 +292,14 @@ nav.open {
   background-color: #CFD8DC;
 }
 .menu__full-bg-close{
-  position:absolute;
+  position: fixed;
   width: 100%;
   height: 100%;
-  height: 100vh;
+  height: 0;
   z-index: -1;
   opacity:0;
   top: 0px;
   left: 0px;
-  transition-duration: .7s;
   z-index: -10;
   position: relative;
   span{
@@ -294,7 +307,6 @@ nav.open {
     width: 0px;
     height: 0px;
     display: block;
-    transition-duration: .15s;
   }
 }
 .main-nav {
@@ -349,8 +361,14 @@ nav.open {
     line-height: 1.71;
     letter-spacing: normal;
     text-decoration: none;
-    transition-duration: .7s;
     width:100%;
+    @media (min-width: $breakepoint-xs) {
+      font-size: 12px;
+    }
+    @media (min-width: $breakepoint-md) {
+      font-size: 14px;
+    }
+
 
     &:hover {
       background-color: $topline-bg;
@@ -360,6 +378,38 @@ nav.open {
 
   &_special {
     color: #e61a1a;
+    align-items: center;
+    justify-content: left;
+    display: inline-flex;
+    &:before {
+      @extend %before;
+      @extend %before-small;
+      @media (min-width: $breakepoint-xs) {
+      background-image: url(../../img/svg/link_special.svg);
+      margin-right: 4px;
+      }
+      @media (min-width: $breakepoint-md) {
+        margin:0;
+        display: none;
+      }
+    }
+  }
+  &_comunity {
+    align-items: center;
+    justify-content: left;
+    display: inline-flex;
+    &:before {
+      @extend %before;
+      @extend %before-small;
+      @media (min-width: $breakepoint-xs) {
+        background-image: url(../../img/svg/link_warning.svg);
+        margin-right: 4px;
+      }
+      @media (min-width: $breakepoint-md) {
+        margin:0;
+        display: none;
+      }
+    }
   }
   &__title{
     @include font-property(normal);
@@ -476,6 +526,29 @@ nav.open {
 
   /* width */
 
+  &__mobile{
+    @media (min-width: $breakepoint-xs) {
+      display: block;
+    }
+    @media (min-width: $breakepoint-ipad) {
+      display: none;
+    }
+    &-top{
+      position: relative;
+      top: 0;
+    }
+    .main-nav__title{
+      padding: 8px;
+    }
+  }
+  &__desktop{
+    @media (min-width: $breakepoint-xs) {
+      display: none;
+    }
+    @media (min-width: $breakepoint-ipad) {
+      display: block;
+    }
+  }
 
 }
 
@@ -542,3 +615,69 @@ nav.open {
       @include transition(.25s);
     }
   }
+
+  .nav-hide{
+    display: none;
+  }
+
+ /* .nav-level.nav-overlay.nav-covered{
+    position: absolute;
+    top: auto;
+  }
+.submenu.open{
+  background: #fff;
+  height: auto;
+  min-height: calc(100vh - 200px);
+}*/
+
+.nav-level2 {
+  .submenu.nav-level{
+      top: auto;
+      background: #fff;
+      margin-top: -40px;
+    }
+  .main-nav__category-menu{
+    li{
+      .top_back{
+        position: relative !important;
+        width: 100% !important;
+        margin: 0px 14px;
+        height: auto;
+        margin-top: 0;
+        &:before{
+          margin-top: 0;
+        }
+      }
+    }
+  }
+  .multilevel-icon {
+    width: 100% !important;
+    position: absolute;
+    margin-top: -40px;
+    right: 0;
+    height: 40px;
+    width: 40px;
+    cursor: pointer;
+    &:before {
+      @extend %before;
+      @extend %before-small;
+      background-image: url(../../img/svg/owl-next-black.svg);
+      background-size: cover;
+      z-index: 0;
+      position: absolute;
+      cursor: pointer;
+      top: 50%;
+      left: auto;
+      right: 30px;
+      margin-top: -8px;
+      margin-left: -8px;
+    }
+  }
+
+
+
+}
+
+.submenu.nav-level.open>.main-nav__mobile-top{
+  padding-bottom: 100px;
+}

@@ -4,6 +4,7 @@
   margin-bottom: -12%;
   min-height: 300px;
   position: relative;
+  max-height: 768px;
   @media (max-width: $breakepoint-md){
     margin-bottom: 0%;
     min-height: auto;
@@ -13,7 +14,6 @@
     width: 100%;
   }
 }
-
 .slider{
   position: relative;
   font-size: 16px;
@@ -168,6 +168,10 @@
     display: flex;
     align-items: center;
     min-height: 182px;
+
+    display: inline-flex;
+    align-self: center;
+    justify-content: center;
   }
   .main-title{
     margin-bottom: 0px;
@@ -176,6 +180,15 @@
     .main-title{
       justify-content: center;
     }
+  }
+  &__bg{
+    width: 128px;
+    height: 128px;
+    position: absolute;
+    z-index: -1;
+    background-image: url(../../img/svg/discover_backplate.svg);
+    background-position: center;
+    background-size: cover;
   }
 
 }
@@ -189,6 +202,9 @@
     background-color: rgba(0, 0, 0, 0.5);
     padding: 44px 16px !important;
     margin-top: -61px;
+    &:hover{
+      background-color: rgba(0, 0, 0, 0.7);
+    }
     &:before{
       width: 24px;
       height: 24px;
@@ -226,41 +242,110 @@
       width: auto;
     }
   }
-  .tns-controls {
-    top: 43%;
-  }
-  .tns-controls button {
-    color: #FFF;
-    font-size: 14px;
-    cursor: pointer;
-    border-radius: 4px;
-    background-color: rgba(0, 0, 0, 0.5);
-    padding: 44px 16px !important;
-    margin-top: -61px;
-    &:before{
-      width: 24px;
-      height: 24px;
+  >.tns-outer {
+    >.tns-controls {
+      top: 43%;
+    }
+
+    >.tns-controls button {
+      color: #FFF;
+      font-size: 14px;
+      cursor: pointer;
+      border-radius: 4px;
+      background-color: rgba(0, 0, 0, 0.5);
+      padding: 44px 16px !important;
+      margin-top: -61px;
+
+      &:hover {
+        background-color: rgba(0, 0, 0, 0.7);
+      }
+
+      &:before {
+        width: 24px;
+        height: 24px;
+      }
+    }
+
+    >.tns-controls button[data-controls="prev"] {
+      @media (min-width: $breakepoint-xs) {
+        left: -60px;
+      }
+      @media (min-width: $breakepoint-xxl) {
+        left: -72px;
+      }
+    }
+
+    >.tns-controls button[data-controls="next"] {
+      @media (min-width: $breakepoint-xs) {
+        right: -60px;
+      }
+      @media (min-width: $breakepoint-xxl) {
+        right: -72px;
+      }
+    }
+
+    >.tns-controls button[disabled] {
+      opacity: 0;
     }
   }
-  .tns-controls button[data-controls="prev"] {
+
+  .slider-cards{
     @media (min-width: $breakepoint-xs) {
-      left: -10px;
+      overflow: hidden;
     }
-    @media (min-width: $breakepoint-xxl) {
-      left: -72px;
-    }
-  }
-  .tns-controls button[data-controls="next"] {
-    @media (min-width: $breakepoint-xs) {
-      right: -10px;
-    }
-    @media (min-width: $breakepoint-xxl) {
-      right: -72px;
+
+    .tns-ovh{
+      @media (min-width: $breakepoint-xs) {
+        overflow-y: visible;
+      }
+      @media (min-width: $breakepoint-md) {
+        overflow: hidden;
+      }
     }
   }
-  .tns-controls button[disabled]{
-    opacity:0;
+  .slider-cards__slider, .slider-cards__slider-new{
+    padding: 10px 0px;
+
+    .card_slider {
+      .hidden-slider-item {
+        justify-content: center;
+        align-items: center;
+        display: inline-flex;
+
+        img {
+          max-height: 244px;
+          width: auto;
+          @media (min-width: $breakepoint-xs) and (max-width: $breakepoint-ipad) {
+            max-height: 208px;
+            max-height: 200px;
+          }
+          @media (max-width: $breakepoint-lg) {
+            border-radius: 0px;
+          }
+
+        }
+      }
+
+      &.over .card__hidden-slider, &.over_l .card__hidden-slider {
+        box-shadow: 0 0 5px 3px rgba(0, 0, 0, 0.55);
+        @media (min-width: $breakepoint-ipad) and (max-width: $breakepoint-ipad-L1) {
+          width: 722px;
+          left: 0;
+          height: 294px;
+          z-index: 20;
+        }
+        @media (min-width: $breakepoint-lg) {
+          width: 477px;
+          width: 457px;
+        }
+
+      }
+    }
   }
+  .slider_off {
+    //transform: initial !important;
+  }
+
   &__show-more{
     @include font-property(normal);
     @extend %column24px-margin;
@@ -385,13 +470,18 @@
   .tns-controls {
    button{
      background-color: transparent;
-     padding: 0 !important;
+     padding: 8px;
+     &:hover{
+       background: #e6e6e6;
+     }
    }
   button[data-controls="prev"] {
     margin-left: 0px;
     left: 0;
+    left: -15px;
     @media (max-width: $breakepoint-md) {
-      margin-left: -20px
+      margin-left: 0;
+      left: 0;
     }
     &:before {
       background-image: url(../../img/svg/owl-prev-black.svg);
@@ -403,8 +493,10 @@
   button[data-controls="next"] {
     margin-right: 0px;
     right: 0;
+    right: -15px;
     @media (max-width: $breakepoint-md) {
-      margin-right: -20px
+      margin-right: 0;
+      right: 0;
     }
 
     &:before {

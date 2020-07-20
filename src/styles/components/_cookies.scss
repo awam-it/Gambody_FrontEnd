@@ -7,7 +7,8 @@
   width: 100%;
   z-index: 10;
   .container-full{
-    padding:16px;
+    padding: 0;
+    padding-top: 16px;
   }
   .container{
     @include font-property(normal);
@@ -15,6 +16,7 @@
     line-height: 1.71;
     color: $black;
     position: relative;
+    padding: 16px;
   }
   &__title{
     font-weight: 500;

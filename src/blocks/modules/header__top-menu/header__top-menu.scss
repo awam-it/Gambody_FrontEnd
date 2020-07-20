@@ -1,0 +1,75 @@
+
+/* header__top-menu.scss */
+
+.menuflat{
+  display: inline-flex;
+  .menuflat__list{
+    display: inline-flex;
+    list-style: none;
+    font-size: 0;
+    >.menuflat__item{
+      >.menuflat__link {
+        font-size: 11px;
+        line-height: 1.45;
+        color: $topline-color;
+        @extend %flex-align;
+        padding: 8px;
+      }
+    }
+    >.menuflat__item{
+      &:hover{
+        background: $red-bg;
+        >.menuflat__link{
+          color: #fff;
+        }
+        .menu-arrow{
+          display: block;
+        }
+      }
+    }
+  }
+  &:after{
+    @extend %delimeter;
+    margin: 8px 0px 8px 8px;
+  }
+
+  .link_special{
+    &:before{
+      @extend %before;
+      @extend %before-small;
+      background-image:  url("../../img/svg/link_special.svg");
+      margin-right: 4px;
+    }
+    &:hover{
+      &:before{
+        background-image:  url("../../img/svg/link_special-hover.svg");
+      }
+    }
+  }
+  .link_warning{
+    &:before{
+      @extend %before;
+      @extend %before-small;
+      background-image:  url("../../img/svg/link_warning.svg");
+      margin-right: 4px;
+    }
+  }
+  .menuflat_dropdown {
+    &:hover {
+      a {
+        &:after {
+          background-image: url("../../img/svg/menuflat_dropdown_hover.svg");
+        }
+      }
+    }
+  }
+  .menuflat_dropdown>a{
+    &:after{
+      @extend %before;
+      @extend %before-small;
+      background-image:  url("../../img/svg/menuflat_dropdown.svg");
+      margin-left: 4px;
+    }
+  }
+
+}

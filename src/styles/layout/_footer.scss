@@ -7,6 +7,14 @@
       margin-bottom:32px;
       }
     }
+    @media (min-width: $breakepoint-xs) {
+      padding-left: 8px;
+      padding-right: 8px;
+    }
+    @media (min-width: $breakepoint-md) {
+      padding-left: 0px;
+      padding-right: 0px;
+    }
   }
   &__center{
     @extend %column32px-padding;
@@ -47,6 +55,19 @@
   }
 
   &__quicklinks{
+    &-block{
+      display: none;
+      width: 100%;
+      margin-top: 32px;
+    }
+    &-active{
+      .footer__quicklinks-title:before {
+        transform: rotate(180deg);
+      }
+    }
+    &-block-active{
+      display: block;
+    }
 
   }
   &__quicklinks-title{
@@ -55,6 +76,7 @@
     line-height: 1.45;
     letter-spacing: normal;
     color: $white;
+    cursor: pointer;
     @extend %flex-align;
     &:before {
       @extend %before;
@@ -71,6 +93,17 @@
       flex-direction: column;
       justify-content: flex-start;
       border-radius: 2px;
+      @media (min-width: $breakepoint-xs) {
+        margin-top:32px;
+      }
+      @media (min-width: $breakepoint-lg) {
+        margin-top:0px;
+      }
+      &:first-child{
+        @media (min-width: $breakepoint-xs) {
+          margin-top:0px;
+        }
+      }
     }
   }
   &__center-content{
@@ -86,9 +119,7 @@
     }
   }
   &__center-title{
-    @media (max-width: $breakepoint-md) {
-      margin-top:32px;
-    }
+
   }
   &__center-title, &__center-content-trustpilot {
     @include font-property(normal);
@@ -152,6 +183,21 @@
     @extend %flex-align;
     @extend %column16px-padding;
     width: 100%;
+    @media (min-width: $breakepoint-xs) {
+      flex-wrap: wrap;
+      max-width: 90%;
+      margin: 0 auto;
+    }
+    img{
+      @media (min-width: $breakepoint-xs) {
+        padding-bottom:8px;
+        height: auto;
+      }
+      @media (min-width: $breakepoint-md) {
+        padding-bottom:0px;
+      }
+    }
+
   }
   &__bottom{
     @extend %column24px-padding;
@@ -166,6 +212,11 @@
       letter-spacing: normal;
       color: $white;
       @extend %flex-align;
+    }
+    a{
+      &:hover{
+        text-decoration: underline;
+      }
     }
   }
   &__bottom-links{
@@ -183,19 +234,17 @@
         color: $white;
         width: 10px;
       }
-      @media (max-width: $breakepoint-md) {
-        padding:12px 0px;
+      @media (min-width: $breakepoint-xs) {
+        padding: 20px 0px;
+      }
+      @media (min-width: $breakepoint-lg) {
+        padding: 0px;
       }
     }
     li{
       &:first-child{
           &:before{
             display: none;
-        }
-      }
-      a{
-        &:hover{
-          text-decoration: underline;
         }
       }
     }

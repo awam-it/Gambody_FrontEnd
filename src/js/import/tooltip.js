@@ -2,6 +2,23 @@
 /*****************************/
 /* tooltip */
 /*****************************/
+
+function onClickClose(elem) { // вызвать в момент показа окна, где elem - окно
+    function outsideClickListener(event) {
+        if (!elem.contains(event.target) && isVisible(elem)) {  // проверяем, что клик не по элементу и элемент виден
+            /*elem.style.display = 'none'; //скрыть*/
+            elem.classList.remove('slider_off');
+            document.removeEventListener('click', outsideClickListener);
+        }
+    }
+    document.addEventListener('click', outsideClickListener)
+}
+function isVisible(elem) { //открыто ли условное окно
+    return !!elem && !!( elem.offsetWidth || elem.offsetHeight || elem.getClientRects().length );
+}
+
+/***************/
+
 var i = 0;
 
 
@@ -37,6 +54,10 @@ function gettooltip(event) {
                 items: 1,
                 slideBy: 'page',
                 nav: false,
+                mouseDrag: false,
+                touch: false,
+                responsive: {
+                }
             });
         } else {
             var slider = tns({
@@ -44,6 +65,8 @@ function gettooltip(event) {
                 items: 1,
                 slideBy: 'page',
                 nav: false,
+                mouseDrag: false,
+                touch: false,
                 controlsContainer: control,
             });
         }
@@ -89,13 +112,28 @@ $( "div.card__mob-zoom" ).on("click", function () {
     var newthis = $(this).closest( ".card_slider" )
     $(newthis).addClass("mob-over");
     gettooltip(newthis);
+
+
+    var click_l = this.closest(".slider-cards__slider");
+    if (click_l) {
+        onClickClose(click_l)
+        var r1 = this.closest(".slider-cards__slider");
+        r1.classList.add('slider_off');
+    }
+
 });
 
 $( "div.card__mob-zoom-close" ).on("click", function () {
     var newthis = $(this).closest( ".card_slider" )
     newthis.removeClass("over");
     newthis.removeClass("over_l");
+    var r1 = this.closest(".slider-cards__slider");
+    if (r1) {
+        r1.classList.remove('slider_off');
+    }
 });
+
+
 
 
 /*****************************/

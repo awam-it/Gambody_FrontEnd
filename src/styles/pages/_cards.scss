@@ -10,10 +10,14 @@
   .card{
     @include col();
     @include size-xs(12);
-    @include size-md(4);
+    @include size-md(6);
     @include size-lg(3);
     @include size-xl(2);
     margin: $padding-side-xs;
+    @media (max-width: $breakepoint-750) {
+      width:100%;
+      margin: 4px 0;
+    }
   }
 }
 .cards-featured{
@@ -25,6 +29,11 @@
 }
 
 .catalog-line{
+  .container{
+    @media (min-width: $breakepoint-xs) {
+      padding:0;
+    }
+  }
   padding: 20px 0px;
   &:first-child{
     padding-top:40px;

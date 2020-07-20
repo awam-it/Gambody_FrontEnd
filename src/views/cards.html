@@ -16,7 +16,7 @@
                 Grid layout
             </div>
             <div class="cards-catalog">
-                <div class="card">
+                <div class="card card_slider">
                     <div class="card__img">
                         <img src="img/jpg/card-catalog1.jpg" srcset="img/jpg/card-catalog1@2x.jpg 2x, img/jpg/card-catalog1@3x.jpg 3x" alt="Card img">
                         <div class="labels">
@@ -31,6 +31,7 @@
                         <!-- hover block -->
                         <input id="card__hover-mobile1" class="card__hover-mobile" type="checkbox" />
                         <label for="card__hover-mobile1" class="card__hover-mobile-label"></label>
+                        <div class="card__mob-zoom"></div>
                         <div class="card__hover-block">
                             <div class="card__hover-settings">
                                 <input id="card__hover-settings-checkbox1" class="card__hover-settings-checkbox" type="checkbox" />
@@ -51,8 +52,8 @@
                             </div>
                             <div class="card__hover-etc">
                                 <div class="card__hover-share"></div>
-                                <div class="card__hover-list"></div>
-                                <div class="card__hover-favourites"></div>
+                                <div class="card__hover-list card__hover-list-active"></div>
+                                <div class="card__hover-favourites card__hover-favourites-active"></div>
                             </div>
                             <div class="card__hover-content">
                                 <div class="card__hover-item">
@@ -72,13 +73,17 @@
                         <!-- hover block -->
                     </div>
                     <div class="card__content">
-                        <div class="card__content-title">
-                            Viserion Ice Dragon 3D Printing Figurine
-                        </div>
-                        <div class="card__content-author">
-                            by <span>Oliver</span>
-                        </div>
+                        <a href="javascript:;" class="card__content-title">
+							Viserion Ice Dragon 3D Printing Figurine
+						</a>
+						<div class="card__content-author">
+							by <a href="javascript:;">Oliver</a>
+						</div>	
                         <div class="card__content-line">
+                            <ul class="card__controls" id="customize-controls" aria-label="Carousel Navigation" tabindex="0">
+                                <li class="prev button button_secondary button_m" data-controls="prev" aria-controls="customize" tabindex="-1"></li>
+                                <li class="next button button_secondary button_m" data-controls="next" aria-controls="customize" tabindex="-1"></li>
+                            </ul>
                             <div class="card__price">
                                 $24.99
                             </div>
@@ -87,32 +92,49 @@
                             </div>
                         </div>
                     </div>
-                    <!------------------------------------------------
+                    <!-- card__hidden-slider -->
                     <div class="card__hidden-slider">
-                        <div class="my-slider">
-                            <div class="slider-item">
-                                 <img src="https://placeimg.com/200/150/any" alt="">
+                        <div class="card__mob-zoom-close"></div>
+                        <div class="card__hidden-slider-count">
+                            <div class="slider-count-current"></div>&nbsp;of&nbsp;<div class="slider-count-total"></div>
+                        </div>
+                        <div class="hidden-slider">
+                            <div class="hidden-slider-item">
+                                <img src="img/jpg/ravager-groot-3d-model.jpg" alt="Viserion Ice Dragon 3D Printing Figurine">
                             </div>
-                            <div class="slider-item">
-                                    <img src="https://placeimg.com/200/150/nature" alt="">
+                            <div class="hidden-slider-item">
+                                <img src="img/jpg/ravager-groot-3d-model1.jpg" alt="Viserion Ice Dragon 3D Printing Figurine">
                             </div>
-                            <div class="slider-item">
-                                <img src="https://placeimg.com/200/150/any" alt="">
+                            <div class="hidden-slider-item">
+                                <img src="img/jpg/ravager-groot-3d-model2.jpg" alt="Viserion Ice Dragon 3D Printing Figurine">
                             </div>
-                            <div class="slider-item">
-                                <img src="https://placeimg.com/200/150/nature" alt="">
+                        </div>
+                        <div class="hidden-slider-content">
+                            <div class="card__content-title">
+                                Viserion Ice Dragon 3D Printing Figurine
+                            </div>
+                            <div class="card__content-line">
+                                <div class="card__price">
+                                    $24.99
+                                    <div class="card__oldprice">
+                                        $74.99
+                                    </div>
+                                </div>
+                                <div class="card__cart">
+                                    <a href="javascript:;" class="card__cart-link"></a>
+                                </div>
                             </div>
                         </div>
                     </div>
-                   ----------------------------------------------->
-
+                    <!-- card__hidden-slider -->
                 </div>
-                <div class="card">
+                <div class="card card_slider">
                     <div class="card__img">
                         <img src="img/jpg/card-catalog2.jpg" srcset="img/jpg/card-catalog2@2x.jpg 2x, img/jpg/card-catalog2@3x.jpg 3x" alt="Card img">
                         <!-- hover block -->
                         <input id="card__hover-mobile2" class="card__hover-mobile" type="checkbox" />
                         <label for="card__hover-mobile2" class="card__hover-mobile-label"></label>
+						<div class="card__mob-zoom"></div>
                         <div class="card__hover-block">
                             <div class="card__hover-settings">
                                 <input id="card__hover-settings-checkbox2" class="card__hover-settings-checkbox" type="checkbox" />
@@ -153,14 +175,18 @@
                         </div>
                         <!-- hover block -->
                     </div>
-                    <div class="card__content">
-                        <div class="card__content-title">
-                            Alien Queen 3D Printing Figurine in
-                        </div>
-                        <div class="card__content-author">
-                            by <span>Irene Sotelo</span>
-                        </div>
+                    <div class="card__content"> 
+						<a href="javascript:;" class="card__content-title">
+							Alien Queen 3D Printing Figurine in
+						</a>
+						<div class="card__content-author">
+							by <a href="javascript:;">Irene Sotelo</a>
+						</div>	
                         <div class="card__content-line">
+							<ul class="card__controls" id="customize-controls" aria-label="Carousel Navigation" tabindex="0">
+                                <li class="prev button button_secondary button_m" data-controls="prev" aria-controls="customize" tabindex="-1"></li>
+                                <li class="next button button_secondary button_m" data-controls="next" aria-controls="customize" tabindex="-1"></li>
+                            </ul>
                             <div class="card__price">
                                 $24.99
                             </div>
@@ -169,9 +195,44 @@
                             </div>
                         </div>
                     </div>
+					<!-- card__hidden-slider -->
+                    <div class="card__hidden-slider">
+                        <div class="card__mob-zoom-close"></div>
+                        <div class="card__hidden-slider-count">
+                            <div class="slider-count-current"></div>&nbsp;of&nbsp;<div class="slider-count-total"></div>
+                        </div>
+                        <div class="hidden-slider">
+                            <div class="hidden-slider-item">
+                                <img src="img/png/model-robots2_1.png" alt="Viserion Ice Dragon 3D Printing Figurine">
+                            </div>
+                            <div class="hidden-slider-item">
+                                <img src="img/png/model-robots2_2.png" alt="Viserion Ice Dragon 3D Printing Figurine">
+                            </div>
+                            <div class="hidden-slider-item">
+                                <img src="img/png/model-robots2_3.png" alt="Viserion Ice Dragon 3D Printing Figurine">
+                            </div>
+                        </div>
+                        <div class="hidden-slider-content">
+                            <div class="card__content-title">
+                                Viserion Ice Dragon 3D Printing Figurine
+                            </div>
+                            <div class="card__content-line">
+                                <div class="card__price">
+                                    $24.99
+                                    <div class="card__oldprice">
+                                        $74.99
+                                    </div>
+                                </div>
+                                <div class="card__cart">
+                                    <a href="javascript:;" class="card__cart-link"></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- card__hidden-slider -->
 
                 </div>
-                <div class="card">
+                <div class="card card_slider">
                     <div class="card__img">
                         <img src="img/jpg/card-catalog3.jpg" srcset="img/jpg/card-catalog3@2x.jpg 2x, img/jpg/card-catalog3@3x.jpg 3x" alt="Card img">
                         <div class="labels">
@@ -183,6 +244,7 @@
                         <!-- hover block -->
                         <input id="card__hover-mobile3" class="card__hover-mobile" type="checkbox" />
                         <label for="card__hover-mobile3" class="card__hover-mobile-label"></label>
+						<div class="card__mob-zoom"></div>
                         <div class="card__hover-block">
                             <div class="card__hover-settings">
                                 <input id="card__hover-settings-checkbox3" class="card__hover-settings-checkbox" type="checkbox" />
@@ -223,14 +285,18 @@
                         </div>
                         <!-- hover block -->
                     </div>
-                    <div class="card__content">
-                        <div class="card__content-title">
-                            Millennium Falcon 3D Print Model | Standard Assembly Kit
-                        </div>
-                        <div class="card__content-author">
-                            by <span>Jaclynn Bradley</span>
-                        </div>
+                    <div class="card__content">                     
+						<a href="javascript:;" class="card__content-title">
+							Millennium Falcon 3D Print Model | Standard Assembly Kit
+						</a>
+						<div class="card__content-author">
+							by <a href="javascript:;">Jaclynn Bradley</a>
+						</div>	
                         <div class="card__content-line">
+							<ul class="card__controls" id="customize-controls" aria-label="Carousel Navigation" tabindex="0">
+                                <li class="prev button button_secondary button_m" data-controls="prev" aria-controls="customize" tabindex="-1"></li>
+                                <li class="next button button_secondary button_m" data-controls="next" aria-controls="customize" tabindex="-1"></li>
+                            </ul>
                             <div class="card__price card__sale">
                                 $24.99
                                 <div class="card__oldprice">
@@ -242,9 +308,50 @@
                             </div>
                         </div>
                     </div>
+					<!-- card__hidden-slider -->
+                    <div class="card__hidden-slider">
+                        <div class="card__mob-zoom-close"></div>
+                        <div class="card__hidden-slider-count">
+                            <div class="slider-count-current"></div>&nbsp;of&nbsp;<div class="slider-count-total"></div>
+                        </div>
+                        <div class="hidden-slider">
+                            <div class="hidden-slider-item">
+                                <img src="img/png/model-robot1.png" alt="Viserion Ice Dragon 3D Printing Figurine">
+                            </div>
+                            <div class="hidden-slider-item">
+                                <img src="img/png/model-robot2.png" alt="Viserion Ice Dragon 3D Printing Figurine">
+                            </div>
+                            <div class="hidden-slider-item">
+                                <img src="img/png/model-robot3.png" alt="Viserion Ice Dragon 3D Printing Figurine">
+                            </div>
+                            <div class="hidden-slider-item">
+                                <img src="img/png/model-robot4.png" alt="Viserion Ice Dragon 3D Printing Figurine">
+                            </div>
+                            <div class="hidden-slider-item">
+                                <img src="img/png/model-robot5.png" alt="Viserion Ice Dragon 3D Printing Figurine">
+                            </div>
+                        </div>
+                        <div class="hidden-slider-content">
+                            <div class="card__content-title">
+                                Viserion Ice Dragon 3D Printing Figurine
+                            </div>
+                            <div class="card__content-line">
+                                <div class="card__price">
+                                    $24.99
+                                    <div class="card__oldprice">
+                                        $74.99
+                                    </div>
+                                </div>
+                                <div class="card__cart">
+                                    <a href="javascript:;" class="card__cart-link"></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- card__hidden-slider -->
 
                 </div>
-                <div class="card card_sale-premium">
+                <div class="card card_sale-premium card_slider">
                     <div class="card__img">
                         <img src="img/jpg/card-catalog7.jpg" srcset="img/jpg/card-catalog7@2x.jpg 2x, img/jpg/card-catalog7@3x.jpg 3x" alt="Card img">
                         <div class="labels">
@@ -258,6 +365,7 @@
                         <!-- hover block -->
                         <input id="card__hover-mobile4" class="card__hover-mobile" type="checkbox" />
                         <label for="card__hover-mobile4" class="card__hover-mobile-label"></label>
+						<div class="card__mob-zoom"></div>
                         <div class="card__hover-block">
                             <div class="card__hover-settings">
                                 <input id="card__hover-settings-checkbox4" class="card__hover-settings-checkbox" type="checkbox" />
@@ -298,14 +406,18 @@
                         </div>
                         <!-- hover block -->
                     </div>
-                    <div class="card__content">
-                        <div class="card__content-title">
-                            Spider-Man Wall Crawler 3D Printing Figurine | Assembly
-                        </div>
+                    <div class="card__content">                        
+						<a href="javascript:;" class="card__content-title">
+                             Spider-Man Wall Crawler 3D Printing Figurine | Assembly
+                        </a>
                         <div class="card__content-author">
-                            by <span>Amelia Cabal</span>
+                            by <a href="javascript:;">Amelia Cabal</a>
                         </div>
                         <div class="card__content-line">
+							<ul class="card__controls" id="customize-controls" aria-label="Carousel Navigation" tabindex="0">
+                                <li class="prev button button_secondary button_m" data-controls="prev" aria-controls="customize" tabindex="-1"></li>
+                                <li class="next button button_secondary button_m" data-controls="next" aria-controls="customize" tabindex="-1"></li>
+                            </ul>
                             <div class="card__price">
                                 $24.99
                                 <div class="card__premium-price">
@@ -317,14 +429,50 @@
                             </div>
                         </div>
                     </div>
+					<!-- card__hidden-slider -->
+                    <div class="card__hidden-slider">
+                        <div class="card__mob-zoom-close"></div>
+                        <div class="card__hidden-slider-count">
+                            <div class="slider-count-current"></div>&nbsp;of&nbsp;<div class="slider-count-total"></div>
+                        </div>
+                        <div class="hidden-slider">
+                            <div class="hidden-slider-item">
+                                <img src="img/png/model-iron1.png" alt="Viserion Ice Dragon 3D Printing Figurine">
+                            </div>
+                            <div class="hidden-slider-item">
+                                <img src="img/png/model-iron2.png" alt="Viserion Ice Dragon 3D Printing Figurine">
+                            </div>
+                            <div class="hidden-slider-item">
+                                <img src="img/png/model-iron3.png" alt="Viserion Ice Dragon 3D Printing Figurine">
+                            </div>
+                        </div>
+                        <div class="hidden-slider-content">
+                            <div class="card__content-title">
+                                Viserion Ice Dragon 3D Printing Figurine
+                            </div>
+                            <div class="card__content-line">
+                                <div class="card__price">
+                                    $24.99
+                                    <div class="card__oldprice">
+                                        $74.99
+                                    </div>
+                                </div>
+                                <div class="card__cart">
+                                    <a href="javascript:;" class="card__cart-link"></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- card__hidden-slider -->
 
                 </div>
-                <div class="card">
+                <div class="card card_slider">
                     <div class="card__img">
                         <img src="img/jpg/card-catalog4.jpg" srcset="img/jpg/card-catalog4@2x.jpg 2x, img/jpg/card-catalog4@3x.jpg 3x" alt="Card img">
                         <!-- hover block -->
                         <input id="card__hover-mobile5" class="card__hover-mobile" type="checkbox" />
                         <label for="card__hover-mobile5" class="card__hover-mobile-label"></label>
+						<div class="card__mob-zoom"></div>
                         <div class="card__hover-block">
                             <div class="card__hover-settings">
                                 <input id="card__hover-settings-checkbox5" class="card__hover-settings-checkbox" type="checkbox" />
@@ -366,13 +514,17 @@
                         <!-- hover block -->
                     </div>
                     <div class="card__content">
-                        <div class="card__content-title">
-                            Viserion Ice Dragon 3D Printing Figurine
-                        </div>
+                        <a href="javascript:;" class="card__content-title">
+                             Viserion Ice Dragon 3D Printing Figurine
+                        </a>
                         <div class="card__content-author">
-                            by <span>Oliver</span>
-                        </div>
+                            by <a href="javascript:;">Oliver</a>
+                        </div>						
                         <div class="card__content-line">
+							<ul class="card__controls" id="customize-controls" aria-label="Carousel Navigation" tabindex="0">
+                                <li class="prev button button_secondary button_m" data-controls="prev" aria-controls="customize" tabindex="-1"></li>
+                                <li class="next button button_secondary button_m" data-controls="next" aria-controls="customize" tabindex="-1"></li>
+                            </ul>
                             <div class="card__price">
                                 $24.99
                             </div>
@@ -381,8 +533,43 @@
                             </div>
                         </div>
                     </div>
+					<!-- card__hidden-slider -->
+                    <div class="card__hidden-slider">
+                        <div class="card__mob-zoom-close"></div>
+                        <div class="card__hidden-slider-count">
+                            <div class="slider-count-current"></div>&nbsp;of&nbsp;<div class="slider-count-total"></div>
+                        </div>
+                        <div class="hidden-slider">
+                            <div class="hidden-slider-item">
+                                <img src="img/png/model-robots2_1.png" alt="Viserion Ice Dragon 3D Printing Figurine">
+                            </div>
+                            <div class="hidden-slider-item">
+                                <img src="img/png/model-robots2_2.png" alt="Viserion Ice Dragon 3D Printing Figurine">
+                            </div>
+                            <div class="hidden-slider-item">
+                                <img src="img/png/model-robots2_3.png" alt="Viserion Ice Dragon 3D Printing Figurine">
+                            </div>
+                        </div>
+                        <div class="hidden-slider-content">
+                            <div class="card__content-title">
+                                Viserion Ice Dragon 3D Printing Figurine
+                            </div>
+                            <div class="card__content-line">
+                                <div class="card__price">
+                                    $24.99
+                                    <div class="card__oldprice">
+                                        $74.99
+                                    </div>
+                                </div>
+                                <div class="card__cart">
+                                    <a href="javascript:;" class="card__cart-link"></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- card__hidden-slider -->
                 </div>
-                <div class="card">
+                <div class="card card_slider">
                     <div class="card__img">
                         <img src="img/jpg/card-catalog5.jpg" srcset="img/jpg/card-catalog5@2x.jpg 2x, img/jpg/card-catalog5@3x.jpg 3x" alt="Card img">
                         <div class="labels">
@@ -393,6 +580,7 @@
                         <!-- hover block -->
                         <input id="card__hover-mobile6" class="card__hover-mobile" type="checkbox" />
                         <label for="card__hover-mobile6" class="card__hover-mobile-label"></label>
+						<div class="card__mob-zoom"></div>
                         <div class="card__hover-block">
                             <div class="card__hover-settings">
                                 <input id="card__hover-settings-checkbox6" class="card__hover-settings-checkbox" type="checkbox" />
@@ -434,19 +622,58 @@
                         <!-- hover block -->
                     </div>
                     <div class="card__content">
-                        <div class="card__content-title">
-                            Viserion Ice Dragon 3D Printing Figurine
-                        </div>
+                         <a href="javascript:;" class="card__content-title">
+                             Viserion Ice Dragon 3D Printing Figurine
+                        </a>
                         <div class="card__content-author">
-                            by <span>Oliver</span>
+                            by <a href="javascript:;">Oliver</a>
                         </div>
                         <div class="card__content-line">
+							<ul class="card__controls" id="customize-controls" aria-label="Carousel Navigation" tabindex="0">
+                                <li class="prev button button_secondary button_m" data-controls="prev" aria-controls="customize" tabindex="-1"></li>
+                                <li class="next button button_secondary button_m" data-controls="next" aria-controls="customize" tabindex="-1"></li>
+                            </ul>
                             <a href="#" class="button button_primary button_m">Download</a>
                         </div>
                     </div>
+					<!-- card__hidden-slider -->
+                    <div class="card__hidden-slider">
+                        <div class="card__mob-zoom-close"></div>
+                        <div class="card__hidden-slider-count">
+                            <div class="slider-count-current"></div>&nbsp;of&nbsp;<div class="slider-count-total"></div>
+                        </div>
+                        <div class="hidden-slider">
+                            <div class="hidden-slider-item">
+                                <img src="img/png/model_dino1.png" alt="Viserion Ice Dragon 3D Printing Figurine">
+                            </div>
+                            <div class="hidden-slider-item">
+                                <img src="img/png/model_dino2.png" alt="Viserion Ice Dragon 3D Printing Figurine">
+                            </div>
+                            <div class="hidden-slider-item">
+                                <img src="img/png/model_dino3.png" alt="Viserion Ice Dragon 3D Printing Figurine">
+                            </div>
+                        </div>
+                        <div class="hidden-slider-content">
+                            <div class="card__content-title">
+                                Viserion Ice Dragon 3D Printing Figurine
+                            </div>
+                            <div class="card__content-line">
+                                <div class="card__price">
+                                    $24.99
+                                    <div class="card__oldprice">
+                                        $74.99
+                                    </div>
+                                </div>
+                                <div class="card__cart">
+                                    <a href="javascript:;" class="card__cart-link"></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- card__hidden-slider -->
 
                 </div>
-                <div class="card">
+                <div class="card card_slider">
                     <div class="card__img">
                         <img src="img/jpg/card-catalog6.jpg" srcset="img/jpg/card-catalog6@2x.jpg 2x, img/jpg/card-catalog6@3x.jpg 3x" alt="Card img">
                         <div class="labels">
@@ -457,6 +684,7 @@
                         <!-- hover block -->
                         <input id="card__hover-mobile7" class="card__hover-mobile" type="checkbox" />
                         <label for="card__hover-mobile7" class="card__hover-mobile-label"></label>
+						<div class="card__mob-zoom"></div>
                         <div class="card__hover-block">
                             <div class="card__hover-settings">
                                 <input id="card__hover-settings-checkbox7" class="card__hover-settings-checkbox" type="checkbox" />
@@ -498,13 +726,17 @@
                         <!-- hover block -->
                     </div>
                     <div class="card__content">
-                        <div class="card__content-title">
-                            Viserion Ice Dragon 3D Printing Figurine
-                        </div>
+                         <a href="javascript:;" class="card__content-title">
+                             Viserion Ice Dragon 3D Printing Figurine
+                        </a>
                         <div class="card__content-author">
-                            by <span>Oliver</span>
+                            by <a href="javascript:;">Oliver</a>
                         </div>
                         <div class="card__content-line">
+							<ul class="card__controls" id="customize-controls" aria-label="Carousel Navigation" tabindex="0">
+                                <li class="prev button button_secondary button_m" data-controls="prev" aria-controls="customize" tabindex="-1"></li>
+                                <li class="next button button_secondary button_m" data-controls="next" aria-controls="customize" tabindex="-1"></li>
+                            </ul>
                             <div class="card__price">
                                 $24.99
                             </div>
@@ -513,9 +745,44 @@
                             </div>
                         </div>
                     </div>
+					<!-- card__hidden-slider -->
+                    <div class="card__hidden-slider">
+                        <div class="card__mob-zoom-close"></div>
+                        <div class="card__hidden-slider-count">
+                            <div class="slider-count-current"></div>&nbsp;of&nbsp;<div class="slider-count-total"></div>
+                        </div>
+                        <div class="hidden-slider">
+                            <div class="hidden-slider-item">
+                                <img src="img/png/model_dragon1.png" alt="Viserion Ice Dragon 3D Printing Figurine">
+                            </div>
+                            <div class="hidden-slider-item">
+                                <img src="img/png/model_dragon2.png" alt="Viserion Ice Dragon 3D Printing Figurine">
+                            </div>
+                            <div class="hidden-slider-item">
+                                <img src="img/png/model_dragon3.png" alt="Viserion Ice Dragon 3D Printing Figurine">
+                            </div>
+                        </div>
+                        <div class="hidden-slider-content">
+                            <div class="card__content-title">
+                                Viserion Ice Dragon 3D Printing Figurine
+                            </div>
+                            <div class="card__content-line">
+                                <div class="card__price">
+                                    $24.99
+                                    <div class="card__oldprice">
+                                        $74.99
+                                    </div>
+                                </div>
+                                <div class="card__cart">
+                                    <a href="javascript:;" class="card__cart-link"></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- card__hidden-slider -->
 
                 </div>
-                <div class="card">
+                <div class="card card_slider">
                     <div class="card__img">
                         <img src="img/jpg/card-catalog2.jpg" srcset="img/jpg/card-catalog2@2x.jpg 2x, img/jpg/card-catalog2@3x.jpg 3x" alt="Card img">
                         <div class="labels">
@@ -526,6 +793,7 @@
                         <!-- hover block -->
                         <input id="card__hover-mobile8" class="card__hover-mobile" type="checkbox" />
                         <label for="card__hover-mobile8" class="card__hover-mobile-label"></label>
+						<div class="card__mob-zoom"></div>
                         <div class="card__hover-block">
                             <div class="card__hover-settings">
                                 <input id="card__hover-settings-checkbox8" class="card__hover-settings-checkbox" type="checkbox" />
@@ -567,13 +835,17 @@
                         <!-- hover block -->
                     </div>
                     <div class="card__content">
-                        <div class="card__content-title">
-                            Viserion Ice Dragon 3D Printing Figurine
-                        </div>
+                         <a href="javascript:;" class="card__content-title">
+                             Viserion Ice Dragon 3D Printing Figurine
+                        </a>
                         <div class="card__content-author">
-                            by <span>Oliver</span>
+                            by <a href="javascript:;">Oliver</a>
                         </div>
                         <div class="card__content-line">
+							<ul class="card__controls" id="customize-controls" aria-label="Carousel Navigation" tabindex="0">
+                                <li class="prev button button_secondary button_m" data-controls="prev" aria-controls="customize" tabindex="-1"></li>
+                                <li class="next button button_secondary button_m" data-controls="next" aria-controls="customize" tabindex="-1"></li>
+                            </ul>
                             <div class="card__price">
                                 $24.99
                             </div>
@@ -582,9 +854,50 @@
                             </div>
                         </div>
                     </div>
+					<!-- card__hidden-slider -->
+                    <div class="card__hidden-slider">
+                        <div class="card__mob-zoom-close"></div>
+                        <div class="card__hidden-slider-count">
+                            <div class="slider-count-current"></div>&nbsp;of&nbsp;<div class="slider-count-total"></div>
+                        </div>
+                        <div class="hidden-slider">
+                            <div class="hidden-slider-item">
+                                <img src="img/png/model-robot1.png" alt="Viserion Ice Dragon 3D Printing Figurine">
+                            </div>
+                            <div class="hidden-slider-item">
+                                <img src="img/png/model-robot2.png" alt="Viserion Ice Dragon 3D Printing Figurine">
+                            </div>
+                            <div class="hidden-slider-item">
+                                <img src="img/png/model-robot3.png" alt="Viserion Ice Dragon 3D Printing Figurine">
+                            </div>
+                            <div class="hidden-slider-item">
+                                <img src="img/png/model-robot4.png" alt="Viserion Ice Dragon 3D Printing Figurine">
+                            </div>
+                            <div class="hidden-slider-item">
+                                <img src="img/png/model-robot5.png" alt="Viserion Ice Dragon 3D Printing Figurine">
+                            </div>
+                        </div>
+                        <div class="hidden-slider-content">
+                            <div class="card__content-title">
+                                Viserion Ice Dragon 3D Printing Figurine
+                            </div>
+                            <div class="card__content-line">
+                                <div class="card__price">
+                                    $24.99
+                                    <div class="card__oldprice">
+                                        $74.99
+                                    </div>
+                                </div>
+                                <div class="card__cart">
+                                    <a href="javascript:;" class="card__cart-link"></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- card__hidden-slider -->
 
                 </div>
-                <div class="card">
+                <div class="card card_slider">
                     <div class="card__img">
                         <img src="img/jpg/card-catalog3.jpg" srcset="img/jpg/card-catalog3@2x.jpg 2x, img/jpg/card-catalog3@3x.jpg 3x" alt="Card img">
                         <div class="labels">
@@ -597,6 +910,7 @@
                         <!-- hover block -->
                         <input id="card__hover-mobile9" class="card__hover-mobile" type="checkbox" />
                         <label for="card__hover-mobile9" class="card__hover-mobile-label"></label>
+						<div class="card__mob-zoom"></div>
                         <div class="card__hover-block">
                             <div class="card__hover-settings">
                                 <input id="card__hover-settings-checkbox9" class="card__hover-settings-checkbox" type="checkbox" />
@@ -638,13 +952,17 @@
                         <!-- hover block -->
                     </div>
                     <div class="card__content">
-                        <div class="card__content-title">
-                            Viserion Ice Dragon 3D Printing Figurine
-                        </div>
+                         <a href="javascript:;" class="card__content-title">
+                             Viserion Ice Dragon 3D Printing Figurine
+                        </a>
                         <div class="card__content-author">
-                            by <span>Oliver</span>
+                            by <a href="javascript:;">Oliver</a>
                         </div>
                         <div class="card__content-line">
+							<ul class="card__controls" id="customize-controls" aria-label="Carousel Navigation" tabindex="0">
+                                <li class="prev button button_secondary button_m" data-controls="prev" aria-controls="customize" tabindex="-1"></li>
+                                <li class="next button button_secondary button_m" data-controls="next" aria-controls="customize" tabindex="-1"></li>
+                            </ul>
                             <div class="card__price">
                                 $24.99
                                 <div class="card__oldprice">
@@ -656,6 +974,41 @@
                             </div>
                         </div>
                     </div>
+					<!-- card__hidden-slider -->
+                    <div class="card__hidden-slider">
+                        <div class="card__mob-zoom-close"></div>
+                        <div class="card__hidden-slider-count">
+                            <div class="slider-count-current"></div>&nbsp;of&nbsp;<div class="slider-count-total"></div>
+                        </div>
+                        <div class="hidden-slider">
+                            <div class="hidden-slider-item">
+                                <img src="img/jpg/ravager-groot-3d-model.jpg" alt="Viserion Ice Dragon 3D Printing Figurine">
+                            </div>
+                            <div class="hidden-slider-item">
+                                <img src="img/jpg/ravager-groot-3d-model1.jpg" alt="Viserion Ice Dragon 3D Printing Figurine">
+                            </div>
+                            <div class="hidden-slider-item">
+                                <img src="img/jpg/ravager-groot-3d-model2.jpg" alt="Viserion Ice Dragon 3D Printing Figurine">
+                            </div>
+                        </div>
+                        <div class="hidden-slider-content">
+                            <div class="card__content-title">
+                                Viserion Ice Dragon 3D Printing Figurine
+                            </div>
+                            <div class="card__content-line">
+                                <div class="card__price">
+                                    $24.99
+                                    <div class="card__oldprice">
+                                        $74.99
+                                    </div>
+                                </div>
+                                <div class="card__cart">
+                                    <a href="javascript:;" class="card__cart-link"></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- card__hidden-slider -->
                 </div>
             </div>
             <div class="show-more">
@@ -672,7 +1025,7 @@
                 Featured grid layout
             </div>
             <div class="cards-featured">
-                <div class="card card_featured">
+                <div class="card card_featured card_slider">
                     <div class="card__img">
                         <img src="img/jpg/card-featured1.jpg" srcset="img/jpg/card-featured1@2x.jpg 2x, img/jpg/card-featured1@3x.jpg 3x" alt="Card img">
                         <div class="labels">
@@ -683,6 +1036,7 @@
                         <!-- hover block -->
                         <input id="card__hover-mobile12" class="card__hover-mobile" type="checkbox" />
                         <label for="card__hover-mobile12" class="card__hover-mobile-label"></label>
+						<div class="card__mob-zoom"></div>
                         <div class="card__hover-block">
                             <div class="card__hover-comments">
                                 <div class="card__hover-comments-label"><span>55</span></div>
@@ -709,14 +1063,18 @@
                         </div>
                         <!-- hover block -->
                     </div>
-                    <div class="card__content">
-                        <div class="card__content-title">
-                            BT-7274 3D Printing Model | Assembly
-                        </div>
+                    <div class="card__content">                        
+						<a href="javascript:;" class="card__content-title">
+                             BT-7274 3D Printing Model | Assembly
+                        </a>
                         <div class="card__content-author">
-                            by <span>Erika Mateo</span>
+                            by <a href="javascript:;">Erika Mateo</a>
                         </div>
                         <div class="card__content-line">
+							<ul class="card__controls" id="customize-controls" aria-label="Carousel Navigation" tabindex="0">
+                                <li class="prev button button_secondary button_m" data-controls="prev" aria-controls="customize" tabindex="-1"></li>
+                                <li class="next button button_secondary button_m" data-controls="next" aria-controls="customize" tabindex="-1"></li>
+                            </ul>
                             <div class="card__price">
                                 $24.99
                             </div>
@@ -725,8 +1083,49 @@
                             </div>
                         </div>
                     </div>
+                    <!-- card__hidden-slider -->
+                    <div class="card__hidden-slider">
+                        <div class="card__mob-zoom-close"></div>
+                        <div class="card__hidden-slider-count">
+                            <div class="slider-count-current"></div>&nbsp;of&nbsp;<div class="slider-count-total"></div>
+                        </div>
+                        <div class="hidden-slider">
+                            <div class="hidden-slider-item">
+                                <img src="img/png/model-robot1.png" alt="Viserion Ice Dragon 3D Printing Figurine">
+                            </div>
+                            <div class="hidden-slider-item">
+                                <img src="img/png/model-robot2.png" alt="Viserion Ice Dragon 3D Printing Figurine">
+                            </div>
+                            <div class="hidden-slider-item">
+                                <img src="img/png/model-robot3.png" alt="Viserion Ice Dragon 3D Printing Figurine">
+                            </div>
+                            <div class="hidden-slider-item">
+                                <img src="img/png/model-robot4.png" alt="Viserion Ice Dragon 3D Printing Figurine">
+                            </div>
+                            <div class="hidden-slider-item">
+                                <img src="img/png/model-robot5.png" alt="Viserion Ice Dragon 3D Printing Figurine">
+                            </div>
+                        </div>
+                        <div class="hidden-slider-content">
+                            <div class="card__content-title">
+                                Viserion Ice Dragon 3D Printing Figurine
+                            </div>
+                            <div class="card__content-line">
+                                <div class="card__price">
+                                    $24.99
+                                    <div class="card__oldprice">
+                                        $74.99
+                                    </div>
+                                </div>
+                                <div class="card__cart">
+                                    <a href="javascript:;" class="card__cart-link"></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- card__hidden-slider -->
                 </div>
-                <div class="card card_featured">
+                <div class="card card_featured card_slider">
                     <div class="card__img">
                         <img src="img/jpg/card-featured2.jpg" srcset="img/jpg/card-featured2@2x.jpg 2x, img/jpg/card-featured2@3x.jpg 3x" alt="Card img">
                         <div class="labels">
@@ -737,6 +1136,7 @@
                         <!-- hover block -->
                         <input id="card__hover-mobile11" class="card__hover-mobile" type="checkbox" />
                         <label for="card__hover-mobile11" class="card__hover-mobile-label"></label>
+						<div class="card__mob-zoom"></div>
                         <div class="card__hover-block">
                             <div class="card__hover-comments">
                                 <div class="card__hover-comments-label"><span>55</span></div>
@@ -763,14 +1163,18 @@
                         </div>
                         <!-- hover block -->
                     </div>
-                    <div class="card__content">
-                        <div class="card__content-title">
-                            Alien Queen 3D Printing Figurine in
-                        </div>
+                    <div class="card__content">                        
+						<a href="javascript:;" class="card__content-title">
+                             Alien Queen 3D Printing Figurine in
+                        </a>
                         <div class="card__content-author">
-                            by <span>Irene Sotelo</span>
+                            by <a href="javascript:;">Irene Sotelo</a>
                         </div>
                         <div class="card__content-line">
+							<ul class="card__controls" id="customize-controls" aria-label="Carousel Navigation" tabindex="0">
+                                <li class="prev button button_secondary button_m" data-controls="prev" aria-controls="customize" tabindex="-1"></li>
+                                <li class="next button button_secondary button_m" data-controls="next" aria-controls="customize" tabindex="-1"></li>
+                            </ul>
                             <div class="card__price">
                                 $24.99
                             </div>
@@ -779,8 +1183,43 @@
                             </div>
                         </div>
                     </div>
+                    <!-- card__hidden-slider -->
+                    <div class="card__hidden-slider">
+                        <div class="card__mob-zoom-close"></div>
+                        <div class="card__hidden-slider-count">
+                            <div class="slider-count-current"></div>&nbsp;of&nbsp;<div class="slider-count-total"></div>
+                        </div>
+                        <div class="hidden-slider">
+                            <div class="hidden-slider-item">
+                                <img src="img/png/model-robots2_1.png" alt="Viserion Ice Dragon 3D Printing Figurine">
+                            </div>
+                            <div class="hidden-slider-item">
+                                <img src="img/png/model-robots2_2.png" alt="Viserion Ice Dragon 3D Printing Figurine">
+                            </div>
+                            <div class="hidden-slider-item">
+                                <img src="img/png/model-robots2_3.png" alt="Viserion Ice Dragon 3D Printing Figurine">
+                            </div>
+                        </div>
+                        <div class="hidden-slider-content">
+                            <div class="card__content-title">
+                                Viserion Ice Dragon 3D Printing Figurine
+                            </div>
+                            <div class="card__content-line">
+                                <div class="card__price">
+                                    $24.99
+                                    <div class="card__oldprice">
+                                        $74.99
+                                    </div>
+                                </div>
+                                <div class="card__cart">
+                                    <a href="javascript:;" class="card__cart-link"></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- card__hidden-slider -->
                 </div>
-                <div class="card card_featured">
+                <div class="card card_featured card_slider">
                     <div class="card__img">
                         <img src="img/jpg/card-featured1.jpg" srcset="img/jpg/card-featured1@2x.jpg 2x, img/jpg/card-featured1@3x.jpg 3x" alt="Card img">
                         <div class="labels">
@@ -791,6 +1230,7 @@
                         <!-- hover block -->
                         <input id="card__hover-mobile10" class="card__hover-mobile" type="checkbox" />
                         <label for="card__hover-mobile10" class="card__hover-mobile-label"></label>
+						<div class="card__mob-zoom"></div>
                         <div class="card__hover-block">
                             <div class="card__hover-comments">
                                 <div class="card__hover-comments-label"><span>55</span></div>
@@ -817,14 +1257,18 @@
                         </div>
                         <!-- hover block -->
                     </div>
-                    <div class="card__content">
-                        <div class="card__content-title">
-                            BT-7274 3D Printing Model | Assembly
-                        </div>
+                    <div class="card__content">                       
+						<a href="javascript:;" class="card__content-title">
+                             BT-7274 3D Printing Model | Assembly
+                        </a>
                         <div class="card__content-author">
-                            by <span>Erika Mateo</span>
+                            by <a href="javascript:;">Erika Mateo</a>
                         </div>
                         <div class="card__content-line">
+							<ul class="card__controls" id="customize-controls" aria-label="Carousel Navigation" tabindex="0">
+                                <li class="prev button button_secondary button_m" data-controls="prev" aria-controls="customize" tabindex="-1"></li>
+                                <li class="next button button_secondary button_m" data-controls="next" aria-controls="customize" tabindex="-1"></li>
+                            </ul>
                             <div class="card__price">
                                 $24.99
                             </div>
@@ -833,10 +1277,51 @@
                             </div>
                         </div>
                     </div>
+					<!-- card__hidden-slider -->
+                    <div class="card__hidden-slider">
+                        <div class="card__mob-zoom-close"></div>
+                        <div class="card__hidden-slider-count">
+                            <div class="slider-count-current"></div>&nbsp;of&nbsp;<div class="slider-count-total"></div>
+                        </div>
+                        <div class="hidden-slider">
+                            <div class="hidden-slider-item">
+                                <img src="img/png/model-robot1.png" alt="Viserion Ice Dragon 3D Printing Figurine">
+                            </div>
+                            <div class="hidden-slider-item">
+                                <img src="img/png/model-robot2.png" alt="Viserion Ice Dragon 3D Printing Figurine">
+                            </div>
+                            <div class="hidden-slider-item">
+                                <img src="img/png/model-robot3.png" alt="Viserion Ice Dragon 3D Printing Figurine">
+                            </div>
+                            <div class="hidden-slider-item">
+                                <img src="img/png/model-robot4.png" alt="Viserion Ice Dragon 3D Printing Figurine">
+                            </div>
+                            <div class="hidden-slider-item">
+                                <img src="img/png/model-robot5.png" alt="Viserion Ice Dragon 3D Printing Figurine">
+                            </div>
+                        </div>
+                        <div class="hidden-slider-content">
+                            <div class="card__content-title">
+                                Viserion Ice Dragon 3D Printing Figurine
+                            </div>
+                            <div class="card__content-line">
+                                <div class="card__price">
+                                    $24.99
+                                    <div class="card__oldprice">
+                                        $74.99
+                                    </div>
+                                </div>
+                                <div class="card__cart">
+                                    <a href="javascript:;" class="card__cart-link"></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- card__hidden-slider -->
                 </div>
             </div>
             <div class="cards-catalog">
-                <div class="card">
+                <div class="card card_slider">
                     <div class="card__img">
                         <img src="img/jpg/card-catalog4.jpg" srcset="img/jpg/card-catalog4@2x.jpg 2x, img/jpg/card-catalog4@3x.jpg 3x" alt="Card img">
                         <div class="labels">
@@ -847,6 +1332,7 @@
                         <!-- hover block -->
                         <input id="card__hover-mobile15" class="card__hover-mobile" type="checkbox" />
                         <label for="card__hover-mobile15" class="card__hover-mobile-label"></label>
+						<div class="card__mob-zoom"></div>
                         <div class="card__hover-block">
                             <div class="card__hover-comments">
                                 <div class="card__hover-comments-label"><span>55</span></div>
@@ -873,14 +1359,18 @@
                         </div>
                         <!-- hover block -->
                     </div>
-                    <div class="card__content">
-                        <div class="card__content-title">
-                            Deadpool 3D Printing Miniature | Assembly
-                        </div>
+                    <div class="card__content">                        
+						<a href="javascript:;" class="card__content-title">
+                             BDeadpool 3D Printing Miniature | Assembly
+                        </a>
                         <div class="card__content-author">
-                            by <span>Oliver</span>
+                            by <a href="javascript:;">Erika Mateo</a>
                         </div>
                         <div class="card__content-line">
+							<ul class="card__controls" id="customize-controls" aria-label="Carousel Navigation" tabindex="0">
+                                <li class="prev button button_secondary button_m" data-controls="prev" aria-controls="customize" tabindex="-1"></li>
+                                <li class="next button button_secondary button_m" data-controls="next" aria-controls="customize" tabindex="-1"></li>
+                            </ul>
 
                             <div class="card__price">
                                 $24.99
@@ -890,13 +1380,49 @@
                             </div>
                         </div>
                     </div>
+					<!-- card__hidden-slider -->
+                    <div class="card__hidden-slider">
+                        <div class="card__mob-zoom-close"></div>
+                        <div class="card__hidden-slider-count">
+                            <div class="slider-count-current"></div>&nbsp;of&nbsp;<div class="slider-count-total"></div>
+                        </div>
+                        <div class="hidden-slider">
+                            <div class="hidden-slider-item">
+                                <img src="img/jpg/ravager-groot-3d-model.jpg" alt="Viserion Ice Dragon 3D Printing Figurine">
+                            </div>
+                            <div class="hidden-slider-item">
+                                <img src="img/jpg/ravager-groot-3d-model1.jpg" alt="Viserion Ice Dragon 3D Printing Figurine">
+                            </div>
+                            <div class="hidden-slider-item">
+                                <img src="img/jpg/ravager-groot-3d-model2.jpg" alt="Viserion Ice Dragon 3D Printing Figurine">
+                            </div>
+                        </div>
+                        <div class="hidden-slider-content">
+                            <div class="card__content-title">
+                                Viserion Ice Dragon 3D Printing Figurine
+                            </div>
+                            <div class="card__content-line">
+                                <div class="card__price">
+                                    $24.99
+                                    <div class="card__oldprice">
+                                        $74.99
+                                    </div>
+                                </div>
+                                <div class="card__cart">
+                                    <a href="javascript:;" class="card__cart-link"></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- card__hidden-slider -->
                 </div>
-                <div class="card">
+                <div class="card card_slider">
                     <div class="card__img">
                         <img src="img/jpg/card-catalog3.jpg" srcset="img/jpg/card-catalog3@2x.jpg 2x, img/jpg/card-catalog3@3x.jpg 3x" alt="Card img">
                         <!-- hover block -->
                         <input id="card__hover-mobile16" class="card__hover-mobile" type="checkbox" />
                         <label for="card__hover-mobile16" class="card__hover-mobile-label"></label>
+						<div class="card__mob-zoom"></div>
                         <div class="card__hover-block">
                             <div class="card__hover-comments">
                                 <div class="card__hover-comments-label"><span>55</span></div>
@@ -921,14 +1447,18 @@
                         </div>
                         <!-- hover block -->
                     </div>
-                    <div class="card__content">
-                        <div class="card__content-title">
-                            BT-7274 3D Printing Model | Assembly + Action
-                        </div>
+                    <div class="card__content">                        
+						<a href="javascript:;" class="card__content-title">
+                             BT-7274 3D Printing Model | Assembly + Action
+                        </a>
                         <div class="card__content-author">
-                            by <span>Irene Sotelo</span>
+                            by <a href="javascript:;">Irene Sotelo</a>
                         </div>
                         <div class="card__content-line">
+							<ul class="card__controls" id="customize-controls" aria-label="Carousel Navigation" tabindex="0">
+                                <li class="prev button button_secondary button_m" data-controls="prev" aria-controls="customize" tabindex="-1"></li>
+                                <li class="next button button_secondary button_m" data-controls="next" aria-controls="customize" tabindex="-1"></li>
+                            </ul>
                             <div class="card__price">
                                 $24.99
                             </div>
@@ -937,14 +1467,50 @@
                             </div>
                         </div>
                     </div>
+					<!-- card__hidden-slider -->
+                    <div class="card__hidden-slider">
+                        <div class="card__mob-zoom-close"></div>
+                        <div class="card__hidden-slider-count">
+                            <div class="slider-count-current"></div>&nbsp;of&nbsp;<div class="slider-count-total"></div>
+                        </div>
+                        <div class="hidden-slider">
+                            <div class="hidden-slider-item">
+                                <img src="img/jpg/ravager-groot-3d-model.jpg" alt="Viserion Ice Dragon 3D Printing Figurine">
+                            </div>
+                            <div class="hidden-slider-item">
+                                <img src="img/jpg/ravager-groot-3d-model1.jpg" alt="Viserion Ice Dragon 3D Printing Figurine">
+                            </div>
+                            <div class="hidden-slider-item">
+                                <img src="img/jpg/ravager-groot-3d-model2.jpg" alt="Viserion Ice Dragon 3D Printing Figurine">
+                            </div>
+                        </div>
+                        <div class="hidden-slider-content">
+                            <div class="card__content-title">
+                                Viserion Ice Dragon 3D Printing Figurine
+                            </div>
+                            <div class="card__content-line">
+                                <div class="card__price">
+                                    $24.99
+                                    <div class="card__oldprice">
+                                        $74.99
+                                    </div>
+                                </div>
+                                <div class="card__cart">
+                                    <a href="javascript:;" class="card__cart-link"></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- card__hidden-slider -->
 
                 </div>
-                <div class="card">
+                <div class="card card_slider">
                     <div class="card__img">
                         <img src="img/jpg/card-catalog6.jpg" srcset="img/jpg/card-catalog6@2x.jpg 2x, img/jpg/card-catalog6@3x.jpg 3x" alt="Card img">
                         <!-- hover block -->
                         <input id="card__hover-mobile17" class="card__hover-mobile" type="checkbox" />
                         <label for="card__hover-mobile17" class="card__hover-mobile-label"></label>
+						<div class="card__mob-zoom"></div>
                         <div class="card__hover-block">
                             <div class="card__hover-comments">
                                 <div class="card__hover-comments-label"><span>55</span></div>
@@ -971,14 +1537,18 @@
                         </div>
                         <!-- hover block -->
                     </div>
-                    <div class="card__content">
-                        <div class="card__content-title">
-                            Millennium Falcon 3D Print Model | Standard Assembly Kit
-                        </div>
+                    <div class="card__content">                        
+						<a href="javascript:;" class="card__content-title">
+                             Millennium Falcon 3D Print Model | Standard Assembly Kit
+                        </a>
                         <div class="card__content-author">
-                            by <span>Jaclynn Bradley</span>
+                            by <a href="javascript:;">Jaclynn Bradley</a>
                         </div>
                         <div class="card__content-line">
+							<ul class="card__controls" id="customize-controls" aria-label="Carousel Navigation" tabindex="0">
+                                <li class="prev button button_secondary button_m" data-controls="prev" aria-controls="customize" tabindex="-1"></li>
+                                <li class="next button button_secondary button_m" data-controls="next" aria-controls="customize" tabindex="-1"></li>
+                            </ul>
                             <div class="card__price">
                                 $24.99
                                 <div class="card__oldprice">
@@ -990,9 +1560,44 @@
                             </div>
                         </div>
                     </div>
+					<!-- card__hidden-slider -->
+                    <div class="card__hidden-slider">
+                        <div class="card__mob-zoom-close"></div>
+                        <div class="card__hidden-slider-count">
+                            <div class="slider-count-current"></div>&nbsp;of&nbsp;<div class="slider-count-total"></div>
+                        </div>
+                        <div class="hidden-slider">
+                            <div class="hidden-slider-item">
+                                <img src="img/jpg/ravager-groot-3d-model.jpg" alt="Viserion Ice Dragon 3D Printing Figurine">
+                            </div>
+                            <div class="hidden-slider-item">
+                                <img src="img/jpg/ravager-groot-3d-model1.jpg" alt="Viserion Ice Dragon 3D Printing Figurine">
+                            </div>
+                            <div class="hidden-slider-item">
+                                <img src="img/jpg/ravager-groot-3d-model2.jpg" alt="Viserion Ice Dragon 3D Printing Figurine">
+                            </div>
+                        </div>
+                        <div class="hidden-slider-content">
+                            <div class="card__content-title">
+                                Viserion Ice Dragon 3D Printing Figurine
+                            </div>
+                            <div class="card__content-line">
+                                <div class="card__price">
+                                    $24.99
+                                    <div class="card__oldprice">
+                                        $74.99
+                                    </div>
+                                </div>
+                                <div class="card__cart">
+                                    <a href="javascript:;" class="card__cart-link"></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- card__hidden-slider -->
 
                 </div>
-                <div class="card">
+                <div class="card card_slider">
                     <div class="card__img">
                         <img src="img/jpg/card-catalog2.jpg" srcset="img/jpg/card-catalog2@2x.jpg 2x, img/jpg/card-catalog2@3x.jpg 3x" alt="Card img">
                         <div class="labels">
@@ -1004,6 +1609,7 @@
                         <!-- hover block -->
                         <input id="card__hover-mobile18" class="card__hover-mobile" type="checkbox" />
                         <label for="card__hover-mobile18" class="card__hover-mobile-label"></label>
+						<div class="card__mob-zoom"></div>
                         <div class="card__hover-block">
 
                             <div class="card__hover-comments">
@@ -1031,14 +1637,18 @@
                         </div>
                         <!-- hover block -->
                     </div>
-                    <div class="card__content">
-                        <div class="card__content-title">
+                    <div class="card__content">                        
+						<a href="javascript:;" class="card__content-title">
                             Robotech VFA-6 Alpha 3D Printing Model | Action Assembly
-                        </div>
+                        </a>
                         <div class="card__content-author">
-                            by <span>Chloé Modibo</span>
+                            by <a href="javascript:;">Chloé Modibo</a>
                         </div>
                         <div class="card__content-line">
+							<ul class="card__controls" id="customize-controls" aria-label="Carousel Navigation" tabindex="0">
+                                <li class="prev button button_secondary button_m" data-controls="prev" aria-controls="customize" tabindex="-1"></li>
+                                <li class="next button button_secondary button_m" data-controls="next" aria-controls="customize" tabindex="-1"></li>
+                            </ul>
                             <div class="card__price">
                                 $24.99
                             </div>
@@ -1047,14 +1657,50 @@
                             </div>
                         </div>
                     </div>
+					<!-- card__hidden-slider -->
+                    <div class="card__hidden-slider">
+                        <div class="card__mob-zoom-close"></div>
+                        <div class="card__hidden-slider-count">
+                            <div class="slider-count-current"></div>&nbsp;of&nbsp;<div class="slider-count-total"></div>
+                        </div>
+                        <div class="hidden-slider">
+                            <div class="hidden-slider-item">
+                                <img src="img/jpg/ravager-groot-3d-model.jpg" alt="Viserion Ice Dragon 3D Printing Figurine">
+                            </div>
+                            <div class="hidden-slider-item">
+                                <img src="img/jpg/ravager-groot-3d-model1.jpg" alt="Viserion Ice Dragon 3D Printing Figurine">
+                            </div>
+                            <div class="hidden-slider-item">
+                                <img src="img/jpg/ravager-groot-3d-model2.jpg" alt="Viserion Ice Dragon 3D Printing Figurine">
+                            </div>
+                        </div>
+                        <div class="hidden-slider-content">
+                            <div class="card__content-title">
+                                Viserion Ice Dragon 3D Printing Figurine
+                            </div>
+                            <div class="card__content-line">
+                                <div class="card__price">
+                                    $24.99
+                                    <div class="card__oldprice">
+                                        $74.99
+                                    </div>
+                                </div>
+                                <div class="card__cart">
+                                    <a href="javascript:;" class="card__cart-link"></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- card__hidden-slider -->
 
                 </div>
-                <div class="card">
+                <div class="card card_slider">
                     <div class="card__img">
                         <img src="img/jpg/card-catalog1.jpg" srcset="img/jpg/card-catalog1@2x.jpg 2x, img/jpg/card-catalog1@3x.jpg 3x" alt="Card img">
                         <!-- hover block -->
                         <input id="card__hover-mobile19" class="card__hover-mobile" type="checkbox" />
                         <label for="card__hover-mobile19" class="card__hover-mobile-label"></label>
+						<div class="card__mob-zoom"></div>
                         <div class="card__hover-block">
                             <div class="card__hover-comments">
                                 <div class="card__hover-comments-label"><span>55</span></div>
@@ -1079,14 +1725,18 @@
                         </div>
                         <!-- hover block -->
                     </div>
-                    <div class="card__content">
-                        <div class="card__content-title">
+                    <div class="card__content">                        
+						<a href="javascript:;" class="card__content-title">
                             BT-7274 3D Printing Model | Assembly + Action
-                        </div>
+                        </a>
                         <div class="card__content-author">
-                            by <span>Erika Mateo</span>
+                            by <a href="javascript:;">Erika Mateo</a>
                         </div>
                         <div class="card__content-line">
+							<ul class="card__controls" id="customize-controls" aria-label="Carousel Navigation" tabindex="0">
+                                <li class="prev button button_secondary button_m" data-controls="prev" aria-controls="customize" tabindex="-1"></li>
+                                <li class="next button button_secondary button_m" data-controls="next" aria-controls="customize" tabindex="-1"></li>
+                            </ul>
                             <div class="card__price">
                                 $24.99
                             </div>
@@ -1095,8 +1745,43 @@
                             </div>
                         </div>
                     </div>
+					<!-- card__hidden-slider -->
+                    <div class="card__hidden-slider">
+                        <div class="card__mob-zoom-close"></div>
+                        <div class="card__hidden-slider-count">
+                            <div class="slider-count-current"></div>&nbsp;of&nbsp;<div class="slider-count-total"></div>
+                        </div>
+                        <div class="hidden-slider">
+                            <div class="hidden-slider-item">
+                                <img src="img/jpg/ravager-groot-3d-model.jpg" alt="Viserion Ice Dragon 3D Printing Figurine">
+                            </div>
+                            <div class="hidden-slider-item">
+                                <img src="img/jpg/ravager-groot-3d-model1.jpg" alt="Viserion Ice Dragon 3D Printing Figurine">
+                            </div>
+                            <div class="hidden-slider-item">
+                                <img src="img/jpg/ravager-groot-3d-model2.jpg" alt="Viserion Ice Dragon 3D Printing Figurine">
+                            </div>
+                        </div>
+                        <div class="hidden-slider-content">
+                            <div class="card__content-title">
+                                Viserion Ice Dragon 3D Printing Figurine
+                            </div>
+                            <div class="card__content-line">
+                                <div class="card__price">
+                                    $24.99
+                                    <div class="card__oldprice">
+                                        $74.99
+                                    </div>
+                                </div>
+                                <div class="card__cart">
+                                    <a href="javascript:;" class="card__cart-link"></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- card__hidden-slider -->
                 </div>
-                <div class="card">
+                <div class="card card_slider">
                     <div class="card__img">
                         <img src="img/jpg/card-catalog5.jpg" srcset="img/jpg/card-catalog5@2x.jpg 2x, img/jpg/card-catalog5@3x.jpg 3x" alt="Card img">
                         <div class="labels">
@@ -1107,6 +1792,7 @@
                         <!-- hover block -->
                         <input id="card__hover-mobile20" class="card__hover-mobile" type="checkbox" />
                         <label for="card__hover-mobile20" class="card__hover-mobile-label"></label>
+						<div class="card__mob-zoom"></div>
                         <div class="card__hover-block">
                             <div class="card__hover-comments">
                                 <div class="card__hover-comments-label"><span>55</span></div>
@@ -1133,14 +1819,18 @@
                         </div>
                         <!-- hover block -->
                     </div>
-                    <div class="card__content">
-                        <div class="card__content-title">
-                            Cyberpunk Vampire Bust 3D Printing Figurine | Assembly
-                        </div>
+                    <div class="card__content">                        
+						<a href="javascript:;" class="card__content-title">
+                           Cyberpunk Vampire Bust 3D Printing Figurine | Assembly
+                        </a>
                         <div class="card__content-author">
-                            by <span>Leonardo Oliveira</span>
+                            by <a href="javascript:;">Leonardo Oliveira</a>
                         </div>
                         <div class="card__content-line">
+							<ul class="card__controls" id="customize-controls" aria-label="Carousel Navigation" tabindex="0">
+                                <li class="prev button button_secondary button_m" data-controls="prev" aria-controls="customize" tabindex="-1"></li>
+                                <li class="next button button_secondary button_m" data-controls="next" aria-controls="customize" tabindex="-1"></li>
+                            </ul>
                             <div class="card__price">
                                 $24.99
                             </div>
@@ -1149,6 +1839,41 @@
                             </div>
                         </div>
                     </div>
+					<!-- card__hidden-slider -->
+                    <div class="card__hidden-slider">
+                        <div class="card__mob-zoom-close"></div>
+                        <div class="card__hidden-slider-count">
+                            <div class="slider-count-current"></div>&nbsp;of&nbsp;<div class="slider-count-total"></div>
+                        </div>
+                        <div class="hidden-slider">
+                            <div class="hidden-slider-item">
+                                <img src="img/jpg/ravager-groot-3d-model.jpg" alt="Viserion Ice Dragon 3D Printing Figurine">
+                            </div>
+                            <div class="hidden-slider-item">
+                                <img src="img/jpg/ravager-groot-3d-model1.jpg" alt="Viserion Ice Dragon 3D Printing Figurine">
+                            </div>
+                            <div class="hidden-slider-item">
+                                <img src="img/jpg/ravager-groot-3d-model2.jpg" alt="Viserion Ice Dragon 3D Printing Figurine">
+                            </div>
+                        </div>
+                        <div class="hidden-slider-content">
+                            <div class="card__content-title">
+                                Viserion Ice Dragon 3D Printing Figurine
+                            </div>
+                            <div class="card__content-line">
+                                <div class="card__price">
+                                    $24.99
+                                    <div class="card__oldprice">
+                                        $74.99
+                                    </div>
+                                </div>
+                                <div class="card__cart">
+                                    <a href="javascript:;" class="card__cart-link"></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- card__hidden-slider -->
                 </div>
             </div>
             <div class="show-more">
@@ -1165,15 +1890,18 @@
             <div class="main-title">
                 Line layout
             </div>
+    </div>
+    <div class="container container-full-mob">
             <div class="slider-cards">
                 <div class="slider-cards__slider-new">
                     <div>
-                    <div class="card">
+                    <div class="card card_slider">
                         <div class="card__img">
                             <img src="img/jpg/trending8.jpg" srcset="img/jpg/trending8@2x.jpg 2x, img/jpg/trending8@3x.jpg 3x" alt="Card img">
                             <!-- hover block -->
                             <input id="card__hover-mobile40" class="card__hover-mobile" type="checkbox" />
                             <label for="card__hover-mobile40" class="card__hover-mobile-label"></label>
+							<div class="card__mob-zoom"></div>
                             <div class="card__hover-block">
                                 <div class="card__hover-comments">
                                     <div class="card__hover-comments-label"><span>55</span></div>
@@ -1200,12 +1928,49 @@
                             </div>
                             <!-- hover block -->
                         </div>
-                        <div class="card__content">
+                        <div class="card__content">                            
+							<a href="javascript:;" class="card__content-title">
+								Cyberpunk Vampire Bust 3D Printing Figurine | Assembly
+							</a>
+							<div class="card__content-author">
+								by <a href="javascript:;">Leonardo Oliveira</a>
+							</div>
+                            <div class="card__content-line">
+								<ul class="card__controls" id="customize-controls" aria-label="Carousel Navigation" tabindex="0">
+                                <li class="prev button button_secondary button_m" data-controls="prev" aria-controls="customize" tabindex="-1"></li>
+                                <li class="next button button_secondary button_m" data-controls="next" aria-controls="customize" tabindex="-1"></li>
+                            </ul>
+                                <div class="card__price">
+                                    $24.99
+                                    <div class="card__oldprice">
+                                        $74.99
+                                    </div>
+                                </div>
+                                <div class="card__cart">
+                                    <a href="javascript:;" class="card__cart-link"></a>
+                                </div>
+                            </div>
+                        </div>
+						<!-- card__hidden-slider -->
+                    <div class="card__hidden-slider">
+                        <div class="card__mob-zoom-close"></div>
+                        <div class="card__hidden-slider-count">
+                            <div class="slider-count-current"></div>&nbsp;of&nbsp;<div class="slider-count-total"></div>
+                        </div>
+                        <div class="hidden-slider">
+                            <div class="hidden-slider-item">
+                                <img src="img/jpg/ravager-groot-3d-model.jpg" alt="Viserion Ice Dragon 3D Printing Figurine">
+                            </div>
+                            <div class="hidden-slider-item">
+                                <img src="img/jpg/ravager-groot-3d-model1.jpg" alt="Viserion Ice Dragon 3D Printing Figurine">
+                            </div>
+                            <div class="hidden-slider-item">
+                                <img src="img/jpg/ravager-groot-3d-model2.jpg" alt="Viserion Ice Dragon 3D Printing Figurine">
+                            </div>
+                        </div>
+                        <div class="hidden-slider-content">
                             <div class="card__content-title">
                                 Viserion Ice Dragon 3D Printing Figurine
-                            </div>
-                            <div class="card__content-author">
-                                by <span>Oliver</span>
                             </div>
                             <div class="card__content-line">
                                 <div class="card__price">
@@ -1219,11 +1984,13 @@
                                 </div>
                             </div>
                         </div>
+                    </div>
+                    <!-- card__hidden-slider -->
 
                     </div>
                    </div>
                    <div>
-                    <div class="card">
+                    <div class="card card_slider">
                         <div class="card__img">
                             <img src="img/jpg/trending12.jpg" srcset="img/jpg/trending12@2x.jpg 2x, img/jpg/trending12@3x.jpg 3x" alt="Card img">
                             <div class="labels">
@@ -1234,6 +2001,7 @@
                             <!-- hover block -->
                             <input id="card__hover-mobile41" class="card__hover-mobile" type="checkbox" />
                             <label for="card__hover-mobile41" class="card__hover-mobile-label"></label>
+							<div class="card__mob-zoom"></div>
                             <div class="card__hover-block">
                                 <div class="card__hover-comments">
                                     <div class="card__hover-comments-label"><span>55</span></div>
@@ -1260,14 +2028,18 @@
                             </div>
                             <!-- hover block -->
                         </div>
-                        <div class="card__content">
-                            <div class="card__content-title">
-                                Viserion Ice Dragon 3D Printing Figurine
-                            </div>
-                            <div class="card__content-author">
-                                by <span>Oliver</span>
-                            </div>
+                        <div class="card__content">                            
+							<a href="javascript:;" class="card__content-title">
+								Viserion Ice Dragon 3D Printing Figurine
+							</a>
+							<div class="card__content-author">
+								by <a href="javascript:;">Oliver</a>
+							</div>
                             <div class="card__content-line">
+								<ul class="card__controls" id="customize-controls" aria-label="Carousel Navigation" tabindex="0">
+                                <li class="prev button button_secondary button_m" data-controls="prev" aria-controls="customize" tabindex="-1"></li>
+                                <li class="next button button_secondary button_m" data-controls="next" aria-controls="customize" tabindex="-1"></li>
+                            </ul>
                                 <div class="card__price">
                                     $24.99
                                 </div>
@@ -1276,10 +2048,45 @@
                                 </div>
                             </div>
                         </div>
+						<!-- card__hidden-slider -->
+                    <div class="card__hidden-slider">
+                        <div class="card__mob-zoom-close"></div>
+                        <div class="card__hidden-slider-count">
+                            <div class="slider-count-current"></div>&nbsp;of&nbsp;<div class="slider-count-total"></div>
+                        </div>
+                        <div class="hidden-slider">
+                            <div class="hidden-slider-item">
+                                <img src="img/jpg/ravager-groot-3d-model.jpg" alt="Viserion Ice Dragon 3D Printing Figurine">
+                            </div>
+                            <div class="hidden-slider-item">
+                                <img src="img/jpg/ravager-groot-3d-model1.jpg" alt="Viserion Ice Dragon 3D Printing Figurine">
+                            </div>
+                            <div class="hidden-slider-item">
+                                <img src="img/jpg/ravager-groot-3d-model2.jpg" alt="Viserion Ice Dragon 3D Printing Figurine">
+                            </div>
+                        </div>
+                        <div class="hidden-slider-content">
+                            <div class="card__content-title">
+                                Viserion Ice Dragon 3D Printing Figurine
+                            </div>
+                            <div class="card__content-line">
+                                <div class="card__price">
+                                    $24.99
+                                    <div class="card__oldprice">
+                                        $74.99
+                                    </div>
+                                </div>
+                                <div class="card__cart">
+                                    <a href="javascript:;" class="card__cart-link"></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- card__hidden-slider -->
                     </div>
                    </div>
                     <div>
-                    <div class="card">
+                    <div class="card card_slider">
                         <div class="card__img">
                             <img src="img/jpg/trending13.jpg" srcset="img/jpg/trending13@2x.jpg 2x, img/jpg/trending13@3x.jpg 3x" alt="Card img">
                             <div class="labels">
@@ -1291,6 +2098,7 @@
                             <!-- hover block -->
                             <input id="card__hover-mobile42" class="card__hover-mobile" type="checkbox" />
                             <label for="card__hover-mobile42" class="card__hover-mobile-label"></label>
+							<div class="card__mob-zoom"></div>
                             <div class="card__hover-block">
                                 <div class="card__hover-comments">
                                     <div class="card__hover-comments-label"><span>55</span></div>
@@ -1318,13 +2126,17 @@
                             <!-- hover block -->
                         </div>
                         <div class="card__content">
-                            <div class="card__content-title">
-                                Viserion Ice Dragon 3D Printing Figurine
-                            </div>
-                            <div class="card__content-author">
-                                by <span>Oliver</span>
-                            </div>
+                            <a href="javascript:;" class="card__content-title">
+								Viserion Ice Dragon 3D Printing Figurine
+							</a>
+							<div class="card__content-author">
+								by <a href="javascript:;">Oliver</a>
+							</div>
                             <div class="card__content-line">
+								<ul class="card__controls" id="customize-controls" aria-label="Carousel Navigation" tabindex="0">
+                                <li class="prev button button_secondary button_m" data-controls="prev" aria-controls="customize" tabindex="-1"></li>
+                                <li class="next button button_secondary button_m" data-controls="next" aria-controls="customize" tabindex="-1"></li>
+                            </ul>
                                 <div class="card__price">
                                     $24.99
                                 </div>
@@ -1333,10 +2145,45 @@
                                 </div>
                             </div>
                         </div>
+						<!-- card__hidden-slider -->
+                    <div class="card__hidden-slider">
+                        <div class="card__mob-zoom-close"></div>
+                        <div class="card__hidden-slider-count">
+                            <div class="slider-count-current"></div>&nbsp;of&nbsp;<div class="slider-count-total"></div>
+                        </div>
+                        <div class="hidden-slider">
+                            <div class="hidden-slider-item">
+                                <img src="img/jpg/ravager-groot-3d-model.jpg" alt="Viserion Ice Dragon 3D Printing Figurine">
+                            </div>
+                            <div class="hidden-slider-item">
+                                <img src="img/jpg/ravager-groot-3d-model1.jpg" alt="Viserion Ice Dragon 3D Printing Figurine">
+                            </div>
+                            <div class="hidden-slider-item">
+                                <img src="img/jpg/ravager-groot-3d-model2.jpg" alt="Viserion Ice Dragon 3D Printing Figurine">
+                            </div>
+                        </div>
+                        <div class="hidden-slider-content">
+                            <div class="card__content-title">
+                                Viserion Ice Dragon 3D Printing Figurine
+                            </div>
+                            <div class="card__content-line">
+                                <div class="card__price">
+                                    $24.99
+                                    <div class="card__oldprice">
+                                        $74.99
+                                    </div>
+                                </div>
+                                <div class="card__cart">
+                                    <a href="javascript:;" class="card__cart-link"></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- card__hidden-slider -->
                     </div>
                     </div>
                     <div>
-                    <div class="card">
+                    <div class="card card_slider">
                         <div class="card__img">
                             <img src="img/jpg/trending14.jpg" srcset="img/jpg/trending14@2x.jpg 2x, img/jpg/trending14@3x.jpg 3x" alt="Card img">
                             <div class="labels">
@@ -1347,6 +2194,7 @@
                             <!-- hover block -->
                             <input id="card__hover-mobile25" class="card__hover-mobile" type="checkbox" />
                             <label for="card__hover-mobile25" class="card__hover-mobile-label"></label>
+							<div class="card__mob-zoom"></div>
                             <div class="card__hover-block">
                                 <div class="card__hover-comments">
                                     <div class="card__hover-comments-label"><span>55</span></div>
@@ -1374,13 +2222,17 @@
                             <!-- hover block -->
                         </div>
                         <div class="card__content">
-                            <div class="card__content-title">
-                                Viserion Ice Dragon 3D Printing Figurine
-                            </div>
-                            <div class="card__content-author">
-                                by <span>Oliver</span>
-                            </div>
+                            <a href="javascript:;" class="card__content-title">
+								Viserion Ice Dragon 3D Printing Figurine
+							</a>
+							<div class="card__content-author">
+								by <a href="javascript:;">Oliver</a>
+							</div>
                             <div class="card__content-line">
+								<ul class="card__controls" id="customize-controls" aria-label="Carousel Navigation" tabindex="0">
+                                <li class="prev button button_secondary button_m" data-controls="prev" aria-controls="customize" tabindex="-1"></li>
+                                <li class="next button button_secondary button_m" data-controls="next" aria-controls="customize" tabindex="-1"></li>
+                            </ul>
                                 <div class="card__price">
                                     $24.99
                                 </div>
@@ -1389,10 +2241,45 @@
                                 </div>
                             </div>
                         </div>
+						<!-- card__hidden-slider -->
+                    <div class="card__hidden-slider">
+                        <div class="card__mob-zoom-close"></div>
+                        <div class="card__hidden-slider-count">
+                            <div class="slider-count-current"></div>&nbsp;of&nbsp;<div class="slider-count-total"></div>
+                        </div>
+                        <div class="hidden-slider">
+                            <div class="hidden-slider-item">
+                                <img src="img/jpg/ravager-groot-3d-model.jpg" alt="Viserion Ice Dragon 3D Printing Figurine">
+                            </div>
+                            <div class="hidden-slider-item">
+                                <img src="img/jpg/ravager-groot-3d-model1.jpg" alt="Viserion Ice Dragon 3D Printing Figurine">
+                            </div>
+                            <div class="hidden-slider-item">
+                                <img src="img/jpg/ravager-groot-3d-model2.jpg" alt="Viserion Ice Dragon 3D Printing Figurine">
+                            </div>
+                        </div>
+                        <div class="hidden-slider-content">
+                            <div class="card__content-title">
+                                Viserion Ice Dragon 3D Printing Figurine
+                            </div>
+                            <div class="card__content-line">
+                                <div class="card__price">
+                                    $24.99
+                                    <div class="card__oldprice">
+                                        $74.99
+                                    </div>
+                                </div>
+                                <div class="card__cart">
+                                    <a href="javascript:;" class="card__cart-link"></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- card__hidden-slider -->
                     </div>
                     </div>
                     <div>
-                    <div class="card">
+                    <div class="card card_slider">
                         <div class="card__img">
                             <img src="img/jpg/trending15.jpg" srcset="img/jpg/trending15@2x.jpg 2x, img/jpg/trending15@3x.jpg 3x" alt="Card img">
                             <div class="labels">
@@ -1403,6 +2290,7 @@
                             <!-- hover block -->
                             <input id="card__hover-mobile24" class="card__hover-mobile" type="checkbox" />
                             <label for="card__hover-mobile24" class="card__hover-mobile-label"></label>
+							<div class="card__mob-zoom"></div>
                             <div class="card__hover-block">
                                 <div class="card__hover-comments">
                                     <div class="card__hover-comments-label"><span>55</span></div>
@@ -1430,13 +2318,17 @@
                             <!-- hover block -->
                         </div>
                         <div class="card__content">
-                            <div class="card__content-title">
-                                Viserion Ice Dragon 3D Printing Figurine
-                            </div>
-                            <div class="card__content-author">
-                                by <span>Oliver</span>
-                            </div>
+							<a href="javascript:;" class="card__content-title">
+								Viserion Ice Dragon 3D Printing Figurine
+							</a>
+							<div class="card__content-author">
+								by <a href="javascript:;">Oliver</a>
+							</div>
                             <div class="card__content-line">
+								<ul class="card__controls" id="customize-controls" aria-label="Carousel Navigation" tabindex="0">
+                                <li class="prev button button_secondary button_m" data-controls="prev" aria-controls="customize" tabindex="-1"></li>
+                                <li class="next button button_secondary button_m" data-controls="next" aria-controls="customize" tabindex="-1"></li>
+                            </ul>
                                 <div class="card__price">
                                     $24.99
                                 </div>
@@ -1445,10 +2337,45 @@
                                 </div>
                             </div>
                         </div>
+						<!-- card__hidden-slider -->
+                    <div class="card__hidden-slider">
+                        <div class="card__mob-zoom-close"></div>
+                        <div class="card__hidden-slider-count">
+                            <div class="slider-count-current"></div>&nbsp;of&nbsp;<div class="slider-count-total"></div>
+                        </div>
+                        <div class="hidden-slider">
+                            <div class="hidden-slider-item">
+                                <img src="img/jpg/ravager-groot-3d-model.jpg" alt="Viserion Ice Dragon 3D Printing Figurine">
+                            </div>
+                            <div class="hidden-slider-item">
+                                <img src="img/jpg/ravager-groot-3d-model1.jpg" alt="Viserion Ice Dragon 3D Printing Figurine">
+                            </div>
+                            <div class="hidden-slider-item">
+                                <img src="img/jpg/ravager-groot-3d-model2.jpg" alt="Viserion Ice Dragon 3D Printing Figurine">
+                            </div>
+                        </div>
+                        <div class="hidden-slider-content">
+                            <div class="card__content-title">
+                                Viserion Ice Dragon 3D Printing Figurine
+                            </div>
+                            <div class="card__content-line">
+                                <div class="card__price">
+                                    $24.99
+                                    <div class="card__oldprice">
+                                        $74.99
+                                    </div>
+                                </div>
+                                <div class="card__cart">
+                                    <a href="javascript:;" class="card__cart-link"></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- card__hidden-slider -->
                     </div>
                     </div>
                     <div>
-                    <div class="card">
+                    <div class="card card_slider">
                         <div class="card__img">
                             <img src="img/jpg/trending16.jpg" srcset="img/jpg/trending16@2x.jpg 2x, img/jpg/trending16@3x.jpg 3x" alt="Card img">
                             <div class="labels">
@@ -1459,6 +2386,7 @@
                             <!-- hover block -->
                             <input id="card__hover-mobile23" class="card__hover-mobile" type="checkbox" />
                             <label for="card__hover-mobile23" class="card__hover-mobile-label"></label>
+							<div class="card__mob-zoom"></div>
                             <div class="card__hover-block">
                                 <div class="card__hover-comments">
                                     <div class="card__hover-comments-label"><span>55</span></div>
@@ -1486,13 +2414,17 @@
                             <!-- hover block -->
                         </div>
                         <div class="card__content">
-                            <div class="card__content-title">
-                                Viserion Ice Dragon 3D Printing Figurine
-                            </div>
-                            <div class="card__content-author">
-                                by <span>Oliver</span>
-                            </div>
+                            <a href="javascript:;" class="card__content-title">
+								Viserion Ice Dragon 3D Printing Figurine
+							</a>
+							<div class="card__content-author">
+								by <a href="javascript:;">Oliver</a>
+							</div>
                             <div class="card__content-line">
+								<ul class="card__controls" id="customize-controls" aria-label="Carousel Navigation" tabindex="0">
+                                <li class="prev button button_secondary button_m" data-controls="prev" aria-controls="customize" tabindex="-1"></li>
+                                <li class="next button button_secondary button_m" data-controls="next" aria-controls="customize" tabindex="-1"></li>
+                            </ul>
                                 <div class="card__price">
                                     $24.99
                                 </div>
@@ -1501,10 +2433,45 @@
                                 </div>
                             </div>
                         </div>
+						<!-- card__hidden-slider -->
+                    <div class="card__hidden-slider">
+                        <div class="card__mob-zoom-close"></div>
+                        <div class="card__hidden-slider-count">
+                            <div class="slider-count-current"></div>&nbsp;of&nbsp;<div class="slider-count-total"></div>
+                        </div>
+                        <div class="hidden-slider">
+                            <div class="hidden-slider-item">
+                                <img src="img/jpg/ravager-groot-3d-model.jpg" alt="Viserion Ice Dragon 3D Printing Figurine">
+                            </div>
+                            <div class="hidden-slider-item">
+                                <img src="img/jpg/ravager-groot-3d-model1.jpg" alt="Viserion Ice Dragon 3D Printing Figurine">
+                            </div>
+                            <div class="hidden-slider-item">
+                                <img src="img/jpg/ravager-groot-3d-model2.jpg" alt="Viserion Ice Dragon 3D Printing Figurine">
+                            </div>
+                        </div>
+                        <div class="hidden-slider-content">
+                            <div class="card__content-title">
+                                Viserion Ice Dragon 3D Printing Figurine
+                            </div>
+                            <div class="card__content-line">
+                                <div class="card__price">
+                                    $24.99
+                                    <div class="card__oldprice">
+                                        $74.99
+                                    </div>
+                                </div>
+                                <div class="card__cart">
+                                    <a href="javascript:;" class="card__cart-link"></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- card__hidden-slider -->
                     </div>
                     </div>
                     <div>
-                    <div class="card">
+                    <div class="card card_slider">
                         <div class="card__img">
                             <img src="img/jpg/trending12.jpg" srcset="img/jpg/trending12@2x.jpg 2x, img/jpg/trending12@3x.jpg 3x" alt="Card img">
                             <div class="labels">
@@ -1515,6 +2482,7 @@
                             <!-- hover block -->
                             <input id="card__hover-mobile22" class="card__hover-mobile" type="checkbox" />
                             <label for="card__hover-mobile22" class="card__hover-mobile-label"></label>
+							<div class="card__mob-zoom"></div>
                             <div class="card__hover-block">
                                 <div class="card__hover-comments">
                                     <div class="card__hover-comments-label"><span>55</span></div>
@@ -1542,13 +2510,17 @@
                             <!-- hover block -->
                         </div>
                         <div class="card__content">
-                            <div class="card__content-title">
-                                Viserion Ice Dragon 3D Printing Figurine
-                            </div>
-                            <div class="card__content-author">
-                                by <span>Oliver</span>
-                            </div>
+                            <a href="javascript:;" class="card__content-title">
+								Viserion Ice Dragon 3D Printing Figurine
+							</a>
+							<div class="card__content-author">
+								by <a href="javascript:;">Oliver</a>
+							</div>
                             <div class="card__content-line">
+								<ul class="card__controls" id="customize-controls" aria-label="Carousel Navigation" tabindex="0">
+                                <li class="prev button button_secondary button_m" data-controls="prev" aria-controls="customize" tabindex="-1"></li>
+                                <li class="next button button_secondary button_m" data-controls="next" aria-controls="customize" tabindex="-1"></li>
+                            </ul>
                                 <div class="card__price">
                                     $24.99
                                 </div>
@@ -1557,6 +2529,41 @@
                                 </div>
                             </div>
                         </div>
+                        <!-- card__hidden-slider -->
+                        <div class="card__hidden-slider">
+                            <div class="card__mob-zoom-close"></div>
+                            <div class="card__hidden-slider-count">
+                                <div class="slider-count-current"></div>&nbsp;of&nbsp;<div class="slider-count-total"></div>
+                            </div>
+                            <div class="hidden-slider">
+                                <div class="hidden-slider-item">
+                                    <img src="img/jpg/ravager-groot-3d-model.jpg" alt="Viserion Ice Dragon 3D Printing Figurine">
+                                </div>
+                                <div class="hidden-slider-item">
+                                    <img src="img/jpg/ravager-groot-3d-model1.jpg" alt="Viserion Ice Dragon 3D Printing Figurine">
+                                </div>
+                                <div class="hidden-slider-item">
+                                    <img src="img/jpg/ravager-groot-3d-model2.jpg" alt="Viserion Ice Dragon 3D Printing Figurine">
+                                </div>
+                            </div>
+                            <div class="hidden-slider-content">
+                                <div class="card__content-title">
+                                    Viserion Ice Dragon 3D Printing Figurine
+                                </div>
+                                <div class="card__content-line">
+                                    <div class="card__price">
+                                        $24.99
+                                        <div class="card__oldprice">
+                                            $74.99
+                                        </div>
+                                    </div>
+                                    <div class="card__cart">
+                                        <a href="javascript:;" class="card__cart-link"></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- card__hidden-slider -->
                     </div>
                     </div>
 
@@ -1622,19 +2629,17 @@
                         <!-- hover block -->
                     </div>
                     <div class="card__content">
-                        <div class="card__content-title">
-                            Viserion Ice Dragon 3D Printing Figurine
-                        </div>
-                        <div class="card__content-author">
-                            by <span>Oliver</span>
-                        </div>
+                        <a href="javascript:;" class="card__content-title">
+								Viserion Ice Dragon 3D Printing Figurine
+							</a>
+							<div class="card__content-author">
+								by <a href="javascript:;">Oliver</a>
+							</div>
                         <div class="card__content-line">
-
                             <ul class="card__controls" id="customize-controls" aria-label="Carousel Navigation" tabindex="0">
                                 <li class="prev button button_secondary button_m" data-controls="prev" aria-controls="customize" tabindex="-1"></li>
                                 <li class="next button button_secondary button_m" data-controls="next" aria-controls="customize" tabindex="-1"></li>
                             </ul>
-
                             <div class="card__price">
                                 $24.99
                             </div>
@@ -1643,7 +2648,7 @@
                             </div>
                         </div>
                     </div>
-                    <!- card__hidden-slider ->
+                    <!-- card__hidden-slider -->
                     <div class="card__hidden-slider">
                         <div class="card__mob-zoom-close"></div>
                         <div class="card__hidden-slider-count">
@@ -1651,16 +2656,13 @@
                         </div>
                         <div class="hidden-slider">
                             <div class="hidden-slider-item">
-                                <img src="img/png/uss-sulaco-1_980x500.png" alt="Viserion Ice Dragon 3D Printing Figurine">
+                                <img src="img/jpg/ravager-groot-3d-model.jpg" alt="Viserion Ice Dragon 3D Printing Figurine">
                             </div>
                             <div class="hidden-slider-item">
-                                <img src="img/png/uss-sulaco-2_980x500.png" alt="Viserion Ice Dragon 3D Printing Figurine">
+                                <img src="img/jpg/ravager-groot-3d-model1.jpg" alt="Viserion Ice Dragon 3D Printing Figurine">
                             </div>
                             <div class="hidden-slider-item">
-                                <img src="img/png/uss-sulaco-3_980x500.png" alt="Viserion Ice Dragon 3D Printing Figurine">
-                            </div>
-                            <div class="hidden-slider-item">
-                                <img src="img/png/uss-sulaco-4_980x500.png" alt="Viserion Ice Dragon 3D Printing Figurine">
+                                <img src="img/jpg/ravager-groot-3d-model2.jpg" alt="Viserion Ice Dragon 3D Printing Figurine">
                             </div>
                         </div>
                         <div class="hidden-slider-content">
@@ -1673,6 +2675,9 @@
                                     <div class="card__oldprice">
                                         $74.99
                                     </div>
+                                </div>
+                                <div class="card__cart">
+                                    <a href="javascript:;" class="card__cart-link"></a>
                                 </div>
                             </div>
                         </div>
@@ -1727,12 +2732,12 @@
                         <!-- hover block -->
                     </div>
                     <div class="card__content">
-                        <div class="card__content-title">
-                            Viserion Ice Dragon 3D Printing Figurine
-                        </div>
-                        <div class="card__content-author">
-                            by <span>Oliver</span>
-                        </div>
+                        <a href="javascript:;" class="card__content-title">
+								Viserion Ice Dragon 3D Printing Figurine
+							</a>
+							<div class="card__content-author">
+								by <a href="javascript:;">Oliver</a>
+							</div>
                         <div class="card__content-line">
 
                             <ul class="card__controls" id="customize-controls" aria-label="Carousel Navigation" tabindex="0">
@@ -1748,7 +2753,7 @@
                             </div>
                         </div>
                     </div>
-                    <!- card__hidden-slider ->
+                    <!-- card__hidden-slider -->
                     <div class="card__hidden-slider">
                         <div class="card__mob-zoom-close"></div>
                         <div class="card__hidden-slider-count">
@@ -1776,6 +2781,9 @@
                                     <div class="card__oldprice">
                                         $74.99
                                     </div>
+                                </div>
+                                <div class="card__cart">
+                                    <a href="javascript:;" class="card__cart-link"></a>
                                 </div>
                             </div>
                         </div>
@@ -1829,13 +2837,13 @@
                         </div>
                         <!-- hover block -->
                     </div>
-                    <div class="card__content">
-                        <div class="card__content-title">
-                            Millennium Falcon 3D Print Model | Standard Assembly Kit
-                        </div>
-                        <div class="card__content-author">
-                            by <span>Jaclynn Bradley</span>
-                        </div>
+                    <div class="card__content">                        
+						<a href="javascript:;" class="card__content-title">
+							Millennium Falcon 3D Print Model | Standard Assembly Kit
+						</a>
+						<div class="card__content-author">
+							by <a href="javascript:;">Jaclynn Bradley</a>
+						</div>
                         <div class="card__content-line">
 
                             <ul class="card__controls" id="customize-controls" aria-label="Carousel Navigation" tabindex="0">
@@ -1851,7 +2859,7 @@
                             </div>
                         </div>
                     </div>
-                    <!- card__hidden-slider ->
+                    <!-- card__hidden-slider -->
                     <div class="card__hidden-slider">
                         <div class="card__mob-zoom-close"></div>
                         <div class="card__hidden-slider-count">
@@ -1879,6 +2887,9 @@
                                     <div class="card__oldprice">
                                         $74.99
                                     </div>
+                                </div>
+                                <div class="card__cart">
+                                    <a href="javascript:;" class="card__cart-link"></a>
                                 </div>
                             </div>
                         </div>
@@ -1932,13 +2943,13 @@
                         </div>
                         <!-- hover block -->
                     </div>
-                    <div class="card__content">
-                        <div class="card__content-title">
-                            Spider-Man Wall Crawler 3D Printing Figurine | Assembly
-                        </div>
-                        <div class="card__content-author">
-                            by <span>Amelia Cabal</span>
-                        </div>
+                    <div class="card__content">                        
+						<a href="javascript:;" class="card__content-title">
+							Spider-Man Wall Crawler 3D Printing Figurine | Assembly
+						</a>
+						<div class="card__content-author">
+							by <a href="javascript:;">Amelia Cabal</a>
+						</div>
                         <div class="card__content-line">
 
                             <ul class="card__controls" id="customize-controls" aria-label="Carousel Navigation" tabindex="0">
@@ -1954,7 +2965,7 @@
                             </div>
                         </div>
                     </div>
-                    <!- card__hidden-slider ->
+                    <!-- card__hidden-slider -->
                     <div class="card__hidden-slider">
                         <div class="card__mob-zoom-close"></div>
                         <div class="card__hidden-slider-count">
@@ -1982,6 +2993,9 @@
                                     <div class="card__oldprice">
                                         $74.99
                                     </div>
+                                </div>
+                                <div class="card__cart">
+                                    <a href="javascript:;" class="card__cart-link"></a>
                                 </div>
                             </div>
                         </div>
@@ -2034,13 +3048,13 @@
                         </div>
                         <!-- hover block -->
                     </div>
-                    <div class="card__content">
-                        <div class="card__content-title">
-                            Deadpool 3D Printing Miniature | Assembly
-                        </div>
-                        <div class="card__content-author">
-                            by <span>Oliver</span>
-                        </div>
+                    <div class="card__content">                        
+						<a href="javascript:;" class="card__content-title">
+							Deadpool 3D Printing Miniature | Assembly
+						</a>
+						<div class="card__content-author">
+							by <a href="javascript:;">Oliver</a>
+						</div>
                         <div class="card__content-line">
 
                             <ul class="card__controls" id="customize-controls" aria-label="Carousel Navigation" tabindex="0">
@@ -2056,7 +3070,7 @@
                             </div>
                         </div>
                     </div>
-                    <!- card__hidden-slider ->
+                    <!-- card__hidden-slider -->
                     <div class="card__hidden-slider">
                         <div class="card__mob-zoom-close"></div>
                         <div class="card__hidden-slider-count">
@@ -2084,6 +3098,9 @@
                                     <div class="card__oldprice">
                                         $74.99
                                     </div>
+                                </div>
+                                <div class="card__cart">
+                                    <a href="javascript:;" class="card__cart-link"></a>
                                 </div>
                             </div>
                         </div>
@@ -2137,12 +3154,12 @@
                         <!-- hover block -->
                     </div>
                     <div class="card__content">
-                        <div class="card__content-title">
-                            Viserion Ice Dragon 3D Printing Figurine
-                        </div>
-                        <div class="card__content-author">
-                            by <span>Oliver</span>
-                        </div>
+                        <a href="javascript:;" class="card__content-title">
+							Viserion Ice Dragon 3D Printing Figurine
+						</a>
+						<div class="card__content-author">
+							by <a href="javascript:;">Oliver</a>
+						</div>						
                         <div class="card__content-line">
 
                             <ul class="card__controls" id="customize-controls" aria-label="Carousel Navigation" tabindex="0">
@@ -2158,7 +3175,7 @@
                             </div>
                         </div>
                     </div>
-                    <!- card__hidden-slider ->
+                    <!-- card__hidden-slider -->
                     <div class="card__hidden-slider">
                         <div class="card__mob-zoom-close"></div>
                         <div class="card__hidden-slider-count">
@@ -2186,6 +3203,9 @@
                                     <div class="card__oldprice">
                                         $74.99
                                     </div>
+                                </div>
+                                <div class="card__cart">
+                                    <a href="javascript:;" class="card__cart-link"></a>
                                 </div>
                             </div>
                         </div>

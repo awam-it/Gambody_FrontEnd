@@ -1,0 +1,32 @@
+/* header__top-language.scss */
+
+.menu-arrow {
+  position: absolute;
+  width: 100%;
+  right: 50%;
+  bottom: -9px;
+  z-index: 30;
+  display: none;
+  &:after {
+    content: '';
+    position: absolute;
+    right: 22px;
+    right: -8px;
+    top: -16px;
+    border: 8px solid transparent;
+    border-bottom: 8px solid white;
+  }
+}
+.langflat{
+  .dropdown-content{
+    min-width: 68px;
+    right: -8px;
+  }
+  &__link {
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    padding: 8px;
+  }
+
+}

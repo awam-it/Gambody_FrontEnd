@@ -6,7 +6,7 @@
     box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.11);
     background-color: $white-bg;
     padding:16px;
-    margin-bottom: 16px;
+    //margin-bottom: 16px;
     height: 100%;
     padding-bottom: 0;
     img{
@@ -33,54 +33,106 @@
   &__description{
     @include font-property(normal);
     @extend %column8px-padding;
-    padding-top:24px;
     font-size: 14px;
     line-height: 1.71;
     letter-spacing: normal;
     text-align: center;
     color: $black;
+    height: 72px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 0;
   }
   &__content{
     display: flex;
     justify-content: center;
     min-height: auto;
+    .tns-inner{
+      @media (min-width: $breakepoint-lg) {
+
+      }
+      @media (min-width: $breakepoint-lg) {
+
+      }
+      @media (min-width: $breakepoint-xl) {
+
+      }
+
+    }
+    img{
+      object-fit: cover;
+      height: 100%;
+      width: 100%;
+      max-height: 262px;
+    }
   }
   .row:first-child{
-    margin-bottom: 16px;
-    @media (max-width: $breakepoint-lg) {
+    @media (min-width: $breakepoint-xs) {
       margin-bottom: 0;
+    }
+    @media (min-width: $breakepoint-lg) {
+      margin-bottom: 16px;
     }
   }
   margin-bottom: 40px;
   &_slider{
-    @media (max-width: $breakepoint-md) {
+    @media (max-width: $breakepoint-lg) {
       padding-left:8px;
       padding-right:8px;
+      padding-bottom: 8px;
     }
   }
   &-slider{
     padding: 0px 50px;
+    display: block;
     position: relative;
     .owl-theme .owl-nav {
       top: 50%;
       margin-top: -12px;
     }
-    @media (max-width: $breakepoint-md) {
-      padding: 0px;
+    @media (min-width: $breakepoint-xs) {
+      margin-bottom: 16px;
+      padding: 0;
+    }
+    @media (min-width: $breakepoint-md) {
+      margin-bottom: 0px;
+      padding: 0px 50px;
     }
   }
-  @media (max-width: $breakepoint-lg) {
+
     .col-12 {
-      margin-bottom: 16px;
+      @media (min-width: $breakepoint-xs) {
+        margin-bottom: 16px;
+
+      }
+      @media (min-width: $breakepoint-lg) {
+      margin-bottom: 0px;
+      }
+
     }
 
-  }
+
+
+
   .tns-controls button[data-controls="prev"] {
     left:8px;
   }
   .tns-controls button[data-controls="next"] {
     right:8px;
   }
+  .tns-nav{
+    margin-top:8px;
+  }
+  .tns-ovh{
+
+  }
+  @media (max-width: $breakepoint-lg) {
+  margin: 40px 0px 24px 0px;
+  }
+
+
 }
 
 .slider-two-rows.owl-theme .owl-nav button{
@@ -93,17 +145,14 @@
   right:-34px;
 }
 .slider-two-rows {
-  padding-bottom:20px;
-  .owl-prev {
-    left: 0;
-  }
-  .owl-next {
-    right: 0;
-  }
+  padding-bottom: 0;
   &__item{
     cursor: pointer;
-    margin-bottom: 8px;
+    margin-top: 8px;
     display: block;
+    &:first-child{
+      margin:0;
+    }
     &:hover{
       .slider-two-rows__item-img{
         border: solid 2px #f2f2f2;
@@ -120,6 +169,7 @@
     width:100%;
     text-align: center;
     padding:4px;
+    padding: 0;
     min-height: 112px;
     max-height: 112px;
     display: flex;
@@ -146,6 +196,7 @@
       font-size: 13px;
       line-height: 1.85;
       letter-spacing: 0.25px;
+      min-height:48px;
     }
 
   }
@@ -222,7 +273,41 @@
 .main-comunity{
   @extend %column32px-padding;
   background: $white-bg;
+  .main-title {
+    width: 100%;
+    justify-content: space-between;
 
+    &__left {
+      width: auto;
+      display: inline-flex;
+      align-items: center;
+      @media (min-width: $breakepoint-xs) {
+        flex-direction: column;
+      }
+      @media (min-width: $breakepoint-ipad) {
+        flex-direction: row;
+      }
+    }
+
+    &__sorting {
+      .select {
+        border: 0;
+
+        select {
+          padding-right: 24px;
+          font-size: 12px;
+          font-weight: bold;
+          line-height: 2;
+        }
+      }
+      @media (min-width: $breakepoint-xs) {
+        margin-top:8px;
+      }
+      @media (min-width: $breakepoint-md) {
+        margin-top:0px;
+      }
+    }
+  }
   @media (max-width: $breakepoint-md) {
     .main-title{
       flex-direction: column;

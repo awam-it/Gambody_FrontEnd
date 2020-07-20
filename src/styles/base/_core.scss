@@ -6,6 +6,7 @@
     max-width: $screen-sm;
     padding-right: $padding-side-sm;
     padding-left: $padding-side-sm;
+    padding:0;
   }
   @media (min-width: $breakepoint-sm) {
     max-width: $screen-sm;
@@ -94,7 +95,22 @@ body.lock-position {
   padding-right: 8px;
   padding-left: 8px;
   font-size: 16px;
+  @media (min-width: $breakepoint-xs) {
+    padding: 0px;
+  }
+  @media (min-width: $breakepoint-md) {
+    padding-right: 8px;
+    padding-left: 8px;
+  }
 }
+
+.container-full-mob{
+    @media (max-width: $breakepoint-md) {
+      width: 100%;
+      max-width: 100%;
+    }
+}
+
 
 //cols
 

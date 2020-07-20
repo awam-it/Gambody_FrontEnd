@@ -6,6 +6,24 @@
 
 $(document).ready(function() {
 
+    /* slider */
+    if ($(".main-slider__block")[0]){
+        var slider = tns({
+            container: '.main-slider__block',
+            items:1,
+            nav: true,
+            navPosition: 'bottom',
+            controls: false,
+            gutter:0,
+            loop:true,
+            responsive:{
+                750:{
+                    controls: true,
+                },
+            }
+        });
+    }
+
     /* two rows */
     if ($(".slider-two-rows")[0]){
     var slider = tns({
@@ -55,8 +73,11 @@ $(document).ready(function() {
             750: {
                 items: 3
             },
+            769: {
+                items: 3
+            },
             1024: {
-                items: 4
+                items: 6
             },
             1420: {
                 items: 6
@@ -83,29 +104,54 @@ tnsCarousel.forEach(slider => {
                     loop:false,
                     controls: false,
                     nav: true,
+                    edgePadding: 0,
+                    swipeAngle: 8,
+                    gutter:8,
+                    mouseDrag: true,
+                    slideBy: "page",
+                },
+                375: {
+                    edgePadding: 16,
+                },
+                400: {
+                    edgePadding: 20,
+                },
+                500: {
+                    edgePadding: 70,
                 },
                 750:{
+                    items:2,
+                    edgePadding: 0,
+                },
+                769:{
                     items:3,
-                    loop:false,
                 },
                 1024:{
+                    items:4,
+                    loop:false,
+                    edgePadding: 0,
+                    swipeAngle: true,
+                    gutter:16,
+                },
+                1200:{
                     items:4,
                     loop:true,
                     nav: false,
                     controls: true,
-                },
-                1200:{
-                    items:4,
+                    mouseDrag: false,
+                    touch: false,
                 },
                 1420:{
                     items:6,
                 },
                 1540:{
 
+
                 },
             }
         });
 });
+
         }
 
 /* cards */
@@ -126,19 +172,40 @@ var slider = tns({
             loop:false,
             controls: false,
             nav: true,
+            edgePadding: 0,
+            swipeAngle: 8,
+            gutter:8,
+        },
+        375: {
+            edgePadding: 16,
+        },
+        400: {
+            edgePadding: 20,
+        },
+        500: {
+            edgePadding: 70,
         },
         750:{
+            items:2,
+            edgePadding: 0,
+        },
+        769:{
             items:3,
-            loop:false,
         },
         1024:{
+            items:4,
+            loop:false,
+            edgePadding: 0,
+            swipeAngle: true,
+            gutter:16,
+        },
+        1200:{
             items:4,
             loop:true,
             nav: false,
             controls: true,
-        },
-        1200:{
-            items:4,
+            mouseDrag: false,
+            touch: false,
         },
         1420:{
             items:6,
