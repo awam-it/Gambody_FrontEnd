@@ -58,7 +58,23 @@
     @extend %delimeter;
     margin: 8px 0px 8px 8px;
   }
-
+  .menuflat_dropdown {
+    &:hover {
+      a {
+        &:after {
+          background-image: url("../../img/svg/menuflat_dropdown_hover.svg");
+        }
+      }
+    }
+  }
+  .menuflat_dropdown>a{
+    &:after{
+      @extend %before;
+      @extend %before-small;
+      background-image:  url("../../img/svg/menuflat_dropdown.svg");
+      margin-left: 4px;
+    }
+  }
   // dropdown
 
   .dropdown {
