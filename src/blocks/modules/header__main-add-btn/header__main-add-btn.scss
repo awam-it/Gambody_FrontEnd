@@ -1,0 +1,39 @@
+
+/* header__main-add-btn.scss */
+
+.main-header {
+  &_btn {
+    cursor: pointer;
+    border: solid 1px transparent;
+    font-size: 0;
+    border-radius: 4px;
+    &:hover {
+      border: solid 1px #e61a1a;
+      .menu-arrow {
+        display: block;
+      }
+    }
+  }
+
+  @media (max-width: $breakepoint-lg) {
+    padding: 16px 8px;
+  }
+}
+.add-btn{
+  @extend %inline8px-padding;
+  display: inline-flex;
+  &__item{
+    @extend %btn-size40;
+    padding: 7px 8px;
+    &:before{
+      @extend %before;
+      @extend %before-mid;
+      background-image: url("../../img/svg/header-add.svg");
+      background-size: cover;
+    }
+  }
+  @media (max-width: $breakepoint-lg) {
+    display: none;
+  }
+
+}

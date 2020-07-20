@@ -1,4 +1,7 @@
 
+/* header__main-menu.scss */
+
+
 /* header-navigation.scss */
 
 .nav-level {
@@ -41,6 +44,7 @@
     }
   }
   .multilevel-icon{
+    width: 100% !important;
     &:before {
       @extend %before;
       @extend %before-small;
@@ -51,7 +55,8 @@
       position: absolute;
       cursor:pointer;
       top: 50%;
-      left: 50%;
+      left: auto;
+      right: 30px;
       margin-top: -8px;
       margin-left: -8px;
     }
@@ -107,6 +112,17 @@ nav.open {
 .main-nav nav ul {
   padding: 0;
   margin: 0;
+  @media (min-width: $breakepoint-xs) {
+    background: #fff;
+    min-height: 100vh;
+    min-height: auto;
+  }
+  @media (min-width: $breakepoint-md) {
+    height: auto;
+    min-height: auto;
+  }
+
+
   li {
 
     a {
@@ -287,7 +303,6 @@ nav.open {
   opacity:0;
   top: 0px;
   left: 0px;
-  transition-duration: .7s;
   z-index: -10;
   position: relative;
   span{
@@ -295,7 +310,6 @@ nav.open {
     width: 0px;
     height: 0px;
     display: block;
-    transition-duration: .15s;
   }
 }
 .main-nav {
@@ -350,8 +364,14 @@ nav.open {
     line-height: 1.71;
     letter-spacing: normal;
     text-decoration: none;
-    transition-duration: .7s;
     width:100%;
+    @media (min-width: $breakepoint-xs) {
+      font-size: 12px;
+    }
+    @media (min-width: $breakepoint-md) {
+      font-size: 14px;
+    }
+
 
     &:hover {
       background-color: $topline-bg;
@@ -361,6 +381,38 @@ nav.open {
 
   &_special {
     color: #e61a1a;
+    align-items: center;
+    justify-content: left;
+    display: inline-flex;
+    &:before {
+      @extend %before;
+      @extend %before-small;
+      @media (min-width: $breakepoint-xs) {
+        background-image: url(../../img/svg/link_special.svg);
+        margin-right: 4px;
+      }
+      @media (min-width: $breakepoint-md) {
+        margin:0;
+        display: none;
+      }
+    }
+  }
+  &_comunity {
+    align-items: center;
+    justify-content: left;
+    display: inline-flex;
+    &:before {
+      @extend %before;
+      @extend %before-small;
+      @media (min-width: $breakepoint-xs) {
+        background-image: url(../../img/svg/link_warning.svg);
+        margin-right: 4px;
+      }
+      @media (min-width: $breakepoint-md) {
+        margin:0;
+        display: none;
+      }
+    }
   }
   &__title{
     @include font-property(normal);
@@ -401,21 +453,6 @@ nav.open {
         height: 100%;
       }
 
-      /*> input:checked ~ .main-nav-cat-btn {
-      right: auto;
-      left: 16px;
-        top: 34px;
-        z-index: 11;
-        background: $white;
-        span{
-          display: block;
-          font-size:12px
-        }
-        &:before {
-          background-image: url(../../img/svg/owl-prev-black.svg);
-        }
-      }*/
-
       .main-nav-cat-btn{
         z-index: 5;
         width: 16px;
@@ -445,7 +482,6 @@ nav.open {
       color: $black;
     }
   }
-
 
   .main-nav__category-menu-level{
     position:absolute;
@@ -477,6 +513,29 @@ nav.open {
 
   /* width */
 
+  &__mobile{
+    @media (min-width: $breakepoint-xs) {
+      display: block;
+    }
+    @media (min-width: $breakepoint-ipad) {
+      display: none;
+    }
+    &-top{
+      position: relative;
+      top: 0;
+    }
+    .main-nav__title{
+      padding: 8px;
+    }
+  }
+  &__desktop{
+    @media (min-width: $breakepoint-xs) {
+      display: none;
+    }
+    @media (min-width: $breakepoint-ipad) {
+      display: block;
+    }
+  }
 
 }
 
@@ -502,44 +561,57 @@ nav.open {
 }
 
 
-.header{
-    .sticky {
-      @media (min-width: $breakepoint-lg) {
-      position: fixed;
-      top: 0;
-      width: 100%;
-      z-index: 14;
-    }
-      .main-header__logo {
-        &:before {
-          position: relative;
-          opacity: 1;
-          @include transition(.25s);
+
+.nav-hide{
+  display: none;
+}
+.nav-level2 {
+  .submenu.nav-level{
+    top: auto;
+    background: #fff;
+    margin-top: -40px;
+  }
+  .main-nav__category-menu{
+    li{
+      .top_back{
+        position: relative !important;
+        width: 100% !important;
+        margin: 0px 14px;
+        height: auto;
+        margin-top: 0;
+        &:before{
+          margin-top: 0;
         }
       }
-  }
-}
-
-
-
-  /* Add some top padding to the page content to prevent sudden quick movement (as the navigation bar gets a new position at the top of the page (position:fixed and top:0) */
-@media (min-width: $breakepoint-lg) {
-  .sticky + .sticky-top {
-    padding-top: 64px;
-  }
-}
-  .sticky .main-header__logo {
-    .logo__text {
-      display: none;
     }
-
+  }
+  .multilevel-icon {
+    width: 100% !important;
+    position: absolute;
+    margin-top: -40px;
+    right: 0;
+    height: 40px;
+    width: 40px;
+    cursor: pointer;
     &:before {
       @extend %before;
-      @extend %before-xlarge;
-      background-image: url(../../img/svg/favicon.svg) !important;
+      @extend %before-small;
+      background-image: url(../../img/svg/owl-next-black.svg);
       background-size: cover;
-      position: relative !important;
-      opacity: 1 !important;
-      @include transition(.25s);
+      z-index: 0;
+      position: absolute;
+      cursor: pointer;
+      top: 50%;
+      left: auto;
+      right: 30px;
+      margin-top: -8px;
+      margin-left: -8px;
     }
   }
+
+}
+
+.submenu.nav-level.open>.main-nav__mobile-top{
+  padding-bottom: 100px;
+}
+
