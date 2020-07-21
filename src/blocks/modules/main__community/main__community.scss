@@ -1,8 +1,9 @@
 /* main__community.scss */
 
-/* import buttons */
-@import '../../components/card';
-/* import buttons */
+/* import card */
+@import '../../../styles/components/card';
+/* import card */
+
 
 .main-comunity{
   @extend %column32px-padding;
