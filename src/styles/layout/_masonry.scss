@@ -92,15 +92,6 @@
 
     }
   }
-  @for $i from 1 through 512 {
-    .masonry-cell:nth-child(#{$i}) {
-      .masonry-item {
-        /*$h: (random(428) + 64) + px;
-        height: $h;
-        line-height: $h;*/
-      }
-    }
-  }
 }
 .masonry-block {
   position: relative;
