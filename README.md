@@ -12,3 +12,6 @@ Installation
 - Install <code>yarn</code>: <code>yarn</code>
 - Development mode: <code>yarn run dev</code>
 - Build mode: <code>yarn run build</code>
+
+Components:
+- Global style styles/base/core.scss
