@@ -1,0 +1,44 @@
+/* main__ads.scss */
+
+.main-advert{
+  @extend %column20px-padding;
+  img{
+    border-radius: 6px;
+    width:100%;
+  }
+  a{
+    overflow: hidden;
+    border-radius: 6px;
+    display: flex;
+    img {
+      @include transition(.25s);
+      &:hover {
+        @include transform(scale(1.1));
+      }
+    }
+    @media (max-width: $breakepoint-lg){
+      margin-bottom: 16px;
+    }
+  }
+  &__link{
+    :first-child{
+      margin-top:0;
+    }
+  }
+  .col-lg-6 {
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  &_padding40{
+    @extend %column40px-padding;
+  }
+  &_full-width{
+    margin:0 !important;
+  }
+}
+
+
+
+
+

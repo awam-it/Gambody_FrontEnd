@@ -738,6 +738,7 @@
   &__hover-mobile-label{
     @media (max-width: $breakepoint-md) {
       display: inline-flex;
+      z-index: 8;
     }
     @extend %flex-align;
     display: none;
@@ -765,9 +766,6 @@
       position: absolute;
     }
   }
-
-
-
 
 
 

@@ -1,0 +1,115 @@
+/* card__loop.scss */
+
+/* import buttons */
+@import '../../components/card';
+/* import buttons */
+.card{
+  &__overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 8px;
+    @extend %flex-align;
+    justify-content: space-between;
+  }
+  &__overlay-type{
+    @extend %card_hover_btn_mini;
+    @extend %card_hover_btn_mid;
+    border-radius: 2px;
+    background-color: $white;
+    &:before{
+      @extend %before;
+      @extend %before-small;
+      background-image: url(../../img/svg/masonry-product-type.svg);
+      background-size: cover;
+    }
+  }
+  &__overlay-comments{
+    @extend %card_hover_btn_mini;
+    @extend %card_hover_btn_mid;
+    padding: 0px 8px;
+    border-radius: 2px;
+    background-color: $white;
+    &:before{
+      @extend %before;
+      @extend %before-small;
+      background-image: url(../../img/svg/masonry-comments.svg);
+      background-size: cover;
+    }
+    span{
+      @include font-property(normal);
+      font-size: 11px;
+      line-height: 1.45;
+      letter-spacing: normal;
+      color: #666666;
+      margin-left:8px;
+    }
+  }
+  &__overlay-video{
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    margin-top:-24px;
+    &:before{
+      @extend %before;
+      width: 48px;
+      height: 48px;
+      background-image: url(../../img/svg/masonry-video.svg);
+      background-size: cover;
+      margin: 0 auto;
+    }
+  }
+
+
+
+
+  &_masonry{
+    border: 0;
+    background:transparent;
+    .card__hover-block{
+      text-align: left;
+      justify-content: flex-start;
+      border-radius: 4px;
+    }
+    .card__hover-item img {
+      max-width: 16px;
+    }
+    .card__hover-item {
+      margin-top: 8px;
+      align-items: flex-start;
+    }
+    @media (max-width: $breakepoint-md) {
+      width: 100%;
+    }
+    @media (max-width: $breakepoint-md) {
+      .card__hover-mobile-label {
+        top: initial;
+        left: 50%;
+        bottom: 0;
+        margin-left: -16px;
+        margin-top: 0;
+      }
+    }
+
+    .card__hover-mobile:checked ~ .card__hover-mobile-label {
+      right: inherit;
+      left: 50%;
+      z-index: 10;
+    }
+    .card__hover-mobile-label:before {
+      transform: rotate(270deg);
+    }
+    .card__hover-mobile:checked ~ .card__hover-mobile-label:before {
+    }
+    .card__img {
+      @media (min-width: $breakepoint-xs) {
+        height: auto;
+      }
+    }
+
+
+  }
+
+}

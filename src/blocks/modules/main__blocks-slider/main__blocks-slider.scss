@@ -1,0 +1,318 @@
+/* main-blocks */
+
+/* main__slider.scss */
+
+.slider{
+  position: relative;
+  font-size: 16px;
+  z-index: 0;
+}
+
+/* tiny slider */
+
+.tns-slider {
+  -webkit-transition: all 0.01s;
+  -moz-transition: all 0.01s;
+  transition: all 0.01s; }
+
+.tns-nav{
+  @extend %flex-align;
+  width: 100%;
+  margin-top: 16px;
+  position: relative;
+  button {
+    display: inline-flex;
+    zoom: 1;
+    background: 0 0;
+    color: inherit;
+    border: none;
+    padding: 0 !important;
+    font: inherit;
+    &.tns-nav-active{
+      &:before{
+        border-radius: 2px;
+        background-color: #d50000;
+        border: solid 1px #d50000;
+      }
+    }
+    &:before{
+      @extend %before;
+      @extend %before-mid;
+      margin: 4px;
+      background: transparent;
+      display: block;
+      transition: opacity .2s ease;
+      width: 8px;
+      height: 16px;
+      border-radius: 2px;
+      border: solid 1px #bdbdbd;
+    }
+    &:hover{
+      @extend .tns-nav-active;
+    }
+  }
+}
+.tns-controls button{
+  font-size: 0px !important;
+  padding: 0;
+  background: transparent;
+  margin: 0;
+  border: 0px;
+  position: absolute;
+  top: 50%;
+  z-index: 5;
+  z-index: 1;
+  border-radius: 2px;
+  padding: 8px;
+  background-color: rgba(0, 0, 0, 0.5);
+  margin-top: -32px;
+  &:before{
+    @extend %before;
+    @extend %before-small;
+    background-size: cover;
+  }
+  &:first-child{
+    left: 8px;
+    &:before{
+      background-image: url(../../img/svg/owl-prev.svg);
+    }
+  }
+  &:last-child{
+    right: 8px;
+    &:before{
+      background-image: url(../../img/svg/owl-next.svg);
+    }
+  }
+}
+
+/* tiny slider */
+
+.main-blocks{
+  &__item{
+    border-radius: 4px;
+    box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.11);
+    background-color: $white-bg;
+    padding:16px;
+    //margin-bottom: 16px;
+    height: 100%;
+    padding-bottom: 0;
+    img{
+      @media (max-width: $breakepoint-md) {
+        width: -webkit-fill-available;
+      }
+    }
+  }
+  &__title {
+    @include font-property(normal);
+    @extend %column8px-padding;
+    padding-bottom:24px;
+    font-size: 26px;
+    line-height: 1.23;
+    letter-spacing: 0.25px;
+    text-align: center;
+    color: #101010;
+    @media (max-width: $breakepoint-md) {
+      font-size: 18px;
+      line-height: 1.33;
+      letter-spacing: 0.14px;
+    }
+  }
+  &__description{
+    @include font-property(normal);
+    @extend %column8px-padding;
+    font-size: 14px;
+    line-height: 1.71;
+    letter-spacing: normal;
+    text-align: center;
+    color: $black;
+    height: 72px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 0;
+  }
+  &__content{
+    display: flex;
+    justify-content: center;
+    min-height: auto;
+    .tns-inner{
+      @media (min-width: $breakepoint-lg) {
+
+      }
+      @media (min-width: $breakepoint-lg) {
+
+      }
+      @media (min-width: $breakepoint-xl) {
+
+      }
+
+    }
+    img{
+      object-fit: cover;
+      height: 100%;
+      width: 100%;
+      max-height: 262px;
+    }
+  }
+  .row:first-child{
+    @media (min-width: $breakepoint-xs) {
+      margin-bottom: 0;
+    }
+    @media (min-width: $breakepoint-lg) {
+      margin-bottom: 16px;
+    }
+  }
+  &_slider{
+    @media (max-width: $breakepoint-lg) {
+      padding-left:8px;
+      padding-right:8px;
+      padding-bottom: 8px;
+    }
+  }
+  &-slider{
+    padding: 0px 50px;
+    display: block;
+    position: relative;
+    .owl-theme .owl-nav {
+      top: 50%;
+      margin-top: -12px;
+    }
+    @media (min-width: $breakepoint-xs) {
+      margin-bottom: 16px;
+      padding: 0;
+    }
+    @media (min-width: $breakepoint-md) {
+      margin-bottom: 0px;
+      padding: 0px 50px;
+    }
+  }
+
+  .tns-controls button[data-controls="prev"] {
+    left:8px;
+  }
+  .tns-controls button[data-controls="next"] {
+    right:8px;
+  }
+  .tns-nav{
+    margin-top:8px;
+  }
+
+}
+
+
+.slider-two-rows.owl-theme .owl-nav button{
+  position: absolute;
+}
+.slider-two-rows.owl-theme .owl-nav button.owl-prev{
+  left:-34px;
+}
+.slider-two-rows.owl-theme .owl-nav button.owl-next{
+  right:-34px;
+}
+.slider-two-rows {
+  padding-bottom: 0;
+  &__item{
+    cursor: pointer;
+    margin-top: 8px;
+    display: block;
+    &:first-child{
+      margin:0;
+    }
+    &:hover{
+      .slider-two-rows__item-img{
+        border: solid 2px #f2f2f2;
+      }
+      .slider-two-rows__title{
+        color: #0030ff;
+        text-decoration:underline;
+      }
+    }
+  }
+  &__item-img{
+    border-radius: 4px;
+    border: solid 2px transparent;
+    width:100%;
+    text-align: center;
+    padding:4px;
+    padding: 0;
+    min-height: 112px;
+    max-height: 112px;
+    display: flex;
+    align-items: center;
+  }
+  &__item img{
+    width: auto !important;
+    margin: 0 auto;
+    max-width: 192px;
+    max-height: 112px;
+    @media (max-width: $breakepoint-md) {
+      max-width: 100% !important;
+    }
+  }
+  &__title{
+    @include font-property(normal);
+    line-height: 1.71;
+    letter-spacing: normal;
+    text-align: center;
+    color: $black;
+    margin-top:8px;
+    font-size: 14px;
+    @media (max-width: $breakepoint-md) {
+      font-size: 13px;
+      line-height: 1.85;
+      letter-spacing: 0.25px;
+      min-height:48px;
+    }
+
+  }
+
+  &__default{
+    .slider-two-rows__item-img{
+      background-color: #e0f7fa;
+    }
+  }
+}
+
+
+.slider-style-black {
+  .tns-controls {
+    button{
+      background-color: transparent;
+      padding: 8px;
+      &:hover{
+        background: #e6e6e6;
+      }
+    }
+    button[data-controls="prev"] {
+      margin-left: 0px;
+      left: 0;
+      left: -15px;
+      @media (max-width: $breakepoint-md) {
+        margin-left: 0;
+        left: 0;
+      }
+      &:before {
+        background-image: url(../../img/svg/owl-prev-black.svg);
+        width: 24px;
+        height: 24px;
+      }
+    }
+
+    button[data-controls="next"] {
+      margin-right: 0px;
+      right: 0;
+      right: -15px;
+      @media (max-width: $breakepoint-md) {
+        margin-right: 0;
+        right: 0;
+      }
+
+      &:before {
+        background-image: url(../../img/svg/owl-next-black.svg);
+        width: 24px;
+        height: 24px;
+      }
+    }
+  }
+}

@@ -24,7 +24,6 @@
   }
   &:before{
     @extend %before;
-    @extend %before-xlarge;
     position: absolute;
     opacity: 0;
     @include transition(.25s);
@@ -46,11 +45,18 @@
 
   &:before {
     @extend %before;
-    @extend %before-xlarge;
     background-image: url(../../img/svg/favicon.svg) !important;
     background-size: cover;
     position: relative !important;
     opacity: 1 !important;
     @include transition(.25s);
+    @media (min-width: $breakepoint-xs) {
+      width: 32px;
+      height: 32px;
+    }
+    @media (min-width: $breakepoint-lg) {
+      width: 40px;
+      height: 40px;
+    }
   }
 }

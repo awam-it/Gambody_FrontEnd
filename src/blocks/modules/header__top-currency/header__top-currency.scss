@@ -86,7 +86,11 @@
     display: inline-flex;
   }
 }
-
+.topline__currency {
+  :after {
+    display: none;
+  }
+}
 .menuflat {
   display: inline-flex;
 
