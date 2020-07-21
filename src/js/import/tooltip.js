@@ -114,10 +114,19 @@ $( "div.card__mob-zoom" ).on("click", function () {
     gettooltip(newthis);
 
 
-    var click_l = this.closest(".slider-cards__slider");
+    var click_l = this.closest(".j_slidercards");
+    if (click_l) {
+    const transform = click_l.style.transform;
+    //console.log(transform) ;
+
+        var divNode = document.createElement("div");
+        divNode.innerHTML = '<style> .slider_off{transform: ' + transform + '!important;} </style>';
+        document.body.appendChild(divNode);
+    }
+
     if (click_l) {
         onClickClose(click_l)
-        var r1 = this.closest(".slider-cards__slider");
+        var r1 = this.closest(".j_slidercards");
         r1.classList.add('slider_off');
     }
 
@@ -127,7 +136,7 @@ $( "div.card__mob-zoom-close" ).on("click", function () {
     var newthis = $(this).closest( ".card_slider" )
     newthis.removeClass("over");
     newthis.removeClass("over_l");
-    var r1 = this.closest(".slider-cards__slider");
+    var r1 = this.closest(".j_slidercards");
     if (r1) {
         r1.classList.remove('slider_off');
     }

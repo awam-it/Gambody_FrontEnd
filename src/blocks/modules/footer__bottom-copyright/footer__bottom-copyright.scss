@@ -1,0 +1,17 @@
+/* footer__bottom.scss */
+
+.footer{
+  &__bottom{
+    a{
+      @include font-property(normal);
+      font-size: 11px;
+      line-height: 1.45;
+      letter-spacing: normal;
+      color: $white;
+      @extend %flex-align;
+      &:hover{
+        text-decoration: underline;
+      }
+    }
+  }
+}

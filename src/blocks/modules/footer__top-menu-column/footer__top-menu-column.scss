@@ -1,0 +1,36 @@
+/* footer__top-menu-column.scss */
+
+.footer {
+  &__menu-title{
+    @include font-property(normal);
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: normal;
+    color: $white;
+    display: flex;
+    margin-bottom:8px;
+  }
+  ul{
+    padding-left: 0px;
+  }
+  &__top-menu {
+    li {
+      a {
+        @include font-property(normal);
+        font-size: 11px;
+        line-height: 1.45;
+        letter-spacing: normal;
+        color: $white;
+        margin-bottom: 8px;
+        display: flex;
+        max-width: 170px;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+
+  }
+}

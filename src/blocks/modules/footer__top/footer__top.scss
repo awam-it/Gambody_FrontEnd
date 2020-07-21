@@ -1,0 +1,28 @@
+/* footer__top.scss */
+
+.footer {
+  &__top {
+    @extend %column32px-padding;
+    @media (max-width: $breakepoint-md) {
+      .col-lg-2 {
+        margin-bottom: 32px;
+      }
+    }
+    @media (min-width: $breakepoint-xs) {
+      padding-left: 8px;
+      padding-right: 8px;
+    }
+    @media (min-width: $breakepoint-md) {
+      padding-left: 0px;
+      padding-right: 0px;
+    }
+  }
+}
+
+
+
+
+
+
+
+
