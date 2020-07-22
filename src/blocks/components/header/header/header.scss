@@ -1,0 +1,102 @@
+
+/* header.scss */
+
+.header{
+  @media (min-width: $breakepoint-xs) {
+    position: sticky;
+    top: 0;
+    z-index: 20;
+  }
+  @media (min-width: $breakepoint-md) {
+    position: relative;
+    z-index: 5;
+  }
+  
+  .topline{
+    font-size: 11px;
+    line-height: 1.45;
+    letter-spacing: normal;
+    color: $topline-color;
+    background-color: $topline-bg;
+    display: flex;
+    &__item {
+      display: block;
+
+      &:before {
+        content:"";
+      }
+    }
+    &__container{
+      margin: 0 auto;
+      font-size: 0px;
+      @extend %flex-align;
+      >div{
+        &:last-of-type:after{
+          display: none;
+        }
+      }
+    }
+    @media (max-width: $breakepoint-md) {
+      display: none;
+    }
+  }
+
+}
+
+// topline-header
+
+/*** mainheader.scss !!! ***/
+
+.header{
+  .sticky {
+    @media (min-width: $breakepoint-lg) {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 14;
+    }
+  }
+}
+
+.main-header{
+  justify-content: space-between;
+  &_btn{
+    cursor: pointer;
+    border: solid 1px transparent;
+    font-size: 0;
+    border-radius: 4px;
+    //transition-duration: .4s;
+    &:hover {
+      border: solid 1px #e61a1a;
+      .menu-arrow{
+        display: block;
+      }
+    }
+  }
+  @media (max-width: $breakepoint-lg) {
+    padding:16px 8px;
+  }
+  &__mixblocks{
+    @extend %flex-align;
+    @media (max-width: $breakepoint-md) {
+      position: absolute;
+      right: 8px;
+    }
+
+  }
+
+}
+
+.sticky + .sticky-top {
+  @media (min-width: $breakepoint-lg) {
+    padding-top: 64px;
+  }
+}
+.sticky .main-header__logo {
+  .logo__text {
+    display: none;
+  }
+}
+
+/* header.scss FINAL */
+

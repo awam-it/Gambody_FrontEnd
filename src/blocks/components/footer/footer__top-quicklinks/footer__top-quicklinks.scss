@@ -1,0 +1,45 @@
+/* footer__top-quicklinks.scss */
+
+.footer {
+  &__top-line {
+    @extend %column24px-padding;
+    margin-top: 32px;
+    border-top: solid 1px #bdbdbd;
+  }
+
+  &__quicklinks {
+    &-block {
+      display: none;
+      width: 100%;
+      margin-top: 32px;
+    }
+
+    &-active {
+      .footer__quicklinks-title:before {
+        transform: rotate(180deg);
+      }
+    }
+
+    &-block-active {
+      display: block;
+    }
+
+  }
+
+  &__quicklinks-title {
+    @include font-property(normal);
+    font-size: 11px;
+    line-height: 1.45;
+    letter-spacing: normal;
+    color: $white;
+    cursor: pointer;
+    @extend %flex-align;
+
+    &:before {
+      @extend %before;
+      @extend %before-small;
+      background-image: url(../../img/svg/menuflat_top.svg);
+      margin-right: 8px;
+    }
+  }
+}

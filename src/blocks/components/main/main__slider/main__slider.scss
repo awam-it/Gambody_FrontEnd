@@ -1,0 +1,25 @@
+/* main__slider.scss */
+
+.slider{
+  position: relative;
+  font-size: 16px;
+  z-index: 0;
+}
+
+/* tiny slider */
+
+.main-slider{
+  margin-bottom: -12%;
+  min-height: 300px;
+  position: relative;
+  max-height: 768px;
+  @media (max-width: $breakepoint-md){
+    margin-bottom: 0%;
+    min-height: auto;
+  }
+  img{
+    display: block;
+    width: 100%;
+  }
+}
+

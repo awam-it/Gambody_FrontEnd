@@ -1,0 +1,52 @@
+/* footer__center-social.scss */
+
+.footer {
+  &__center {
+    .col-lg-4 {
+      @extend %flex-align;
+      flex-direction: column;
+      justify-content: flex-start;
+      border-radius: 2px;
+      @media (min-width: $breakepoint-xs) {
+        margin-top: 32px;
+      }
+      @media (min-width: $breakepoint-lg) {
+        margin-top: 0px;
+      }
+
+      &:first-child {
+        @media (min-width: $breakepoint-xs) {
+          margin-top: 0px;
+        }
+      }
+    }
+  }
+
+  &__center-content {
+    @extend %flex-align;
+    flex-direction: column;
+  }
+
+  &__center-title {
+    @include font-property(normal);
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.71;
+    letter-spacing: normal;
+    color: $white;
+    margin-bottom: 24px;
+
+  }
+
+  &__social-links{
+    @extend %flex-align;
+  }
+  &__soc{
+    @extend %inline12px-padding;
+    &:hover{
+      opacity:0.7;
+    }
+  }
+
+}
+

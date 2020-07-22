@@ -1,0 +1,32 @@
+/* footer__payments.scss */
+
+.footer{
+  &__payment-links{
+    @extend %flex-align;
+    @extend %column16px-padding;
+    width: 100%;
+    @media (min-width: $breakepoint-xs) {
+      flex-wrap: wrap;
+      max-width: 90%;
+      margin: 0 auto;
+    }
+    img{
+      @media (min-width: $breakepoint-xs) {
+        padding-bottom:8px;
+        height: auto;
+      }
+      @media (min-width: $breakepoint-md) {
+        padding-bottom:0px;
+      }
+    }
+
+  }
+  &__payment{
+    @extend %inline12px-padding;
+    &:hover{
+      opacity:0.7;
+    }
+  }
+
+}
+

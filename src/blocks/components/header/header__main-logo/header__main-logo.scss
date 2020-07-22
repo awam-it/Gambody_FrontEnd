@@ -1,0 +1,62 @@
+
+/* header__main-logo.scss */
+
+.logo{
+  @include font-property(normal);
+  @extend %flex-align;
+  font-family: $second-font;
+  font-size: 20px;
+  line-height: 1.6;
+  letter-spacing: normal;
+  color: #262626;
+  @extend %inline8px-padding;
+  span{
+    font-weight:700;
+    color: #d50000;
+    font-weight: bold;
+  }
+}
+.main-header__logo{
+  .logo__text{
+    @media (max-width: $breakepoint-lg) {
+      display: none;
+    }
+  }
+  &:before{
+    @extend %before;
+    position: absolute;
+    opacity: 0;
+    @include transition(.25s);
+    @media (max-width: $breakepoint-lg) {
+      width: 32px;
+      height: 32px;
+      background-image: url(../../img/svg/favicon.svg) !important;
+      background-size: cover;
+      position: relative;
+      opacity: 1;
+    }
+  }
+}
+
+.sticky .main-header__logo {
+  .logo__text {
+    display: none;
+  }
+
+  &:before {
+    @extend %before;
+    background-image: url(../../img/svg/favicon.svg) !important;
+    background-size: cover;
+    position: relative !important;
+    opacity: 1 !important;
+    @include transition(.25s);
+    @media (min-width: $breakepoint-xs) {
+      width: 32px;
+      height: 32px;
+    }
+    @media (min-width: $breakepoint-lg) {
+      width: 40px;
+      height: 40px;
+    }
+  }
+}

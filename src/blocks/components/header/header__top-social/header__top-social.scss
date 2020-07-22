@@ -1,0 +1,74 @@
+
+/* header__top-social.scss */
+
+.socialflat{
+  @extend %inline8px-padding;
+  display: inline-flex;
+  position:relative;
+  &:after{
+    position:absolute;
+    right:0;
+    @extend %delimeter;
+    margin: 8px 0;
+  }
+}
+
+.socialflat_fb{
+  &:before{
+    background-image:  url("../../img/svg/fb.svg");
+  }
+  &:hover {
+    &:before {
+      background-image: url("../../img/svg/fb-hover.svg");
+    }
+  }
+}
+.socialflat_insta{
+  &:before{
+    background-image:  url("../../img/svg/insta.svg");
+  }
+  &:hover {
+    &:before {
+      background-image: url("../../img/svg/insta-hover.svg");
+    }
+  }
+}
+.socialflat_twitter{
+  &:before{
+    background-image:  url("../../img/svg/twitter.svg");
+  }
+  &:hover {
+    &:before {
+      background-image: url("../../img/svg/twitter-hover.svg");
+    }
+  }
+}
+.socialflat_youtube{
+  &:before{
+    background-image:  url("../../img/svg/youtube.svg");
+  }
+  &:hover {
+    &:before {
+      background-image: url("../../img/svg/youtube-hover.svg");
+    }
+  }
+}
+
+.socialflat__item{
+  display: inline-flex;
+  padding: 8px;
+  background-repeat: no-repeat;
+  background-position: 8px;
+  &:before{
+    @extend %before;
+    @extend %before-small;
+    padding: 8px;
+  }
+  &:hover{
+    background: #d50000;
+  }
+  @media (max-width: $breakepoint-lg) {
+    padding: 5px;
+  }
+
+}

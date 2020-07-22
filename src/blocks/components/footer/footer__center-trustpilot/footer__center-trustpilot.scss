@@ -1,0 +1,64 @@
+/* footer__center-trustpilot.scss */
+
+.footer {
+
+  &__center {
+    .col-lg-4 {
+      @extend %flex-align;
+      flex-direction: column;
+      justify-content: flex-start;
+      border-radius: 2px;
+      @media (min-width: $breakepoint-xs) {
+        margin-top: 32px;
+      }
+      @media (min-width: $breakepoint-lg) {
+        margin-top: 0px;
+      }
+
+      &:first-child {
+        @media (min-width: $breakepoint-xs) {
+          margin-top: 0px;
+        }
+      }
+    }
+  }
+
+  &__center-content {
+    @extend %flex-align;
+    flex-direction: column;
+  }
+
+  &__center-content-trustpilot-link img {
+    border: solid 1px #06b67a;
+    max-width: 163px;
+    height: inherit;
+
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+  &__center-content-trustpilot {
+    @extend %flex-align;
+    margin-bottom: 8px;
+    line-height: 32px;
+    @include font-property(normal);
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.71;
+    letter-spacing: normal;
+    color: $white;
+    margin-bottom: 24px;
+    img {
+      margin-left: 8px;
+      max-width: 88px;
+      margin-top: -4px;
+      height: inherit;
+    }
+  }
+
+}
+
+
+
+
+

@@ -1,0 +1,221 @@
+/* main__community.scss */
+
+/* import card */
+@import '../../../styles/components/card';
+/* import card */
+
+
+.main-comunity{
+  @extend %column32px-padding;
+  background: $white-bg;
+  .main-title {
+    width: 100%;
+    justify-content: space-between;
+
+    &__left {
+      width: auto;
+      display: inline-flex;
+      align-items: center;
+      @media (min-width: $breakepoint-xs) {
+        flex-direction: column;
+      }
+      @media (min-width: $breakepoint-ipad) {
+        flex-direction: row;
+      }
+    }
+
+    &__sorting {
+      .select {
+        border: 0;
+
+        select {
+          padding-right: 24px;
+          font-size: 12px;
+          font-weight: bold;
+          line-height: 2;
+        }
+      }
+      @media (min-width: $breakepoint-xs) {
+        margin-top:8px;
+      }
+      @media (min-width: $breakepoint-md) {
+        margin-top:0px;
+      }
+    }
+  }
+  @media (max-width: $breakepoint-md) {
+    .main-title{
+      flex-direction: column;
+      margin-bottom:16px;
+      .button {
+        margin-top: 16px;
+        width: 100%;
+        max-width: 242px;
+        display: inline-flex;
+        justify-content: center;
+      }
+    }
+  }
+}
+
+.select {
+  position: relative;
+  display: flex;
+  width: auto;
+  height: 32px;
+  background: $white-bg;
+  overflow: hidden;
+  font-size: 12px;
+  line-height: 2;
+  letter-spacing: normal;
+  color: $black;
+  border-radius: 4px;
+  border: solid 1px #bfbfbf;
+  &::after {
+    @extend %before;
+    @extend %before-small;
+    background-image: url(../../img/svg/show-more.svg);
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 7px;
+    right: 4px;
+    cursor: pointer;
+    pointer-events: none;
+    -webkit-transition: .25s all ease;
+    -o-transition: .25s all ease;
+    transition: .25s all ease;
+  }
+  &:hover {
+    &::after {
+    }
+  }
+}
+
+/* masonry */
+
+.masonry-root {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  img{
+    height: auto;
+    //min-width: auto !important;
+  }
+  @media (min-width: $breakepoint-xs) {
+    flex-wrap: nowrap;
+  }
+  @media (min-width: $breakepoint-sm) {
+    flex-wrap: nowrap;
+  }
+  @media (min-width: $breakepoint-md) {
+    flex-wrap: wrap;
+  }
+
+  .masonry-cell {
+    flex: 1;
+    margin: 8px;
+    @media (min-width: $breakepoint-xs) {
+      width: 100%;
+      margin: 0px;
+      margin-bottom: 16px;
+      min-width:100%;
+    }
+    @media (min-width: $breakepoint-sm) {
+      width: 100%;
+    }
+    @media (min-width: $breakepoint-md) {
+      width:auto;
+      margin: 8px;
+      min-width:225px;
+    }
+    @media (min-width: $breakepoint-lg) {
+      min-width: 242px;
+    }
+    @media (min-width: $breakepoint-xl) {
+      min-width:220px;
+    }
+    .masonry-item {
+      background: transparent;
+      color: white;
+      text-align: center;
+      font-family: system-ui;
+      font-weight: 900;
+      font-size: 0;
+      min-height:220px;
+      .card__img {
+        max-width: 220px;
+        min-height: 220px;
+        @media (min-width: $breakepoint-xs) {
+          width: 100%;
+          //max-width: 100%;
+          //max-width: 242px;
+        }
+        @media (min-width: $breakepoint-sm) {
+          width: 100%;
+        }
+        @media (min-width: $breakepoint-lg) {
+          max-width: 242px;
+        }
+        @media (min-width: $breakepoint-xl) {
+          max-width: 220px;
+        }
+        >img{
+          @media (min-width: $breakepoint-xs) {
+            //min-width: 100% !important;
+            object-fit: cover;
+            min-height: 220px;
+          }
+          @media (min-width: $breakepoint-sm) {
+            //min-width: 100% !important;
+          }
+          @media (min-width: $breakepoint-md) {
+            min-width: 220px;
+            /*width: 220px;*/
+          }
+          @media (min-width: $breakepoint-lg) {
+            min-width: 242px;
+          }
+          @media (min-width: $breakepoint-xl) {
+            min-width: 100%;
+          }
+        }
+
+      }
+
+
+
+    }
+  }
+}
+.masonry-block {
+  position: relative;
+  width: 100%;
+  &__show-more{
+    justify-content: center;
+    margin: 0 auto;
+    margin-top:32px;
+    font-size: 12px;
+    height: 32px;
+    @media (min-width: $breakepoint-xs) {
+      max-width: 242px;
+    }
+    @media (min-width: $breakepoint-md) {
+      max-width: 328px;
+    }
+    @media (min-width: $breakepoint-xl) {
+      max-width: 456px;
+    }
+  }
+}
+
+.masonry-comunity{
+  @extend .main-comunity;
+}
+.masonry-lessons{
+  @extend .main-comunity;
+  background:transparent;
+}
+
+
+
+

@@ -1,0 +1,8 @@
+/* footer__center.scss */
+
+.footer {
+  &__center {
+    @extend %column32px-padding;
+    background-color: #424242
+  }
+}

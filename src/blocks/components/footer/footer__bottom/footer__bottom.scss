@@ -1,0 +1,24 @@
+/* footer__bottom.scss */
+
+.footer{
+  &__bottom{
+    @extend %column24px-padding;
+    background-color: #424242;
+    width: 100%;
+    @extend %flex-align;
+    justify-content: space-between;
+    a, .row [class*=col-]{
+      @include font-property(normal);
+      font-size: 11px;
+      line-height: 1.45;
+      letter-spacing: normal;
+      color: $white;
+      @extend %flex-align;
+    }
+    a{
+      &:hover{
+        text-decoration: underline;
+      }
+    }
+  }
+}
