@@ -56,15 +56,6 @@
       max-height: 262px;
     }
   }
-  .row:first-child{
-    @media (min-width: $breakepoint-xs) {
-      margin-bottom: 0;
-    }
-    @media (min-width: $breakepoint-lg) {
-      margin-bottom: 16px;
-    }
-  }
-
 
 
 }

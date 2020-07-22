@@ -8,83 +8,6 @@
 
 /* tiny slider */
 
-.tns-slider {
-  -webkit-transition: all 0.01s;
-  -moz-transition: all 0.01s;
-  transition: all 0.01s; }
-
-.tns-nav{
-  @extend %flex-align;
-  width: 100%;
-  margin-top: 16px;
-  position: relative;
-  button {
-    display: inline-flex;
-    zoom: 1;
-    background: 0 0;
-    color: inherit;
-    border: none;
-    padding: 0 !important;
-    font: inherit;
-    &.tns-nav-active{
-      &:before{
-        border-radius: 2px;
-        background-color: #d50000;
-        border: solid 1px #d50000;
-      }
-    }
-    &:before{
-      @extend %before;
-      @extend %before-mid;
-      margin: 4px;
-      background: transparent;
-      display: block;
-      transition: opacity .2s ease;
-      width: 8px;
-      height: 16px;
-      border-radius: 2px;
-      border: solid 1px #bdbdbd;
-    }
-    &:hover{
-      @extend .tns-nav-active;
-    }
-  }
-}
-.tns-controls button{
-  font-size: 0px !important;
-  padding: 0;
-  background: transparent;
-  margin: 0;
-  border: 0px;
-  position: absolute;
-  top: 50%;
-  z-index: 5;
-  z-index: 1;
-  border-radius: 2px;
-  padding: 8px;
-  background-color: rgba(0, 0, 0, 0.5);
-  margin-top: -32px;
-  &:before{
-    @extend %before;
-    @extend %before-small;
-    background-size: cover;
-  }
-  &:first-child{
-    left: 8px;
-    &:before{
-      background-image: url(../../img/svg/owl-prev.svg);
-    }
-  }
-  &:last-child{
-    right: 8px;
-    &:before{
-      background-image: url(../../img/svg/owl-next.svg);
-    }
-  }
-}
-
-/* tiny slider */
-
 .main-slider{
   margin-bottom: -12%;
   min-height: 300px;
@@ -97,40 +20,6 @@
   img{
     display: block;
     width: 100%;
-  }
-  .tns-controls button {
-    color: #FFF;
-    font-size: 14px;
-    cursor: pointer;
-    border-radius: 4px;
-    background-color: rgba(0, 0, 0, 0.5);
-    padding: 44px 16px !important;
-    margin-top: -61px;
-    &:hover{
-      background-color: rgba(0, 0, 0, 0.7);
-    }
-    &:before{
-      width: 24px;
-      height: 24px;
-    }
-    &:first-child {
-      left: 0;
-    }
-    &:last-child {
-      right: 0px;
-    }
-  }
-  .tns-nav {
-    position: absolute;
-    width: 100%;
-    margin-top: 5px;
-    @media (min-width: $breakepoint-xs) {
-      bottom: 16px;
-    }
-    @media (min-width: $breakepoint-md) {
-      bottom: 33%;
-    }
-
   }
 }
 
