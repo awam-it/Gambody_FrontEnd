@@ -1,0 +1,7 @@
+/* card__loop-hover-content.scss */
+.card__hover-content {
+  padding-left: 8px;
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start; }

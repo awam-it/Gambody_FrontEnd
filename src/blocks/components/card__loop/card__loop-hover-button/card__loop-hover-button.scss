@@ -1,0 +1,61 @@
+/* card__loop-hover-button.scss */
+
+.card__loop-hover-button{
+  padding:8px;
+  min-width: 32px;
+  min-height:32px;
+  border-radius: 2px;
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer;
+  position: relative;
+}
+.card__loop-hover-button:hover{
+  background-color: rgba(255, 255, 255, 0.15);
+}
+.card__loop-hover-button span{
+  @include font-property(normal);
+  margin-left:8px;
+  font-size: 10px;
+  font-weight: bold;
+  line-height: 1.6;
+  letter-spacing: 1px;
+  text-align: center;
+  color: $white;
+}
+.card__loop-hover-button:before{
+  content: '';
+  display: block;
+  width: 16px;
+  height: 16px;
+  background-size: cover;
+}
+.card__hover-comments-label:before{
+    background-image: url(../../img/png/hover-comments.png);
+}
+.card__hover-settings-label:before {
+  background-image: url(../../img/svg/hover-settings.svg);
+}
+// active settings
+.card__hover-settings-checkbox:checked ~ .card__hover-settings-label:before {
+  background-image: url(../../img/svg/hover-settings-h.svg);
+}
+.card__hover-share:before{
+  background-image: url(../../img/svg/hover-share.svg);
+}
+
+.card__hover-list:before{
+  background-image: url(../../img/svg/hover-add-to-list.svg);
+}
+// active list
+.card__hover-list-active:before{
+    background-image: url(../../img/svg/hover-add-to-list-active.svg);
+}
+.card__hover-favourites:before{
+  background-image: url(../../img/svg/hover-add-to-favourites.svg);
+}
+// active favourites
+.card__hover-favourites-active:before{
+    background-image: url(../../img/svg/hover-add-to-favourites-active.svg);
+}
+
