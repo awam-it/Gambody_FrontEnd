@@ -1,0 +1,54 @@
+/* card__loop-content-price.scss */
+
+.card__price{
+  @include font-property(normal);
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 1.33;
+  letter-spacing: 0.15px;
+  color: #101010;
+  display: inline-flex;
+  align-items: center;
+  margin-left:6px;
+
+  @media (max-width: $breakepoint-md) {
+    align-items: start;
+    margin-left: 0;
+    flex-direction: column-reverse;
+  }
+
+}
+.card__oldprice{
+  font-size: 12px;
+  line-height: 2;
+  letter-spacing: normal;
+  color: #808080;
+  margin-left:12px;
+  text-decoration: line-through;
+  @media (max-width: $breakepoint-md) {
+    margin-left:0px;
+  }
+}
+
+.card__price.component-active{
+  display:none;
+}
+
+.card__premium-price {
+  color: #f7b228;
+  font-weight: normal;
+}
+@media (min-width: $breakepoint-md) {
+  .card__premium-price {
+    margin-left: 12px;
+  }
+}
+
+.card__sale {
+  color: #e61a1a;
+}
+
+
+
+
+

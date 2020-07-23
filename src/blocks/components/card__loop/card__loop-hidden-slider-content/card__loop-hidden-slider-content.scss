@@ -1,0 +1,30 @@
+/* card__loop-hidden-slider-content.scss */
+
+
+.hidden-slider-content{
+  @extend %flex-align;
+  padding:8px 16px;
+  width: 100%;
+  flex-grow: 1;
+  align-items: center;
+  .card__content-title{
+    flex: auto;
+    margin-bottom: 0;
+  }
+  .card__content-line{
+    align-items: center;
+    justify-content: flex-end;
+    width: auto;
+    @media (min-width: $breakepoint-xs) {
+      position: inherit;
+      padding: 0;
+    }
+  }
+  .card__price{
+    flex-direction: row-reverse;
+  }
+  .card__oldprice{
+    margin:0px 12px 0px 0px;
+  }
+}
+

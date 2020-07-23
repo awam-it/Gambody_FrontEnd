@@ -1,0 +1,47 @@
+/* card__loop-content-cart.scss */
+
+.card__cart{
+  @extend %flex-align;
+  span{
+    @include font-property(normal);
+    font-size: 12px;
+    line-height: 2;
+    letter-spacing: normal;
+    text-align: right;
+    color: $black;
+    margin-right:8px;
+    @media (max-width: $breakepoint-md) {
+      display: none;
+    }
+  }
+  @media (max-width: $breakepoint-md) {
+    right: 0;
+    margin: 0;
+    display: initial;
+  }
+}
+.card__cart-link{
+  @extend %flex-align;
+  border-radius: 4px;
+  border: solid 1px #4bb13c;
+  padding: 7px;
+  height: 32px;
+  width: 32px;
+  &:before{
+    @extend %before;
+    @extend %before-small;
+    background-image:  url("../../img/svg/card_cart.svg");
+  }
+  &:hover{
+    background-color: #4bb13c;
+    &:before{
+      background-image:  url("../../img/svg/card_cart-white.svg");
+    }
+  }
+}
+
+.card__cart.component-active span{
+  display:none;
+}
+
+

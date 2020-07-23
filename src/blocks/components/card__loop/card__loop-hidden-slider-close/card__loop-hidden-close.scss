@@ -1,0 +1,27 @@
+/* card__loop-hidden-slider-close.scss */
+
+.card__mob-zoom-close {
+  position: absolute;
+  top: 9px;
+  right: 9px;
+  padding: 8px;
+  border-radius: 2px;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+@media (min-width: $breakepoint-xs) {
+  .card__mob-zoom-close {
+    display: block;
+    z-index: 5;
+  }
+}
+@media (min-width: $breakepoint-ipad-L){
+.card__mob-zoom-close {
+  display: none;
+}
+}
+.card__mob-zoom-close:before {
+  background-image: url(../../img/svg/mob-zoom-close.svg);
+  background-size: cover;
+}
+
+

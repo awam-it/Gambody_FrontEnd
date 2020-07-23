@@ -1,0 +1,20 @@
+/* card__loop-hidden-slider-count.scss */
+
+.card__hidden-slider-count{
+  @extend %flex-align;
+  @include font-property(normal);
+  height: 24px;
+  font-size: 12px;
+  line-height: 2;
+  text-align: center;
+  color: $white;
+  border-radius: 2px;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding:0px 8px;
+  position: absolute;
+  top:$padding-side-xs;
+  left:$padding-side-xs;
+  z-index:5;
+}
+
+

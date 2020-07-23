@@ -1,0 +1,16 @@
+/* card__loop-hidden-slider-slider.scss */
+
+.card__hidden-slider img{
+  @media (min-width: $breakepoint-xs) {
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    height: auto;
+    width: 100%;
+  }
+  @media (min-width: $breakepoint-ipad-L) {
+    border-radius:0px;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+
+  }
+}

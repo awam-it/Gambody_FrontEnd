@@ -1,0 +1,45 @@
+/* card__loop-content-slider-controls.scss */
+
+.card__controls.component-active{
+  @extend %flex-align;
+  @media (min-width: $breakepoint-xs) {
+    display:none;
+  }
+  @media (min-width: $breakepoint-lg) {
+    display:inline-flex;
+  }
+}
+.card__controls .button {
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+  }
+.card__controls li.button {
+  width: 72px;
+}
+.card__controls li.button:before {
+  content: '';
+  display: block;
+  width: 16px;
+  height: 16px;
+  background-size: cover;
+}
+.card__controls .prev:before {
+  background-image: url(../../img/svg/owl-prev-black.svg);
+}
+.card__controls .prev:hover:before {
+  background-image: url(../../img/svg/owl-prev.svg);
+}
+.card__controls .next:before {
+  background-image: url(../../img/svg/owl-next-black.svg);
+}
+.card__controls .next:hover:before {
+  background-image: url(../../img/svg/owl-next.svg);
+}
+.button_secondary:hover {
+  background-color: #304ffe;
+  color: #fff;
+}
+.card__controls .prev {
+  margin-right: 8px;
+}
