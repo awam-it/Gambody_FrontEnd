@@ -1,7 +1,7 @@
 
 /* nee to use vendor - tiny-slider.js */
-
-if(document.getElementsByClassName("main-slider__block") !== null)
+var element_found = document.getElementsByClassName("main-slider__block").length;
+if(element_found != '0')
 {
     var slider = tns({
         container: '.slider-two-rows',

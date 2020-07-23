@@ -9,6 +9,9 @@
   flex-direction: column;
   z-index: 2;
   min-height: 127px;
+  @media (min-width: $breakepoint-lg) {
+    padding: 8px 10px 16px 16px;
+  }
   @media (max-width: $breakepoint-md) {
     width: 38%;
     position:relative;

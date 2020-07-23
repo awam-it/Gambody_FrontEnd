@@ -1,8 +1,7 @@
 /* main__cards-slider.scss */
 
-/* import card */
-@import '../../../styles/components/card';
-/* import card */
+/* import card.scss */
+//@import '../../components/card';
 
 
 .slider{
@@ -190,6 +189,8 @@
         img {
           max-height: 244px;
           width: auto;
+          object-fit: cover;
+          width: 100%;
           @media (min-width: $breakepoint-xs) and (max-width: $breakepoint-ipad) {
             max-height: 208px;
             max-height: 200px;

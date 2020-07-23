@@ -1,9 +1,7 @@
 /* main__community.scss */
 
-/* import card */
-@import '../../../styles/components/card';
-/* import card */
-
+/* import card.scss */
+//@import '../../components/card';
 
 .main-comunity{
   @extend %column32px-padding;
@@ -117,7 +115,7 @@
     @media (min-width: $breakepoint-xs) {
       width: 100%;
       margin: 0px;
-      margin-bottom: 16px;
+      //margin-bottom: 16px;
       min-width:100%;
     }
     @media (min-width: $breakepoint-sm) {
@@ -142,11 +140,18 @@
       font-weight: 900;
       font-size: 0;
       min-height:220px;
+      @media (min-width: $breakepoint-xs) {
+        margin-bottom: 16px;
+      }
+      @media (min-width: $breakepoint-md) {
+        margin-bottom: 0px;
+      }
       .card__img {
-        max-width: 220px;
+        max-width: 242px;
         min-height: 220px;
         @media (min-width: $breakepoint-xs) {
           width: 100%;
+          max-width: 242px;
           //max-width: 100%;
           //max-width: 242px;
         }
@@ -170,7 +175,7 @@
           }
           @media (min-width: $breakepoint-md) {
             min-width: 220px;
-            /*width: 220px;*/
+            width: 220px;
           }
           @media (min-width: $breakepoint-lg) {
             min-width: 242px;
@@ -181,9 +186,6 @@
         }
 
       }
-
-
-
     }
   }
 }
@@ -214,8 +216,10 @@
 .masonry-lessons{
   @extend .main-comunity;
   background:transparent;
+  .card{
+    background: transparent;
+  }
 }
-
-
-
-
+.masonry-lessons .select, .masonry-lessons select{
+  background: transparent;
+}

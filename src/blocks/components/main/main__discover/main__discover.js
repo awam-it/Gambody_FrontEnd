@@ -1,7 +1,7 @@
 
 /* nee to use vendor - tiny-slider.js */
-
-if(document.getElementsByClassName("main-discover__slider") !== null)
+var element_found = document.getElementsByClassName("main-discover__slider").length;
+if(element_found != '0')
 {
     var slider = tns({
         container: '.main-discover__slider',

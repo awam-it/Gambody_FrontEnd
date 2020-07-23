@@ -1,0 +1,12 @@
+/* category__promo.scss */
+
+.categories-promo{
+  @include row-flex();
+  @include xs(justify-content, center);
+  @include md(justify-content, center);
+  width: 100%;
+  @media (min-width: $breakepoint-xs) {
+    margin-left: 0;
+    margin-right: 0;
+  }
+}

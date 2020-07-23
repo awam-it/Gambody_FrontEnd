@@ -1,7 +1,8 @@
 
 /* nee to use vendor - tiny-slider.js */
 
-if(document.getElementsByClassName("slider-cards__slider") !== null)
+var element_found = document.getElementsByClassName("slider-cards__slider").length;
+if(element_found != '0')
 {
     const tnsCarousel = document.querySelectorAll('.slider-cards__slider');
     tnsCarousel.forEach(slider => {
@@ -22,12 +23,13 @@ if(document.getElementsByClassName("slider-cards__slider") !== null)
                     nav: true,
                     edgePadding: 0,
                     swipeAngle: 8,
-                    gutter:8,
+                    gutter:0,
                     mouseDrag: true,
                     slideBy: "page",
                 },
                 375: {
                     edgePadding: 16,
+                    gutter:8,
                 },
                 400: {
                     edgePadding: 20,
@@ -72,8 +74,8 @@ if(document.getElementsByClassName("slider-cards__slider") !== null)
 
 /* difference in settings slider-cards__slider-new has "rewind: true," */
 
-
-if(document.getElementsByClassName("slider-cards__slider-new") !== null)
+var element_found = document.getElementsByClassName("slider-cards__slider-new").length;
+if(element_found != '0')
 {
     var slider = tns({
         container: '.slider-cards__slider-new',
@@ -92,10 +94,11 @@ if(document.getElementsByClassName("slider-cards__slider-new") !== null)
                 nav: true,
                 edgePadding: 0,
                 swipeAngle: 8,
-                gutter:8,
+                gutter:0,
             },
             375: {
                 edgePadding: 16,
+                gutter:8,
             },
             400: {
                 edgePadding: 20,

@@ -1,0 +1,56 @@
+/* category__promo-card.scss */
+// import card.scss
+
+.card_promo{
+    @include col();
+    @include size-xs(6);
+    @include size-md(6);
+    @include size-lg(3);
+    @include size-xl(2);
+    margin: $padding-side-xs;
+    overflow: hidden;
+    border-radius: 4px;
+    background: $white-bg;
+    @media (max-width: $breakepoint-md) {
+    flex-direction: column !important;
+  }
+}
+
+.card_promo img {
+  -webkit-transition: 0.25s;
+  -moz-transition: 0.25s;
+  transition: 0.25s;
+  width:100%;
+}
+.card_promo:hover img {
+  -webkit-transform: scale(1.1);
+  -moz-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  -o-transform: scale(1.1);
+  transform: scale(1.1);
+}
+.card_promo .card__img{
+  overflow: hidden;
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+  background: $white-bg;
+  @media (max-width: $breakepoint-md) {
+    width: 100%;
+    height: auto;
+    min-height: auto;
+  }
+}
+.categories-promo__item-img{
+
+}
+.card_promo .card__content{
+  min-height: 64px;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 2;
+  color: $black;
+  padding:8px 16px;
+  @media (max-width: $breakepoint-md) {
+    width: 100%;
+  }
+}
