@@ -1,0 +1,32 @@
+
+/* header__main-rate-item.scss */
+
+.rate__item {
+  margin-right: 8px;
+  @include font-property(normal);
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 1.33;
+  color: #bdbdbd;
+  min-width:81px;
+  padding: 12px 2px 11px 2px;
+  border-radius: 4px;
+  border: solid 1px #bdbdbd;
+  text-transform: uppercase;
+  text-align: center;
+  cursor:pointer;
+  &:last-child{
+    margin: 0;
+  }
+  &:hover{
+    border: solid 1px #e61a1a;
+    color: $black;
+  }
+
+}
+
+.rate_active{
+  border: solid 1px #e61a1a;
+  color: $black;
+
+}
