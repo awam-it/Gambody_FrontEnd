@@ -21,8 +21,50 @@
     overflow: hidden;
   }
 }
+.card_mini .card__content{
+  min-height:auto;
+}
 .card_mini .card__content {
   padding: 8px 10px 8px 16px;
+}
+.card__controls{
+  display: none;
+}
+.card__controls{
+  @extend %flex-align;
+  li{
+    &.button{
+      width:72px;
+      &:before{
+        @extend %before;
+        @extend %before-small;
+        background-size: cover;
+      }
+    }
+  }
+  .prev{
+    margin-right: 8px;
+    &:before {
+      background-image: url(../../img/svg/owl-prev-black.svg);
+    }
+    &:hover{
+      &:before {
+        background-image: url(../../img/svg/owl-prev.svg);
+      }
+    }
+  }
+
+  .next{
+    &:before {
+      background-image: url(../../img/svg/owl-next-black.svg);
+    }
+    &:hover{
+      &:before {
+        background-image: url(../../img/svg/owl-next.svg);
+      }
+    }
+  }
+
 }
 
 .card__content-line{
@@ -36,6 +78,11 @@
     bottom: 0;
     padding-bottom: 8px;
     padding-right: 16px;
+  }
+  .button{
+    width: 100%;
+    text-align: center;
+    justify-content: center;
   }
 }
 
@@ -55,5 +102,33 @@
   @media (min-width: $breakepoint-xs) {
     position: relative;
     padding: 0;
+  }
+}
+
+.card__content-title{
+  @include font-property(normal);
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 2;
+  letter-spacing: normal;
+  color: $black;
+  margin-bottom: 8px;
+  &:hover{
+    text-decoration: underline;
+  }
+}
+
+.card__content-author{
+  @include font-property(normal);
+  font-size: 11px;
+  line-height: 1.45;
+  letter-spacing: normal;
+  color: #666666;
+  margin-bottom: 8px;
+  a{
+    color: #666666;
+    &:hover{
+      text-decoration: underline;
+    }
   }
 }

@@ -1,6 +1,5 @@
 /* card__loop-hidden-slider-content.scss */
 
-
 .hidden-slider-content{
   @extend %flex-align;
   padding:8px 16px;
@@ -26,5 +25,15 @@
   .card__oldprice{
     margin:0px 12px 0px 0px;
   }
+  .card__cart {
+    @media (min-width: $breakepoint-xs) {
+      margin-left: 8px;
+      display:inline-flex;
+    }
+    @media (min-width: $breakepoint-md) {
+      display:none;
+    }
+  }
+
 }
 

@@ -2,3 +2,543 @@
 
 /* import card.scss */
 
+.card {
+  border-radius: 4px;
+  background-color: transparent;
+  background: $white-bg;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+
+  &:hover {
+    .card__hover-block {
+      opacity: 1;
+      z-index: 1;
+    }
+  }
+  @media (max-width: $breakepoint-md) {
+    align-items: inherit;
+    justify-content: center;
+    display: inline-flex;
+    flex-direction: row;
+    &__hover-mobile:checked ~ .card__hover-block {
+      opacity: 1;
+      z-index: 2;
+      z-index: 16;
+    }
+    &__hover-mobile:not(:checked)~ .card__hover-block {
+      opacity: 0;
+      z-index: -1;
+    }
+  }
+}
+
+// card__img
+
+.card__img{
+  position: relative;
+  height: 240px;
+  border-radius: 0;
+  border-bottom-right-radius: 0px;
+  border-bottom-left-radius: 0px;
+  @media (min-width: $breakepoint-xs) {
+    height: 240px;
+    min-height: 240px;
+  }
+  @media (max-width: $breakepoint-md) {
+    width: 62%;
+  }
+  img{
+    border-radius: 4px;
+    @media (min-width: $breakepoint-xs) {
+      height: auto;
+      object-fit: cover;
+      height: 100%;
+      width: 100%;
+      border-bottom-right-radius: 0px;
+      border-bottom-left-radius: 0px;
+    }
+  }
+}
+
+/* card__loop.scss */
+/*  labels */
+
+.labels{
+  @extend %flex-align;
+  flex-flow: column;
+  position:absolute;
+  bottom:8px;
+  left: 0;
+  width: 100%;
+  >div{
+    margin-top: 8px;
+  }
+  div{
+    @extend %flex-align;
+    @include font-property(normal);
+    height:24px;
+    max-width:194px;
+    text-transform: uppercase;
+    border-radius: 2px;
+    font-size: 10px;
+    font-weight: bold;
+    line-height: 1.6;
+    letter-spacing: 1px;
+    text-align: center;
+    color: $white;
+  }
+  &__save-with-premium{
+    @include font-property(normal);
+    background-color: #f9aa0a;
+    width: 100%;
+  }
+  &__list {
+    >div{
+      min-width:32px;
+      margin: 0px 4px;
+      padding:0px 3px;
+    }
+
+  }
+  &__new{
+    background-color: #4bb13c;
+  }
+  &__hot{
+    &:before{
+      @extend %before;
+      @extend %before-small;
+      background-image:  url("../../img/svg/labels_hot.svg");
+    }
+    background-color: #f77628;
+  }
+  &__favorites{
+    &:before{
+      @extend %before;
+      @extend %before-small;
+      background-image:  url("../../img/svg/labels_favourites.svg");
+    }
+    background-color: #e85aef;
+  }
+  &__sale{
+    background-color: #e61a1a;
+  }
+  &__diorama{
+    &:before{
+      @extend %before;
+      @extend %before-small;
+      background-image:  url("../../img/svg/labels_diorama.svg");
+    }
+    background-color: #2f9add;
+  }
+}
+
+
+.card__mob-zoom{
+  position: absolute;
+  top: 9px;
+  right: 9px;
+  &:before{
+    @extend %before;
+    @extend %before-small;
+    background-image: url(../../img/svg/mob-zoom.svg);
+    background-size: cover;
+  }
+  @media (min-width: $breakepoint-xs) {
+    display: block;
+    z-index: 9;
+  }
+  @media (min-width: $breakepoint-ipad) {
+    z-index: 0;
+  }
+  @media (min-width: $breakepoint-ipad-L1) {
+    display: none;
+  }
+}
+
+
+/*****************************************************************************/
+/* card__loop.scss */
+/* card types */
+
+.card.card_mini {
+  max-width: 100%;
+  .card__content {
+    width: 100%;
+    justify-content: space-between;
+    align-items: flex-end;
+    @media (max-width: $breakepoint-md) {
+      width: 38%;
+      position:relative;
+      height: auto;
+      justify-content: flex-start;
+      align-items: flex-start;
+
+    }
+  }
+}
+.card .card_mini__link{
+  @media (min-width: $breakepoint-ipad) {
+    position: absolute;
+    width: 70%;
+    height: 80%;
+    z-index: 10;
+  }
+}
+
+.card.card_featured {
+  .card__img {
+    @media (min-width: $breakepoint-xs) {
+      min-height: auto;
+    }
+  }
+}
+
+.card.card_featured{
+  .card__content {
+    min-height: auto;
+  }
+  @media (min-width: $breakepoint-xs) {
+    flex-direction: column;
+  }
+  @media (min-width: $breakepoint-md) {
+    /*flex-direction: row;*/
+  }
+
+  .card__img, .card__content{
+    @media (min-width: $breakepoint-xs) {
+      width: 100%;
+    }
+  }
+  .card__img{
+    >img{
+      @media (min-width: $breakepoint-xs) {
+        min-height: 360px;
+      }
+      @media (min-width: $breakepoint-lg) {
+        min-height: auto;
+      }
+    }
+    @media (min-width: $breakepoint-xs) {
+      height: auto;
+      display: inline-flex;
+      justify-content: start;
+      align-items: unset;
+    }
+    @media (min-width: $breakepoint-lg) {
+      height: 240px;
+    }
+    &:before {
+      @media (min-width: $breakepoint-xs) {
+        content: "";
+        display: block;
+        margin-top: 100%;
+      }
+      @media (min-width: $breakepoint-lg) {
+        margin-top: 0;
+      }
+    }
+
+  }
+  .card__content-line {
+    @media (min-width: $breakepoint-xs) {
+      position: relative;
+      padding: 0;
+    }
+  }
+  .card__hover-mobile:checked ~ .card__hover-mobile-label {
+    @media (min-width: $breakepoint-xs) {
+      right: 0px;
+      z-index: 3;
+    }
+  }
+  .card__hover-mobile:checked ~ .card__hover-block {
+    @media (min-width: $breakepoint-xs) {
+      width: calc(100% - 32px);
+    }
+    @media (min-width: $breakepoint-md) {
+      width: 100%;
+    }
+  }
+
+}
+.card.card_slider{
+  .tns-controls{
+    button:first-child {
+      left: 8px;
+    }
+    button:last-child {
+      right: 8px;
+    }
+  }
+}
+
+
+
+.card.card_article {
+  img {
+    object-fit: cover;
+    width: 100%;
+    @media (min-width: $breakepoint-xs) {
+      height: 194px;
+    }
+    @media (min-width: $breakepoint-lg) {
+      height: 186px;
+    }
+
+    @media (min-width: $breakepoint-xl) {
+      height: auto;
+    }
+  }
+
+  .card__hover-content {
+    font-size: 11px;
+    line-height: 1.45;
+    color: $white;
+  }
+
+  .card__hover-title {
+    @extend %column8px-margin;
+    font-size: 14px;
+    line-height: 1.71;
+    color: $white;
+    z-index: 2;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  .card__hover-block {
+    @extend %flex-align;
+  }
+
+  .card__img {
+    @media (min-width: $breakepoint-xs) {
+      height: auto;
+      min-height: auto;
+    }
+    @media (max-width: $breakepoint-md) {
+      width: 100%;
+    }
+  }
+
+  .card__hover-block {
+    border-radius: 4px;
+  }
+
+
+  .card__hover-mobile-label {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    margin: 0;
+    background: transparent;
+
+    &:before {
+      display: none;
+    }
+
+    &:after {
+      display: none;
+    }
+  }
+
+  .card__hover-mobile:checked ~ .card__hover-mobile-label {
+    right: -32px;
+    left: auto;
+    width: 0px;
+    height: 0px;
+  }
+
+  .card.blog-list__item {
+    @media (min-width: $breakepoint-xs){
+      width: 100%;
+      margin-left: 0;
+      margin-right: 0;
+    }
+    @media (min-width: $breakepoint-lg){
+      width: calc(33.3333333333% - 16px);
+      margin-left: 8px;
+      margin-right: 8px;
+    }
+  }
+}
+
+.card_masonry .card__hover-mobile:checked ~ .card__hover-block {
+  @media (max-width: $breakepoint-md) {
+    z-index: 2;
+  }
+}
+
+/****************************************************************/
+
+/* card__loop.scss */
+/*  card__hover */
+
+.card__hover-mobile:checked ~ .card__hover-mobile-label {
+  right: -32px;
+  left:auto;
+  &:before {
+    background-image: url(../../img/svg/owl-prev.svg);
+  }
+}
+
+.card__hover-mobile{
+  display: none;
+}
+.card__hover-mobile-label{
+  @media (max-width: $breakepoint-md) {
+    display: inline-flex;
+    z-index: 8;
+  }
+  @extend %flex-align;
+  display: none;
+  z-index: 1;
+  width: 32px;
+  height: 32px;
+  background-color: rgba(0, 0, 0, 0.9);
+  position: absolute;
+  top: 50%;
+  left: 0;
+  margin-top: -16px;
+  &:before {
+    @extend %before;
+    @extend %before-small;
+    background-image: url(../../img/svg/owl-next.svg);
+    background-size: cover;
+  }
+  &:after {
+    @extend %before;
+    background: transparent;
+    width: 40px;
+    height: 40px;
+    width: 50px;
+    height: 200px;
+    position: absolute;
+  }
+}
+
+
+/* card__loop.scss */
+/****  component-active  *****/
+
+.tns-outer .over .card__hidden-slider, .tns-outer .over_l .card__hidden-slider {
+  @media (min-width: $breakepoint-md) and (max-width: $breakepoint-ipad-L1) {
+    width: 754px;
+  }
+}
+
+.over .card__hidden-slider, .over_l .card__hidden-slider{
+  @extend %flex-align;
+  @media (min-width: $breakepoint-xs) {
+    right: auto;
+    left: auto;
+    width: 100vw;
+    height: auto;
+    //top: 0;
+    z-index: 10;
+    border-radius: 0px;
+  }
+  @media (min-width: $breakepoint-750) and (max-width: $breakepoint-md) {
+    left: 0;
+  }
+  @media (min-width: $breakepoint-sm) and (max-width: $breakepoint-md)   {
+    width: calc(100vw - 16px);
+
+  }
+  @media (min-width: $breakepoint-ipad) {
+    width: 100%;
+    left: calc(100% + 15px);
+    height: auto;
+    min-height: auto;
+    z-index: 3;
+  }
+  @media (min-width: $breakepoint-md) and (max-width: $breakepoint-ipad-L1) {
+    width: 722px;
+    left: 0;
+    z-index: 20;
+  }
+
+
+  @media (min-width: $breakepoint-lg) {
+    width: 500px;
+    //height: calc(100% + 10%);
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 0 5px 3px rgba(0, 0, 0, 0.55)  !important;
+    border: 0px
+  }
+}
+.over .card__controls, .over_l .card__controls{
+  @extend %flex-align;
+  @media (min-width: $breakepoint-xs) {
+    display:none;
+  }
+  @media (min-width: $breakepoint-lg) {
+    display:inline-flex;
+  }
+}
+.over .card__cart span, .over_l .card__cart span{
+  display:none;
+}
+.over .card__content .card__price, .over_l .card__content  .card__price{
+  @media (min-width: $breakepoint-xs) {
+    display:block;
+  }
+  @media (min-width: $breakepoint-lg) {
+    display: none;
+  }
+}
+
+.over_l .card__hidden-slider{
+  @media (min-width: $breakepoint-xs) {
+    right: auto;
+    left: auto;
+    align-self: center;
+    max-width: 360px;
+    max-height: 360px;
+    overflow: hidden;
+  }
+  @media (min-width: $breakepoint-md) {
+    max-width: initial;
+    max-height: initial;
+  }
+  @media (min-width: $breakepoint-ipad) {
+    right: calc(100% + 15px);
+    left: auto;
+    height: auto;
+    min-height: auto;
+  }
+  @media (min-width: $breakepoint-md) and (max-width: $breakepoint-ipad-L1) {
+    //width: 722px;
+    left: 0;
+    z-index: 20;
+    left: auto;
+    right: 0;
+  }
+
+}
+
+
+.card__controls.component-active{
+  @extend %flex-align;
+  @media (min-width: $breakepoint-xs) {
+    display:none;
+  }
+  @media (min-width: $breakepoint-lg) {
+    display:inline-flex;
+  }
+}
+
+
+.over .card__content-line .button_primary , .over_l .card__content-line .button_primary,
+.component-active .card__content-line .button_primary {
+  position: absolute;
+  bottom: -32px;
+  left: 0;
+}
+
+
+
+/****  component-active  *****/

@@ -23,6 +23,16 @@
   text-align: center;
   color: $white;
 }
+.card__hover-etc{
+  position:absolute;
+  bottom: 8px;
+  right: 8px;
+  >div{
+    @extend %card_hover_btn_mini;
+    margin-left:8px;
+  }
+}
+
 .card__loop-hover-button:before{
   content: '';
   display: block;
@@ -30,12 +40,24 @@
   height: 16px;
   background-size: cover;
 }
+.card__hover-comments{
+  position:absolute;
+  bottom: 8px;
+  left: 8px;
+}
 .card__hover-comments-label:before{
     background-image: url(../../img/png/hover-comments.png);
 }
 .card__hover-settings-label:before {
   background-image: url(../../img/svg/hover-settings.svg);
 }
+.card__hover-settings-label label{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  cursor:pointer;
+}
+
 // active settings
 .card__hover-settings-checkbox:checked ~ .card__hover-settings-label:before {
   background-image: url(../../img/svg/hover-settings-h.svg);

@@ -20,8 +20,9 @@
 }
 }
 .card__mob-zoom-close:before {
+  @extend %before;
+  @extend %before-small;
   background-image: url(../../img/svg/mob-zoom-close.svg);
   background-size: cover;
 }
-
 
