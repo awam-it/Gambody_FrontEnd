@@ -22,6 +22,7 @@
   width: 100%;
   margin-top: 16px;
   position: relative;
+  //z-index: -1;
   button {
     display: inline-flex;
     zoom: 1;
@@ -89,7 +90,11 @@
 
 /* tiny slider */
 
-
+.section-card-slider{
+  .tns-nav{
+    z-index: -1;
+  }
+}
 .main-trending{
   @extend %column20px-padding;
   padding-top:40px;
@@ -178,6 +183,7 @@
     }
     @media (min-width: $breakepoint-lg) {
       padding: 10px 0px;
+      padding: 35px 0px;
     }
 
     .card_slider {
@@ -187,13 +193,13 @@
         display: inline-flex;
 
         img {
-          max-height: 244px;
+         // max-height: 244px;
           width: auto;
           object-fit: cover;
           width: 100%;
           @media (min-width: $breakepoint-xs) and (max-width: $breakepoint-ipad) {
-            max-height: 208px;
-            max-height: 200px;
+            //max-height: 208px;
+            //max-height: 200px;
           }
           @media (max-width: $breakepoint-lg) {
             border-radius: 0px;
@@ -211,8 +217,8 @@
           z-index: 20;
         }
         @media (min-width: $breakepoint-lg) {
-          width: 477px;
-          width: 457px;
+          //width: 477px;
+          //width: 457px;
         }
 
       }
@@ -274,6 +280,16 @@
 
 }
 
+.slider-cards>.tns-outer>.tns-ovh{
+  @media (min-width: $breakepoint-xs) {
+    overflow: visible;
+  }
+  @media (min-width: $breakepoint-md) {
+    overflow: hidden;
+  }
+
+
+}
 
 
 

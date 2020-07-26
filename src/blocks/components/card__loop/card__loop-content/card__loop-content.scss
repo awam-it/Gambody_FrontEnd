@@ -21,6 +21,10 @@
     overflow: hidden;
   }
 }
+.card_mini .card__content {
+  padding: 8px 10px 8px 16px;
+}
+
 .card__content-line{
   @extend %flex-align;
   width:100%;
