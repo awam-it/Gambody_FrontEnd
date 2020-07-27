@@ -70,6 +70,7 @@
 .card__content-line{
   @extend %flex-align;
   width:100%;
+  display: inline-flex;
   justify-content: space-between;
   align-items: flex-end;
   flex: auto;
