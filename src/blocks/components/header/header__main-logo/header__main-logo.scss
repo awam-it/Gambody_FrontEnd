@@ -1,6 +1,20 @@
 
 /* header__main-logo.scss */
 
+.main-header__logo{
+  .logo__text{
+    @media (max-width: $breakepoint-lg) {
+      display: none;
+    }
+  }
+}
+
+.sticky .main-header__logo {
+  .logo__text {
+    display: none;
+  }
+}
+
 .logo{
   @include font-property(normal);
   @extend %flex-align;
@@ -16,40 +30,14 @@
     font-weight: bold;
   }
 }
-.main-header__logo{
-  .logo__text{
-    @media (max-width: $breakepoint-lg) {
-      display: none;
-    }
-  }
-  &:before{
-    @extend %before;
-    position: absolute;
-    opacity: 0;
-    @include transition(.25s);
-    @media (max-width: $breakepoint-lg) {
-      width: 32px;
-      height: 32px;
-      background-image: url(../../img/svg/favicon.svg) !important;
-      background-size: cover;
-      position: relative;
-      opacity: 1;
-    }
-  }
-}
 
-.sticky .main-header__logo {
-  .logo__text {
-    display: none;
-  }
-
+.logo__img {
   &:before {
     @extend %before;
     background-image: url(../../img/svg/favicon.svg) !important;
     background-size: cover;
-    position: relative !important;
-    opacity: 1 !important;
-    @include transition(.25s);
+    position: absolute;
+    opacity: 0;
     @media (min-width: $breakepoint-xs) {
       width: 32px;
       height: 32px;
@@ -59,4 +47,10 @@
       height: 40px;
     }
   }
+}
+.sticky .main-header__logo {
+  .logo__img:before {
+    position: relative !important;
+    opacity: 1 !important;
+    }
 }
