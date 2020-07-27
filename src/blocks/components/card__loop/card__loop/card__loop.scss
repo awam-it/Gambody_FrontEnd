@@ -429,7 +429,7 @@
   }
 }
 
-.over .card__hidden-slider, .over_l .card__hidden-slider, .card__hidden-slider.component-active{
+/*.over .card__hidden-slider, .over_l .card__hidden-slider, .card__hidden-slider.component-active{
   @extend %flex-align;
   @media (min-width: $breakepoint-xs) {
     right: auto;
@@ -504,22 +504,23 @@
     max-width: initial;
     max-height: initial;
   }
-  @media (min-width: $breakepoint-ipad) {
-    right: calc(100% + 15px);
-    left: auto;
-    height: auto;
-    min-height: auto;
-  }
-  @media (min-width: $breakepoint-md) and (max-width: $breakepoint-ipad-L1) {
-    //width: 722px;
-    left: 0;
-    z-index: 20;
-    left: auto;
-    right: 0;
-  }
 
 }
-
+.over_l .card__hidden-slider, .card__hidden-slider.component-active-left{
+@media (min-width: $breakepoint-ipad) {
+  right: calc(100% + 15px);
+  left: auto;
+  height: auto;
+  min-height: auto;
+}
+@media (min-width: $breakepoint-md) and (max-width: $breakepoint-ipad-L1) {
+  //width: 722px;
+  left: 0;
+  z-index: 20;
+  left: auto;
+  right: 0;
+}
+}
 
 .card__controls.component-active{
   @extend %flex-align;
@@ -537,7 +538,7 @@
   position: absolute;
   bottom: -32px;
   left: 0;
-}
+}*/
 
 
 
