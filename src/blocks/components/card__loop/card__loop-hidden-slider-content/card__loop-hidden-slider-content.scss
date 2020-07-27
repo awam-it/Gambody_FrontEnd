@@ -7,6 +7,15 @@
   flex-grow: 1;
   align-items: center;
   .card__content-title{
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 2;
+    letter-spacing: normal;
+    color: #000;
+    margin-bottom: 8px;
     flex: auto;
     margin-bottom: 0;
   }
@@ -21,6 +30,7 @@
   }
   .card__price{
     flex-direction: row-reverse;
+    display: inline-flex;
   }
   .card__oldprice{
     margin:0px 12px 0px 0px;
