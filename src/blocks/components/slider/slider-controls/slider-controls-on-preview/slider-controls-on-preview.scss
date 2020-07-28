@@ -1,0 +1,39 @@
+/* slider-controls-on-preview.scss */
+
+.slider-controls-on-preview button{
+  font-size: 0px !important;
+  background: transparent;
+  margin: 0;
+  border: 0px;
+  position: absolute;
+  top: 50%;
+  z-index: 1;
+  border-radius: 2px;
+  padding: 8px;
+  background-color: rgba(0, 0, 0, 0.5);
+  margin-top: -32px;
+
+
+}
+.slider-controls-on-preview button:before {
+  content: '';
+  display: block;
+  width: 16px;
+  height: 16px;
+  background-size: cover;
+}
+.slider-controls-on-preview
+.slider-prev {
+  left: 8px;
+  &:before {
+    background-image: url(../../img/svg/owl-prev.svg);
+  }
+}
+
+.slider-controls-on-preview
+.slider-next{
+  right: 8px;
+  &:before {
+    background-image: url(../../img/svg/owl-next.svg);
+  }
+}

@@ -1,0 +1,56 @@
+/* slider-controls-normal.scss */
+
+/* swiper buttons normal */
+.slider-controls-normal button{
+  font-size: 0px !important;
+  background: transparent;
+  margin: 0;
+  border: 0px;
+  position: absolute;
+  top: 50%;
+  z-index: 1;
+  padding: 8px;
+  margin-top: -32px;
+  color: #FFF;
+  cursor: pointer;
+  border-radius: 4px;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 44px 16px !important;
+  margin-top: -61px;
+  cursor: pointer;
+  &:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+  }
+}
+.slider-controls-normal button:before {
+  content: '';
+  display: block;
+  width: 24px;
+  height: 24px;
+  background-size: cover;
+}
+.slider-controls-normal
+.slider-prev {
+  @media (min-width: $breakepoint-xs) {
+    left: -60px;
+  }
+  @media (min-width: $breakepoint-xxl) {
+    left: -72px;
+  }
+  &:before {
+    background-image: url(../../img/svg/owl-prev.svg);
+  }
+}
+.slider-controls-normal
+.slider-next{
+  @media (min-width: $breakepoint-xs) {
+    right: -60px;
+  }
+  @media (min-width: $breakepoint-xxl) {
+    right: -72px;
+  }
+  &:before {
+    background-image: url(../../img/svg/owl-next.svg);
+  }
+}
+/* swiper buttons normal */

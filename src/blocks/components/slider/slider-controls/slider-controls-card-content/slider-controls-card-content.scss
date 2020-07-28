@@ -1,0 +1,36 @@
+/* slider-controls-card-content.scss */
+
+/* swiper buttons card content */
+
+.slider-controls-card-content button.button {
+  width: 72px;
+}
+
+.slider-controls-card-content button:before {
+  content: '';
+  display: block;
+  width: 16px;
+  height: 16px;
+  background-size: cover;
+}
+.slider-controls-card-content
+.slider-prev {
+  margin-right: 8px;
+  &:before {
+    background-image: url(../../img/svg/owl-prev-black.svg);
+  }
+  &:hover:before{
+    background-image: url(../../img/svg/owl-prev.svg);
+  }
+}
+.slider-controls-card-content
+.slider-next{
+  &:before {
+    background-image: url(../../img/svg/owl-next-black.svg);
+  }
+  &:hover:before{
+    background-image: url(../../img/svg/owl-next.svg);
+  }
+}
+
+/* swiper buttons card content */

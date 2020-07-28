@@ -1,0 +1,51 @@
+/* slider-controls-black.scss */
+
+/* swiper buttons black */
+.slider-controls-black button{
+  font-size: 0px !important;
+  background: transparent;
+  margin: 0;
+  border: 0px;
+  position: absolute;
+  top: 50%;
+  z-index: 1;
+  border-radius: 2px;
+  padding: 8px;
+  background-color: rgba(0, 0, 0, 0.5);
+  margin-top: -32px;
+  background-color: transparent;
+  padding: 8px;
+  cursor: pointer;
+  &:hover {
+    background: #e6e6e6;
+  }
+}
+.slider-controls-black button:before {
+  content: '';
+  display: block;
+  width: 24px;
+  height: 24px;
+  background-size: cover;
+}
+.slider-controls-black
+.slider-prev {
+  margin-left: 0px;
+  left: -15px;
+  &:before {
+    background-image: url(../../img/svg/owl-prev-black.svg);
+    width: 24px;
+    height: 24px;
+  }
+}
+.slider-controls-black
+.slider-next{
+  margin-right: 0px;
+  right: -15px;
+  &:before {
+    background-image: url(../../img/svg/owl-next-black.svg);
+    width: 24px;
+    height: 24px;
+  }
+}
+
+/* swiper buttons black */

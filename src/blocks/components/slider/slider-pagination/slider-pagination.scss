@@ -1,0 +1,31 @@
+/* slider-pagination.scss */
+
+.slider-pagination {
+  width: 100%;
+  margin-top: 16px;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  display: inline-flex;
+}
+
+.slider-pagination span {
+  display: inline-flex;
+  zoom: 1;
+  background: 0 0;
+  color: inherit;
+  padding: 0 !important;
+  font: inherit;
+  margin: 4px;
+  background: transparent;
+  transition: opacity .2s ease;
+  width: 8px;
+  height: 16px;
+  border-radius: 2px;
+  border: solid 1px #bdbdbd;
+  opacity: 1;
+}
+.slider-pagination span.swiper-pagination-bullet-active{
+  background-color: #d50000;
+  border: solid 1px #d50000;
+}
