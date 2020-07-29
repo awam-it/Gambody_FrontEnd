@@ -1,0 +1,46 @@
+/* slider-container.scss */
+
+.slider-cards{
+  >.slider-cards__swiper {
+    @media (min-width: $breakepoint-xs) {
+      padding: 20px 0px;
+      overflow: visible;
+    }
+    @media (min-width: $breakepoint-md) {
+      overflow: hidden;
+    }
+    @media (min-width: $breakepoint-lg) {
+      padding: 35px 0px;
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* swiper container */
