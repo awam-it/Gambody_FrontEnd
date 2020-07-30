@@ -51,11 +51,29 @@
 .card__hover-settings-label:before {
   background-image: url(../../img/svg/hover-settings.svg);
 }
-.card__hover-settings-label label{
+.card__hover-settings-label-active:before {
+  background-image: url(../../img/svg/hover-settings-h.svg);
+}
+.card__hover-settings-label label, .card__hover-settings-label button{
   position: absolute;
   width: 100%;
   height: 100%;
   cursor:pointer;
+}
+.card.card_article .card__hover-content {
+  font-size: 11px;
+  line-height: 1.45;
+  color: #fff;
+}
+.card__hover-title {
+  @extend %column8px-margin;
+  font-size: 14px;
+  line-height: 1.71;
+  color: $white;
+  z-index: 2;
+  &:hover {
+    text-decoration: underline;
+  }
 }
 
 // active settings
