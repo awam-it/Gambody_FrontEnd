@@ -2,10 +2,9 @@
 ////////////    card.scss   ////////////
 
 .card {
-  border-radius: 4px;
+  /*border-radius: 4px;
   background-color: transparent;
   background: $white-bg;
-  //border: solid 3px transparent;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -14,12 +13,11 @@
       opacity: 1;
       z-index: 1;
     }
-
-  }
+  }*/
 
   // img
 
-  &__img{
+  /*&__img{
     position: relative;
     height: 240px;
     border-radius: 0;
@@ -43,16 +41,16 @@
         border-bottom-left-radius: 0px;
       }
     }
-  }
-  &.card_featured {
+  }*/
+  /*&.card_featured {
     .card__img {
       @media (min-width: $breakepoint-xs) {
         min-height: auto;
       }
     }
-  }
+  }*/
 
-  &__img-bg{
+  /*&__img-bg{
     width:100%;
     height:240px;
     background-position: center;
@@ -66,12 +64,11 @@
       border-top-right-radius: 4px;
       border-bottom-left-radius: 0px;
     }
-  }
+  }*/
 
   // hover block
 
-  &__hover-block {
-    /*display: none;*/
+  /*&__hover-block {
     opacity: 0;
     position: absolute;
     top: 0;
@@ -84,8 +81,8 @@
     background-color: rgba(0, 0, 0, 0.9);
     padding:8px;
     @include transition(.25s);
-  }
-  &__hover-settings{
+  }*/
+  /*&__hover-settings{
     position:absolute;
     top: 8px;
     right: 8px;
@@ -93,8 +90,8 @@
     input{
       display: none;
     }
-  }
-  &__hover-settings-label{
+  }*/
+  /*&__hover-settings-label{
     @extend %card_hover_btn_mini;
     &:before{
       @extend %before;
@@ -104,7 +101,6 @@
     &:hover {
       @extend %card_hover_btn_mini-hover;
       &:before {
-        /*background-image: url(../../img/svg/hover-settings-h.svg);*/
       }
     }
     label{
@@ -113,8 +109,8 @@
       height: 100%;
       cursor:pointer;
     }
-  }
-  &__hover-settings-hidden-block{
+  }*/
+  /*&__hover-settings-hidden-block{
     visibility: hidden;
     right: -8px;
     max-width: 146px;
@@ -155,15 +151,15 @@
         }
       }
     }
-  }
+  }*/
 
 
-  &__hover-comments{
+  /*&__hover-comments{
     position:absolute;
     bottom: 8px;
     left: 8px;
-  }
-  &__hover-comments-label{
+  }*/
+  /*&__hover-comments-label{
     @extend %card_hover_btn_mini;
     &:before{
       @extend %before;
@@ -184,8 +180,8 @@
       text-align: center;
       color: $white;
     }
-  }
-  &__hover-etc{
+  }*/
+  /*&__hover-etc{
     position:absolute;
     bottom: 8px;
     right: 8px;
@@ -193,7 +189,8 @@
       @extend %card_hover_btn_mini;
       margin-left:8px;
     }
-  }
+  }*/
+  /*
   &__hover-share{
     @extend %card_hover_btn_mini;
     &:before{
@@ -240,14 +237,15 @@
       background-image: url(../../img/svg/hover-add-to-favourites-active.svg);
     }
   }
-  &__hover-content {
+  */
+  /*&__hover-content {
     padding-left: 8px;
     display: inline-flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: start;
-  }
-  &__hover-item{
+  }*/
+  /*&__hover-item{
     @extend %flex-align;
     margin-top:16px;
     img{
@@ -262,15 +260,7 @@
       color: $white;
       margin-left: 8px;
     }
-  }
-
-
-
-
-
-
-
-
+  }*/
 
 
 
@@ -280,7 +270,7 @@
 
   // labels
 
-  .labels{
+  /*.labels{
     @extend %flex-align;
     flex-flow: column;
     position:absolute;
@@ -347,13 +337,13 @@
       }
       background-color: #2f9add;
     }
-  }
+  }*/
 
 
   // content
 
   /* card__loop-content.scss */
-  &__content{
+  /*&__content{
     padding: 8px 10px;
     //background-color: $white-bg;
     border-bottom-left-radius: 4px;
@@ -374,8 +364,8 @@
       align-items: flex-start;
       overflow: hidden;
     }
-  }
-  &__content-line{
+  }*/
+  /*&__content-line{
     @extend %flex-align;
     width:100%;
     justify-content: space-between;
@@ -392,11 +382,11 @@
       text-align: center;
       justify-content: center;
     }
-  }
+  }*/
 
   /* card__loop-content.scss */
 
-  &__content-title{
+  /*&__content-title{
     @include font-property(normal);
     font-size: 12px;
     font-weight: 500;
@@ -407,8 +397,8 @@
     &:hover{
       text-decoration: underline;
     }
-  }
-  &__content-author{
+  }*/
+  /*&__content-author{
     @include font-property(normal);
     font-size: 11px;
     line-height: 1.45;
@@ -421,10 +411,10 @@
         text-decoration: underline;
       }
     }
-  }
+  }*/
 
 
-  &__price{
+  /*&__price{
     @include font-property(normal);
     font-size: 18px;
     font-weight: 500;
@@ -441,8 +431,8 @@
     flex-direction: column-reverse;
     }
 
-  }
-  &__oldprice{
+  }*/
+  /*&__oldprice{
     font-size: 12px;
     line-height: 2;
     letter-spacing: normal;
@@ -452,8 +442,8 @@
     @media (max-width: $breakepoint-md) {
     margin-left:0px;
     }
-  }
-  &__sale{
+  }*/
+ /* &__sale{
       color: $sale-color;
   }
   &__premium-price{
@@ -465,8 +455,8 @@
     @media (min-width: $breakepoint-md) {
       margin-left: 12px;
     }
-  }
-  &__cart{
+  }*/
+  /*&__cart{
     @extend %flex-align;
     span{
       @include font-property(normal);
@@ -485,8 +475,8 @@
     margin: 0;
     display: initial;
     }
-  }
-  &__cart-link{
+  }*/
+  /*&__cart-link{
     @extend %flex-align;
     border-radius: 4px;
     border: solid 1px #4bb13c;
@@ -504,7 +494,7 @@
         background-image:  url("../../img/svg/card_cart-white.svg");
       }
     }
-  }
+  }*/
 
 
 
@@ -513,7 +503,7 @@
 
 
 
-
+/*
   // card types
 
   &.card_mini {
@@ -528,19 +518,7 @@
         height: auto;
         justify-content: flex-start;
         align-items: flex-start;
-        /*display: flex;
-        flex-direction: column;
-        align-items: start;
-        justify-content: space-between;*/
-      }
-    }
-    .card__content {
-      .card__content-title,
-      .card__content-author {
-        display: none;
-        @media (max-width: $breakepoint-md) {
-          display: block;
-        }
+
       }
     }
   }
@@ -561,7 +539,7 @@
       flex-direction: column;
     }
     @media (min-width: $breakepoint-md) {
-      /*flex-direction: row;*/
+
     }
 
     .card__img, .card__content{
@@ -724,6 +702,7 @@
      }
   }
 
+  */
 
   // card condition
   &.card_added-to-cart{
@@ -775,12 +754,8 @@
   }
 
 
-  &__hover-mobile{
 
-  }
-
-
-  &__hover-mobile:checked ~ .card__hover-mobile-label {
+  /*&__hover-mobile:checked ~ .card__hover-mobile-label {
     right: -32px;
     left:auto;
     &:before {
@@ -821,11 +796,11 @@
       height: 200px;
       position: absolute;
     }
-  }
+  }*/
 
 
 
-  @media (max-width: $breakepoint-md) {
+ /* @media (max-width: $breakepoint-md) {
     align-items: inherit;
     justify-content: center;
     display: inline-flex;
@@ -839,12 +814,12 @@
       opacity: 0;
       z-index: -1;
     }
-  }
+  }*/
 
-  &__controls{
+  /*&__controls{
     display: none;
-  }
-  &__mob-zoom{
+  }*/
+  /*&__mob-zoom{
     position: absolute;
     top: 9px;
     right: 9px;
@@ -864,8 +839,8 @@
     @media (min-width: $breakepoint-ipad-L1) {
       display: none;
     }
-  }
-  &__mob-zoom-close{
+  }*/
+  /*&__mob-zoom-close{
     position: absolute;
     top: 9px;
     right: 9px;
@@ -885,8 +860,8 @@
     @media (min-width: $breakepoint-ipad-L) {
       display: none;
     }
-  }
-  &__hidden-slider-count{
+  }*/
+  /*&__hidden-slider-count{
     @extend %flex-align;
     @include font-property(normal);
     height: 24px;
@@ -901,9 +876,9 @@
     top:$padding-side-xs;
     left:$padding-side-xs;
     z-index:5;
-  }
+  }*/
   &__hidden-slider{
-    width:500px;
+    /*width:500px;
     min-height:300px;
     position:absolute;
     display:none;
@@ -911,21 +886,11 @@
     background: #ffffff;
     z-index: 10;
     font-size: 16px;
-    top: -9%;
-    //height: calc(100% + 10%);
     border-radius: 10px;
     box-shadow: 0 0 15px 5px rgba(0, 0, 0, 0.55);
-    flex-direction: column;
-    /*&:before{
-      @extend %before;
-      height: 100%;
-      position: absolute;
-      left: -16px;
-      background: transparent;
-      display: flex;
-      width: 20px;
-    }*/
-    @media (min-width: $breakepoint-xs) {
+    flex-direction: column;*/
+
+    /*@media (min-width: $breakepoint-xs) {
       width:100vw;
       width: 100%;
       height: 100%;
@@ -935,17 +900,14 @@
     @media (min-width: $breakepoint-md) {
       width: 100%;
       height: 100%;
-      top: -9%;
     }
     @media (min-width: $breakepoint-ipad-L) {
       width:500px;
-      //height: calc(100% + 10%);
       height: auto;
-      top: -9%;
-    }
+    }*/
 
 
-    img{
+    /*img{
       @media (min-width: $breakepoint-xs) {
         border-top-left-radius: 0;
         border-top-right-radius: 0;
@@ -959,13 +921,10 @@
         border-radius:0px;
         border-top-left-radius: 4px;
         border-top-right-radius: 4px;
-
       }
+    }*/
 
-
-    }
-
-    .card__cart {
+    /*.card__cart {
       @media (min-width: $breakepoint-xs) {
         margin-left: 8px;
         display:inline-flex;
@@ -973,11 +932,11 @@
       @media (min-width: $breakepoint-md) {
         display:none;
       }
-    }
+    }*/
 
   }
 
-  &__controls{
+  /*&__controls{
     @extend %flex-align;
     li{
       &.button{
@@ -1012,7 +971,7 @@
       }
     }
 
-  }
+  }*/
 
 
 }
@@ -1055,7 +1014,7 @@
 
 /***********************/
 
-.tns-outer .over .card__hidden-slider, .tns-outer .over_l .card__hidden-slider {
+/*.tns-outer .over .card__hidden-slider, .tns-outer .over_l .card__hidden-slider {
   @media (min-width: $breakepoint-md) and (max-width: $breakepoint-ipad-L1) {
     width: 754px;
   }
@@ -1071,8 +1030,6 @@
     //top: 0;
     z-index: 10;
     border-radius: 0px;
-    /*border: 2px solid rgba(0, 0, 0, 0.55);
-    box-shadow: none !important;*/
   }
   @media (min-width: $breakepoint-750) and (max-width: $breakepoint-md) {
     left: 0;
@@ -1152,8 +1109,9 @@
     right: 0;
   }
 
-}
-.hidden-slider-content{
+} */
+
+/*.hidden-slider-content{
   @extend %flex-align;
   padding:8px 16px;
   width: 100%;
@@ -1179,23 +1137,21 @@
     margin:0px 12px 0px 0px;
   }
 
+}*/
 
-
-}
-
-.card_masonry .card__hover-mobile:checked ~ .card__hover-block {
+/*.card_masonry .card__hover-mobile:checked ~ .card__hover-block {
     @media (max-width: $breakepoint-md) {
       z-index: 2;
     }
-  }
+  }*/
 
-.card_mini .card__content{
+/*.card_mini .card__content{
   min-height:auto;
-}
+}*/
 
 /**/
 
-.card__controls.component-active{
+/*.card__controls.component-active{
   @extend %flex-align;
   @media (min-width: $breakepoint-xs) {
     display:none;
@@ -1210,7 +1166,7 @@
   position: absolute;
   bottom: -32px;
   left: 0;
-}
+}*/
 
 
 

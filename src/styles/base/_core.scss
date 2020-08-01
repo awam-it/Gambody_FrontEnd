@@ -32,11 +32,9 @@ table {
   box-sizing: border-box;
 }
 
-/* import buttons */
-@import '../components/buttons';
-/* import buttons */
-
 /* core.scss */
+
+/* import buttons */
 
 .container{
   @media (min-width: $breakepoint-xs) {
@@ -504,3 +502,7 @@ button{
 }
 
 /* tiny slider cards */
+
+.page-inner{
+  padding-top:40px;
+}

@@ -177,7 +177,7 @@
 
   &_masonry{
     border: 0;
-    background:transparent;
+    background:transparent !important;
     .card__hover-block{
       text-align: left;
       justify-content: flex-start;
@@ -233,4 +233,10 @@
 .masonry-lessons{
   @extend .main-comunity;
   background:transparent;
+  .card{
+    background: transparent;
+  }
+}
+.masonry-lessons .select, .masonry-lessons select{
+  background: transparent;
 }

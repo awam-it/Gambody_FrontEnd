@@ -51,12 +51,20 @@
         text-align: center;
         justify-content: center;
         color: #101010;
-        font-weight: 500;
+        font-weight: normal;
         margin:0;
         @extend %column24px-padding;
       }
       &__title{
-        @extend .main-title;
+        font-size: 26px;
+        line-height: 1.23;
+        letter-spacing: 0.25px;
+        text-align: center;
+        justify-content: center;
+        color: #101010;
+        font-weight: normal;
+        margin:0;
+        @extend %column24px-padding;
       }
     }
   }
@@ -68,6 +76,21 @@
 
 
 }
+
+.catalog-no-result__img{
+  width:100%;
+  max-height:200px;
+  position: relative;
+  display: inline-flex;
+  justify-content: center;
+  img{
+    height: 200px;
+    object-fit: cover;
+  }
+}
+
+
+
 
 /* switch */
 .search-checkbox{
@@ -219,8 +242,8 @@ input {
   width: 100%;
   padding: 20px 0px;
   .container {
-    padding-right: 8px;
-    padding-left: 8px;
+    //padding-right: 8px;
+    //padding-left: 8px;
   }
   .main-title{
     margin-bottom:32px;
@@ -323,15 +346,15 @@ input {
 
 .catalog{
   &-top{
-    .row{
-      margin:40px 0px;
-    }
+      padding-bottom:40px;
   }
   &-comunity{
     background:$white-bg;
-    .row{
-      margin:0px;
-      padding:40px 0px;
+    @media (min-width: $breakepoint-xs) {
+      padding:16px 0px;
+    }
+    @media (min-width: $breakepoint-lg) {
+      padding:40px 0px 32px 0px;
     }
     &__line {
       @include font-property(normal);
@@ -349,15 +372,21 @@ input {
       }
       @media (min-width: $breakepoint-xs) {
         padding-top:32px;
+        font-size: 11px;
       }
       @media (min-width: $breakepoint-md) {
         padding: 8px 16px;
+      }
+      @media (min-width: $breakepoint-lg) {
+        font-size: 12px;
       }
     }
     .main-title {
       @media (max-width: $breakepoint-md) {
         font-size: 16px;
         font-weight: 500;
+        padding: 0px 16px 8px 16px;
+        margin: 0;
       }
     }
     &__text{
@@ -456,10 +485,9 @@ input {
     }
     &__button{
       max-width: 328px;
-      margin:32px auto;
+      margin: 32px auto 0px;
       justify-content: center;
     }
-
 
 
   }
@@ -474,8 +502,26 @@ input {
   @extend %column16px-padding;
 }
 .promo-cat{
-  @extend %column24px-padding;
+  padding: 24px 0px 32px 0px;
 }
+.promo-cat .container {
+  padding: 0;
+}
+.promo-cat .row .main-title {
+  padding: 0px 8px;
+}
+.main-sellers .main-title{
+  @media (min-width: $breakepoint-xs) {
+    margin-bottom:12px;
+  }
+}
+.main-release .main-title{
+  @media (min-width: $breakepoint-xs) {
+    margin-bottom:12px;
+  }
+}
+
+
 .categories-promo{
   &__item{
     background: $white-bg;

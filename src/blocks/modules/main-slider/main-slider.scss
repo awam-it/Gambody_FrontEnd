@@ -1,0 +1,16 @@
+
+/* slider.scss */
+.main-slider{
+  margin-bottom: -12%;
+  min-height: 300px;
+  @media (max-width: $breakepoint-md){
+    margin-bottom: 0%;
+    min-height: auto;
+  }
+}
+
+.slider{
+  position: relative;
+  font-size: 16px;
+  z-index: 0;
+}
