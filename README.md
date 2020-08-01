@@ -5,6 +5,7 @@ guide to how the markup should be used, component-stylesheet dependencies, etc.
 
 Vendors:
 - jQuery <code>npm install jquery</code>
+- Scss Smart Grid - smart-grid.scss
 
 Installation
 - Gulp global install: <code>yarn global add gulp-cli</code>
